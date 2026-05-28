@@ -1,0 +1,109 @@
+{
+  "id": "lesson12",
+  "stage": 6,
+  "stageTitle": "그리움·OST",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": { "default": "images/1.png", "correct": "images/2.png", "wrong": "images/3.png", "cheer": "images/4.png", "complete": "images/6.png" },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": { "img": "images/1.png", "msg": "OST의 言葉、<br>覚えましょう！" },
+      "korean": "그리워요.",
+      "reading": "クリウォヨ。",
+      "meaning": "恋しいです。/ 会いたくて切ないです。",
+      "audioKey": "그리워요",
+      "scenes": [
+        { "icon": "🎵", "text": "韓国ドラマのOSTで最も多く出てくる感情の言葉。" },
+        { "icon": "🌙", "text": "「보고 싶어요（会いたい）」より少し詩的でしみじみとした表現。" },
+        { "icon": "💌", "text": "遠くにいる人、亡くなった人、過去の記憶など、幅広く使えます。" }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "OSTの言葉を理解しよう！",
+      "character": { "img": "images/1.png", "msg": "OST、もっと<br>楽しくなる！" },
+      "japanese": { "sentence": "ずっと\n待っています。", "reading": "ずっと まっています" },
+      "korean": { "sentence": "계속\n기다릴게요.", "reading": "ケソク キダリルケヨ" },
+      "insight": "「계속（ケソク）＝ずっと・引き続き」は漢字語「繼續」。<br>「기다릴게요（キダリルケヨ）」は「待ちますね」という意志を表す表現です。",
+      "vocab": [
+        { "korean": "그리워요", "japanese": "クリウォヨ ＝ 恋しいです" },
+        { "korean": "기다리다", "japanese": "キダリダ ＝ 待つ" },
+        { "korean": "추억", "japanese": "チュオク ＝ 思い出（秋憶）" },
+        { "korean": "함께", "japanese": "ハムケ ＝ 一緒に" },
+        { "korean": "영원히", "japanese": "ヨンウォニ ＝ 永遠に（永遠）" },
+        { "korean": "기억", "japanese": "キオク ＝ 記憶（記憶）" }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": { "img": "images/4.png", "msg": "OSTの言葉を<br>言ってみよう！" },
+      "template": { "korean": "___ 기억해요.", "reading": "（単語を選んでください）", "japanese": "〜を覚えています", "readingTemplate": "___ キオケヨ。", "japaneseTemplate": "___を覚えています。" },
+      "words": [
+        { "korean": "항상", "reading": "ハンサン", "japanese": "いつも", "audioKey": "항상 기억해요" },
+        { "korean": "아직도", "reading": "アジットド", "japanese": "今でも", "audioKey": "아직도 기억해요" },
+        { "korean": "영원히", "reading": "ヨンウォニ", "japanese": "永遠に", "audioKey": "영원히 기억해요" },
+        { "korean": "당신을", "reading": "タンシヌル", "japanese": "あなたを", "audioKey": "당신을 기억해요" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "シーズン2、最終クイズ！",
+      "character": { "img": "images/1.png", "msg": "最後のクイズ！<br>全部思い出して 😊" },
+      "questions": [
+        {
+          "icon": "🎵",
+          "question": "OSTでよく流れる「恋しいです」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            { "korean": "보고 싶어요", "reading": "ポゴ シポヨ", "correct": false },
+            { "korean": "그리워요", "reading": "クリウォヨ", "correct": true },
+            { "korean": "슬퍼요", "reading": "スルポヨ", "correct": false }
+          ],
+          "correctMsg": "完璧！「그리워요」はOSTの主役。次にドラマを見たら聞こえてきますよ 🎵",
+          "wrongMsg": "惜しい！「그리워요（クリウォヨ）」。「보고 싶어요」より詩的な「恋しさ」の表現ですよ。"
+        },
+        {
+          "icon": "💌",
+          "question": "「今でも覚えています」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            { "korean": "항상 기억해요", "reading": "ハンサン キオケヨ", "correct": false },
+            { "korean": "아직도 기억해요", "reading": "アジットド キオケヨ", "correct": true },
+            { "korean": "영원히 기억해요", "reading": "ヨンウォニ キオケヨ", "correct": false }
+          ],
+          "correctMsg": "その通り！「아직도＝今でも・まだ」。切ない表現ですね 💕",
+          "wrongMsg": "正解は「아직도 기억해요（アジットド キオケヨ）」。「아직도＝今でも・まだ」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "シーズン2、完走おめでとうございます！",
+      "character": { "img": "images/6.png", "msg": "ドラマ編<br>完了です！🎉" },
+      "culture": {
+        "icon": "🎵",
+        "title": "韓国ドラマのOST、なぜこんなに響く？",
+        "body": "韓国ドラマのOSTは、ドラマと同時に制作されドラマの感情を増幅させます。<br><br>OST定番の言葉：<br><hl>그리워（クリウォ）</hl>＝恋しい<br><hl>함께（ハムケ）</hl>＝一緒に<br><hl>영원히（ヨンウォニ）</hl>＝永遠に<br><hl>사랑해（サランヘ）</hl>＝愛してる<br><br>これらを覚えていると歌詞が分かるようになります。<br>次はサビだけでも聞き取ってみて！<br><hl>천천히 해도 괜찮아요 😊</hl>"
+      },
+      "drama": {
+        "lines": ["그리워, 많이 그리워.", "네가 있어서 행복했어."],
+        "reading": "クリウォ、マニ クリウォ。／ ネガ イッソソ ヘンボケッソ。",
+        "japanese": "「恋しい、とても恋しい。」 ／ 「あなたがいてくれて幸せだった。」",
+        "note": "韓国ドラマのOSTに必ずある言葉です。聞こえたら分かりますよ ✨"
+      },
+      "summary": [
+        { "korean": "그리워요", "reading": "クリウォヨ" },
+        { "korean": "아직도 기억해요", "reading": "アジットド キオケヨ" },
+        { "korean": "영원히", "reading": "ヨンウォニ" },
+        { "korean": "함께", "reading": "ハムケ" }
+      ]
+    }
+  ]
+}

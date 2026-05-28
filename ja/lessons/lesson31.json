@@ -1,0 +1,228 @@
+{
+  "id": "lesson31",
+  "stage": 1,
+  "stageTitle": "한식당에서",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "食堂を制覇！<br>覚えましょう！"
+      },
+      "korean": "맛있게 먹겠습니다!",
+      "reading": "マシッケ モクケッスムニダ！",
+      "meaning": "おいしくいただきます！",
+      "audioKey": "맛있게 먹겠습니다!",
+      "scenes": [
+        {
+          "icon": "🍲",
+          "text": "食事前に言うとお店の人が喜ぶ一言。「いただきます」に近い表現"
+        },
+        {
+          "icon": "😊",
+          "text": "「맛있게（マシッケ）＝おいしく」「먹겠습니다（モクケッスムニダ）＝食べます」"
+        },
+        {
+          "icon": "🇰🇷",
+          "text": "韓国には日本の「いただきます」に相当する言葉がなく、このフレーズが最も近い"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "食堂で使う言葉！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "食堂でも<br>韓国語で！"
+      },
+      "japanese": {
+        "sentence": "辛さは\n控えめにして\nください。",
+        "reading": "からさはひかえめにしてください"
+      },
+      "korean": {
+        "sentence": "덜 맵게\n해 주세요.",
+        "reading": "トル メプゲ ヘ ジュセヨ"
+      },
+      "insight": "「덜（トル）＝少なく・控えめに」「맵게（メプゲ）＝辛く」「해 주세요（ヘ ジュセヨ）＝してください」。<br>辛い食べ物が多い韓国料理で必須の表現です！",
+      "vocab": [
+        {
+          "korean": "맛있어요",
+          "japanese": "マシッソヨ ＝ おいしいです"
+        },
+        {
+          "korean": "매워요",
+          "japanese": "メウォヨ ＝ 辛いです"
+        },
+        {
+          "korean": "덜 맵게",
+          "japanese": "トル メプゲ ＝ 辛さ控えめに"
+        },
+        {
+          "korean": "추가요",
+          "japanese": "チュガヨ ＝ 追加注文します"
+        },
+        {
+          "korean": "리필 돼요?",
+          "japanese": "リピル テヨ？ ＝ おかわりできますか？"
+        },
+        {
+          "korean": "포장해 주세요",
+          "japanese": "ポジャンヘ ジュセヨ ＝ 持ち帰りにしてください"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "食堂で<br>使ってみよう！"
+      },
+      "template": {
+        "korean": "___ 더 주세요.",
+        "reading": "（単語を選んでください）",
+        "japanese": "〜をもっとください",
+        "readingTemplate": "___ ト ジュセヨ。",
+        "japaneseTemplate": "___をもっとください。"
+      },
+      "words": [
+        {
+          "korean": "김치",
+          "reading": "キムチ",
+          "japanese": "キムチ",
+          "audioKey": "김치 더 주세요"
+        },
+        {
+          "korean": "밥",
+          "reading": "パプ",
+          "japanese": "ご飯",
+          "audioKey": "밥 더 주세요"
+        },
+        {
+          "korean": "물",
+          "reading": "ムル",
+          "japanese": "お水",
+          "audioKey": "물 더 주세요"
+        },
+        {
+          "korean": "반찬",
+          "reading": "パンチャン",
+          "japanese": "おかず",
+          "audioKey": "반찬 더 주세요"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "🍲",
+          "question": "食事前に「おいしくいただきます！」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "잘 먹었습니다",
+              "reading": "チャル モゴッスムニダ",
+              "correct": false
+            },
+            {
+              "korean": "맛있게 먹겠습니다!",
+              "reading": "マシッケ モクケッスムニダ！",
+              "correct": true
+            },
+            {
+              "korean": "주문할게요",
+              "reading": "チュムナルケヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "완벽해요！「맛있게 먹겠습니다!」食べ終わったら「잘 먹었습니다（チャル モゴッスムニダ）」も言ってみて！",
+          "wrongMsg": "아쉬워요！「맛있게 먹겠습니다!（マシッケ モクケッスムニダ！）」。食事前の一言ですよ。"
+        },
+        {
+          "icon": "🥬",
+          "question": "「キムチをもっとください」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "밥 더 주세요",
+              "reading": "パプ ト ジュセヨ",
+              "correct": false
+            },
+            {
+              "korean": "김치 더 주세요",
+              "reading": "キムチ ト ジュセヨ",
+              "correct": true
+            },
+            {
+              "korean": "물 더 주세요",
+              "reading": "ムル ト ジュセヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "맞아요！「김치 더 주세요」韓国の食堂ではおかわり無料のところも多いですよ！",
+          "wrongMsg": "정답은 「김치 더 주세요（キムチ ト ジュセヨ）」。「더＝もっと」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "한식, 완전<br>楽しめます！"
+      },
+      "culture": {
+        "icon": "🍲",
+        "title": "한식당（ハンシクタン）での食べ方",
+        "body": "韓国食堂でのマナーと表現：<br><br><hl>반찬（パンチャン）</hl>＝小皿のおかず（無料でおかわりできる！）<br>→ <hl>「반찬 더 주세요（パンチャン ト ジュセヨ）」</hl><br><br>食後は：<br><hl>「잘 먹었습니다（チャル モゴッスムニダ）」</hl>＝「ごちそうさまでした」<br><br>お会計のとき：<br><hl>「계산해 주세요（ケサネ ジュセヨ）」</hl>＝「お会計をお願いします」<br><br>韓国では一般的にテーブルごとに一括払い。<hl>각자 내기（カクチャ ネギ）＝割り勘</hl>も最近は増えています。"
+      },
+      "drama": {
+        "lines": [
+          "맛있겠다, 빨리 먹자!",
+          "여기요, 공기밥 하나 더요!"
+        ],
+        "reading": "マシッケッタ、パルリ モクチャ！／ ヨギヨ、コンギパプ ハナ トヨ！",
+        "japanese": "「おいしそう、早く食べよう！」 ／ 「すみません、ご飯もう一つください！」",
+        "note": "韓国ドラマの食事シーンで必ず出てくるセリフです ✨"
+      },
+      "summary": [
+        {
+          "korean": "맛있게 먹겠습니다!",
+          "reading": "マシッケ モクケッスムニダ！"
+        },
+        {
+          "korean": "김치 더 주세요",
+          "reading": "キムチ ト ジュセヨ"
+        },
+        {
+          "korean": "덜 맵게 해 주세요",
+          "reading": "トル メプゲ ヘ ジュセヨ"
+        },
+        {
+          "korean": "잘 먹었습니다",
+          "reading": "チャル モゴッスムニダ"
+        }
+      ]
+    }
+  ]
+}

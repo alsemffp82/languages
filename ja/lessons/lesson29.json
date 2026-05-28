@@ -1,0 +1,228 @@
+{
+  "id": "lesson29",
+  "stage": 5,
+  "stageTitle": "이유 말하기",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "理由の言い方、<br>覚えましょう！"
+      },
+      "korean": "왜냐하면 좋아하기 때문이에요.",
+      "reading": "ウェニャハミョン チョアハギ テムニエヨ。",
+      "meaning": "なぜなら、好きだからです。",
+      "audioKey": "왜냐하면 좋아하기 때문이에요",
+      "scenes": [
+        {
+          "icon": "💡",
+          "text": "「왜냐하면（ウェニャハミョン）＝なぜなら」は日本語と同じ使い方"
+        },
+        {
+          "icon": "🎯",
+          "text": "「때문이에요（テムニエヨ）＝〜だからです」は理由説明の鉄板表現"
+        },
+        {
+          "icon": "💬",
+          "text": "もっと簡単に「좋아서（チョアソ）＝好きだから」とも言えます"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "理由の言い方も似てる！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "理由も<br>韓国語で！"
+      },
+      "japanese": {
+        "sentence": "韓国語が好きだ\nから来ました。",
+        "reading": "かんこくごがすきだからきました"
+      },
+      "korean": {
+        "sentence": "한국어가 좋아서\n왔어요.",
+        "reading": "ハングゴガ チョアソ ワッソヨ"
+      },
+      "insight": "「-아서/어서（アソ/オソ）」は「〜だから・〜して」を表す接続語尾。<br>「좋아서（チョアソ）＝好きだから」「피곤해서（ピゴネソ）＝疲れているから」のように使います。",
+      "vocab": [
+        {
+          "korean": "왜냐하면",
+          "japanese": "ウェニャハミョン ＝ なぜなら"
+        },
+        {
+          "korean": "때문이에요",
+          "japanese": "テムニエヨ ＝ 〜だからです"
+        },
+        {
+          "korean": "좋아서",
+          "japanese": "チョアソ ＝ 好きだから"
+        },
+        {
+          "korean": "바빠서",
+          "japanese": "パッパソ ＝ 忙しいから"
+        },
+        {
+          "korean": "피곤해서",
+          "japanese": "ピゴネソ ＝ 疲れているから"
+        },
+        {
+          "korean": "그래서",
+          "japanese": "クレソ ＝ だから・それで"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "理由を<br>説明しよう！"
+      },
+      "template": {
+        "korean": "___ 때문이에요.",
+        "reading": "（単語を選んでください）",
+        "japanese": "〜だからです",
+        "readingTemplate": "___ テムニエヨ。",
+        "japaneseTemplate": "___だからです。"
+      },
+      "words": [
+        {
+          "korean": "한국 드라마",
+          "reading": "ハングク トゥラマ",
+          "japanese": "韓国ドラマ",
+          "audioKey": "한국 드라마 때문이에요"
+        },
+        {
+          "korean": "K-pop",
+          "reading": "ケイポップ",
+          "japanese": "K-POP",
+          "audioKey": "K-pop 때문이에요"
+        },
+        {
+          "korean": "한국 음식",
+          "reading": "ハングク ウムシク",
+          "japanese": "韓国料理",
+          "audioKey": "한국 음식 때문이에요"
+        },
+        {
+          "korean": "K-뷰티",
+          "reading": "ケイビュティ",
+          "japanese": "K-ビューティ",
+          "audioKey": "K-뷰티 때문이에요"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "💡",
+          "question": "「なぜなら、好きだからです」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "그래서 좋아요",
+              "reading": "クレソ チョアヨ",
+              "correct": false
+            },
+            {
+              "korean": "왜냐하면 좋아하기 때문이에요",
+              "reading": "ウェニャハミョン チョアハギ テムニエヨ",
+              "correct": true
+            },
+            {
+              "korean": "좋아서 왔어요",
+              "reading": "チョアソ ワッソヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "완벽해요！「왜냐하면〜때문이에요」、理由を説明するときの決め台詞ですよ！",
+          "wrongMsg": "아쉬워요！「왜냐하면 좋아하기 때문이에요（ウェニャハミョン…）」。「왜냐하면＝なぜなら」ですよ。"
+        },
+        {
+          "icon": "🎵",
+          "question": "「K-POPだからです」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "한국 음식 때문이에요",
+              "reading": "ハングク ウムシク テムニエヨ",
+              "correct": false
+            },
+            {
+              "korean": "K-pop 때문이에요",
+              "reading": "ケイポップ テムニエヨ",
+              "correct": true
+            },
+            {
+              "korean": "한국 드라마 때문이에요",
+              "reading": "ハングク トゥラマ テムニエヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "맞아요！「K-pop 때문이에요」「なぜ韓国語を勉強するの？」に完璧な答えです！",
+          "wrongMsg": "정답은 「K-pop 때문이에요（ケイポップ テムニエヨ）」。「때문이에요＝〜だからです」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "理由表現、<br>上手になった！"
+      },
+      "culture": {
+        "icon": "💬",
+        "title": "「왜 한국어를 공부해요?」と聞かれたら",
+        "body": "韓国人から必ず聞かれる質問：<br><hl>「왜 한국어를 공부해요?（ウェ ハングゴルル コンブヘヨ？）」</hl><br>＝「なぜ韓国語を勉強しているんですか？」<br><br>自然な答え方：<br><hl>「한국 드라마 때문이에요（ハングク トゥラマ テムニエヨ）」</hl><br>＝「韓国ドラマがきっかけです」<br><br><hl>「서울에 여행하고 싶어서요（ソウレ ヨヘンハゴ シポソヨ）」</hl><br>＝「ソウルに旅行したくて」<br><br>理由を言うとぐっと仲良くなれますよ 😊"
+      },
+      "drama": {
+        "lines": [
+          "왜 저한테 잘해줘요?",
+          "그냥, 좋아하기 때문이에요."
+        ],
+        "reading": "ウェ チョハンテ チャレジョヨ？／ クニャン、チョアハギ テムニエヨ。",
+        "japanese": "「なぜ私に優しくするんですか？」 ／ 「ただ、好きだからです。」",
+        "note": "ドラマの告白シーン定番フレーズです ✨"
+      },
+      "summary": [
+        {
+          "korean": "왜냐하면",
+          "reading": "ウェニャハミョン"
+        },
+        {
+          "korean": "때문이에요",
+          "reading": "テムニエヨ"
+        },
+        {
+          "korean": "좋아서",
+          "reading": "チョアソ"
+        },
+        {
+          "korean": "그래서",
+          "reading": "クレソ"
+        }
+      ]
+    }
+  ]
+}

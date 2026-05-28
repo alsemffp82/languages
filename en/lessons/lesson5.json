@@ -1,0 +1,116 @@
+{
+  "id": "lesson5",
+  "stage": 5,
+  "stageTitle": "At the Market",
+  "appTitle": "Seoul Korean",
+  "character": { "default":"images/1.png","correct":"images/2.png","wrong":"images/3.png","cheer":"images/4.png","complete":"images/6.png" },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "Today's Phrase",
+      "stepTitle": "Shop like a local at Namdaemun!",
+      "character": { "img":"images/1.png","msg":"Shopping time!<br>Let's bargain! 🛍️" },
+      "korean": "얼마예요?",
+      "reading": "eol-ma-ye-yo?",
+      "meaning": "How much is it?",
+      "audioKey": "얼마예요",
+      "scenes": [
+        { "icon":"🛍️","text":"At Namdaemun Market or Dongdaemun — point at something and ask the price!" },
+        { "icon":"🍢","text":"Street food stalls — ask before you eat!" },
+        { "icon":"🧧","text":"Souvenir shops, clothing stores, anywhere you want to know the price." }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "English vs Korean",
+      "stepTitle": "Korean numbers for prices — easier than you think!",
+      "character": { "img":"images/1.png","msg":"만 원 = 10,000 won!<br>Now you know 💰" },
+      "japanese": { "sentence":"How much\nis it?","reading":"English: 'How much'" },
+      "korean":   { "sentence":"얼마\n예요?","reading":"eol-ma-ye-yo? — 얼마 = how much" },
+      "insight": "Korean uses 만 (man) = 10,000 as a key unit. <strong>만 원 = ₩10,000 (about $7)</strong>. So 이만 원 = ₩20,000, 오만 원 = ₩50,000. Most market prices are in the thousands: 오천 원 = ₩5,000, 천 원 = ₩1,000.",
+      "vocab": [
+        { "korean":"얼마",  "japanese":"eol-ma → how much 💰" },
+        { "korean":"원",    "japanese":"won → Korean won ₩" },
+        { "korean":"천",    "japanese":"cheon → 1,000 (1K)" },
+        { "korean":"만",    "japanese":"man → 10,000 (10K)" },
+        { "korean":"할인",  "japanese":"ha-rin → discount 🏷️" },
+        { "korean":"영수증","japanese":"yeong-su-jeung → receipt 🧾" }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "Pattern Practice",
+      "stepTitle": "Ask for what you want!",
+      "character": { "img":"images/4.png","msg":"Shop smarter<br>with these! 🛍️" },
+      "instruction": "\"이거 ___ 있어요?\" = \"Do you have this in ___?\" Try each option! 👇",
+      "template": {
+        "korean":"이거 ___ 있어요?",
+        "reading":"(tap a word below)",
+        "japanese":"Do you have this in ___?",
+        "readingTemplate":"i-geo ___ is-seo-yo?",
+        "japaneseTemplate":"Do you have this in ___?"
+      },
+      "words": [
+        { "korean":"다른 색",     "reading":"da-reun saek",    "japanese":"other color",  "audioKey":"이거 다른 색 있어요" },
+        { "korean":"더 큰 거",    "reading":"deo keun geo",    "japanese":"bigger size",  "audioKey":"이거 더 큰 거 있어요" },
+        { "korean":"더 작은 거",  "reading":"deo ja-geun geo", "japanese":"smaller size", "audioKey":"이거 더 작은 거 있어요" },
+        { "korean":"다른 디자인", "reading":"da-reun di-ja-in","japanese":"other design", "audioKey":"이거 다른 디자인 있어요" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "Mini Quiz",
+      "stepTitle": "Let's check what you remember!",
+      "character": { "img":"images/1.png","msg":"Quiz time!<br>You've got this! 😊" },
+      "questions": [
+        {
+          "icon":"🛍️",
+          "question":"How do you ask \"How much is it?\"",
+          "sub":"Think back to today's phrase!",
+          "options": [
+            { "korean":"이거 주세요","reading":"i-geo ju-se-yo",  "correct":false },
+            { "korean":"얼마예요?", "reading":"eol-ma-ye-yo?",   "correct":true  },
+            { "korean":"있어요?",   "reading":"is-seo-yo?",      "correct":false }
+          ],
+          "correctMsg":"Correct! 얼마예요? — two syllables and you can use it anywhere you want to know the price!",
+          "wrongMsg":"Not quite! 얼마예요? (eol-ma-ye-yo?) — 얼마 = how much, 예요 = is/are."
+        },
+        {
+          "icon":"🎨",
+          "question":"How do you ask \"Do you have this in another color?\"",
+          "sub":"Think back to the pattern practice!",
+          "options": [
+            { "korean":"이거 더 큰 거 있어요?",    "reading":"i-geo deo keun geo is-seo-yo?","correct":false },
+            { "korean":"이거 다른 색 있어요?",     "reading":"i-geo da-reun saek is-seo-yo?","correct":true  },
+            { "korean":"이거 다른 디자인 있어요?","reading":"i-geo da-reun di-ja-in is-seo-yo?","correct":false }
+          ],
+          "correctMsg":"Perfect! 이거 다른 색 있어요? — 다른 = other/different, 색 = color.",
+          "wrongMsg":"Not quite! 이거 다른 색 있어요? — 다른 색 = other color. 이거 = this."
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "Culture Note",
+      "stepTitle": "Seoul's legendary markets",
+      "character": { "img":"images/6.png","msg":"Lesson complete!<br>You're amazing! 🎉" },
+      "culture": {
+        "icon":"🏪",
+        "title":"Namdaemun & Dongdaemun: the shopping Meccas",
+        "body":"<hl>남대문시장 (Namdaemun Market)</hl> is one of the oldest and largest traditional markets in Korea — open since 1414! You can find clothes, food, accessories, and souvenirs at incredible prices.<br><br>Bargaining tips:<br>• <hl>\"<kr>조금 깎아 주세요</kr> (jo-geum kka-kka ju-se-yo)\"</hl> = 'Please give me a little discount'<br>• Buying multiple items? Ask: <hl>\"<kr>두 개 사면 얼마예요</kr>?\"</hl> = 'How much for two?'<br><br>Market etiquette: <hl>bargaining is expected</hl> at traditional markets, but fixed-price stores (편의점, department stores) have set prices."
+      },
+      "drama": {
+        "lines":["이거 살까?","너무 비싸!"],
+        "reading":"i-geo sal-kka? / neo-mu bi-ssa!",
+        "japanese":"\"Should I buy this?\" / \"Too expensive!\"",
+        "note":"너무 = 'too / very' — drama characters say this ALL the time ✨"
+      },
+      "summary": [
+        { "korean":"얼마예요?",          "reading":"eol-ma-ye-yo?" },
+        { "korean":"조금 깎아 주세요",   "reading":"jo-geum kka-kka ju-se-yo" },
+        { "korean":"이거 다른 색 있어요?","reading":"i-geo da-reun saek is-seo-yo?" },
+        { "korean":"이거 더 큰 거 있어요?","reading":"i-geo deo keun geo is-seo-yo?" }
+      ]
+    }
+  ]
+}

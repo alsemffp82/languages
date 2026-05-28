@@ -1,0 +1,116 @@
+{
+  "id": "lesson6",
+  "stage": 6,
+  "stageTitle": "React Like a Local",
+  "appTitle": "Seoul Korean",
+  "character": { "default":"images/1.png","correct":"images/2.png","wrong":"images/3.png","cheer":"images/4.png","complete":"images/6.png" },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "Today's Phrase",
+      "stepTitle": "React to everything with full energy!",
+      "character": { "img":"images/1.png","msg":"This is the most<br>fun phrase! 🤩" },
+      "korean": "진짜 대박이에요!",
+      "reading": "jin-jja dae-ba-gi-e-yo!",
+      "meaning": "This is absolutely amazing! / No way!",
+      "audioKey": "진짜 대박이에요",
+      "scenes": [
+        { "icon":"🍖","text":"You try Korean BBQ for the first time. This is the only acceptable response." },
+        { "icon":"🌆","text":"You see the Seoul skyline from Namsan Tower at night. Say it out loud!" },
+        { "icon":"🎤","text":"Your Korean friend does something impressive. React naturally!" }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "English vs Korean",
+      "stepTitle": "Korean slang you've been hearing in K-dramas!",
+      "character": { "img":"images/1.png","msg":"대박! You already<br>knew this one! 😄" },
+      "japanese": { "sentence":"This is\namazing!","reading":"English: adjective at the end" },
+      "korean":   { "sentence":"진짜\n대박이에요!","reading":"jin-jja dae-ba-gi-e-yo! — really + daebak + it is!" },
+      "insight": "<strong>진짜 (jin-jja)</strong> = really / truly / seriously. <strong>대박 (dae-bak)</strong> started as slang but is now everyday Korean — it means amazing, jackpot, no way! Add 이에요 to make it a sentence. You can also just shout '대박!' on its own.",
+      "vocab": [
+        { "korean":"진짜",  "japanese":"jin-jja → really / seriously 😮" },
+        { "korean":"대박",  "japanese":"dae-bak → amazing / jackpot 🎉" },
+        { "korean":"헐",    "japanese":"heol → OMG / no way 😱" },
+        { "korean":"완전",  "japanese":"wan-jeon → totally / completely 💯" },
+        { "korean":"최고",  "japanese":"choe-go → the best 🏆" },
+        { "korean":"레전드","japanese":"re-jeon-deu → legend 👑" }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "Pattern Practice",
+      "stepTitle": "진짜 + anything = instant expression!",
+      "character": { "img":"images/4.png","msg":"진짜 everything!<br>Go for it! 🤩" },
+      "instruction": "\"진짜 ___\" = \"Really ___\" or \"This is really ___\". Try each one! 👇",
+      "template": {
+        "korean":"진짜 ___",
+        "reading":"(tap a word below)",
+        "japanese":"Really ___!",
+        "readingTemplate":"jin-jja ___",
+        "japaneseTemplate":"Really ___!"
+      },
+      "words": [
+        { "korean":"대박이에요", "reading":"dae-ba-gi-e-yo", "japanese":"amazing!",    "audioKey":"진짜 대박이에요" },
+        { "korean":"대박",      "reading":"dae-bak",         "japanese":"amazing! (excl.)","audioKey":"진짜 대박" },
+        { "korean":"맛있어",    "reading":"ma-si-sseo",      "japanese":"delicious! (casual)","audioKey":"진짜 맛있어" },
+        { "korean":"예쁘다",    "reading":"ye-ppeu-da",      "japanese":"pretty! (casual)","audioKey":"진짜 예쁘다" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "Mini Quiz",
+      "stepTitle": "Let's check what you remember!",
+      "character": { "img":"images/1.png","msg":"Last quiz of<br>the season! 🎉" },
+      "questions": [
+        {
+          "icon":"🍖",
+          "question":"You just tried Korean BBQ and it's incredible. What do you say?",
+          "sub":"Use today's phrase!",
+          "options": [
+            { "korean":"진짜 대박이에요!","reading":"jin-jja dae-ba-gi-e-yo!","correct":true  },
+            { "korean":"조금 깎아 주세요","reading":"jo-geum kka-kka ju-se-yo","correct":false },
+            { "korean":"체크인 하려고요", "reading":"che-keu-in ha-ryeo-go-yo","correct":false }
+          ],
+          "correctMsg":"Yes!! 진짜 대박이에요! is the perfect response. Koreans will love your enthusiasm!",
+          "wrongMsg":"Not quite! 진짜 대박이에요! is your go-to reaction to anything amazing — food, views, surprises!"
+        },
+        {
+          "icon":"🎭",
+          "question":"What does 진짜 mean?",
+          "sub":"Think about how you've heard it in K-dramas!",
+          "options": [
+            { "korean":"감사합니다","reading":"gam-sa-ham-ni-da (thank you)","correct":false },
+            { "korean":"맛있어",   "reading":"ma-si-sseo (delicious)","correct":false },
+            { "korean":"진짜",    "reading":"jin-jja (really / seriously / OMG)","correct":true  }
+          ],
+          "correctMsg":"Correct! 진짜 = really / seriously / for real. It's one of the most useful intensifiers in Korean!",
+          "wrongMsg":"Not quite! 진짜 (jin-jja) means 'really / seriously / for real' — you've definitely heard it in K-dramas!"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "Culture Note",
+      "stepTitle": "You've completed Season 1! 🎉",
+      "character": { "img":"images/6.png","msg":"Season 1 complete!<br>You're incredible! 🏆" },
+      "culture": {
+        "icon":"🇰🇷",
+        "title":"You're ready for Seoul!",
+        "body":"You now know how to:<br>✅ Get attention: <hl><kr>저기요!</kr></hl><br>✅ Order food and drinks: <hl><kr>___ 주세요</kr></hl><br>✅ Check into your hotel: <hl><kr>체크인 하려고요</kr></hl><br>✅ Navigate the subway: <hl><kr>어디서 갈아타요?</kr></hl><br>✅ Shop at markets: <hl><kr>얼마예요?</kr></hl><br>✅ React like a local: <hl><kr>진짜 대박이에요!</kr></hl><br><br>Most importantly — Koreans absolutely <hl>love when foreigners try Korean</hl>. Even one word will make someone smile. You've got this. <hl>화이팅! (hwa-i-ting!)</hl> — Go for it!"
+      },
+      "drama": {
+        "lines":["화이팅!","할 수 있어!"],
+        "reading":"hwa-i-ting! / hal su i-sseo!",
+        "japanese":"\"Fighting! / You can do it!\" — a Korean cheer",
+        "note":"화이팅 comes from the English word 'fighting' — it's a cheer of encouragement. You'll hear it everywhere ✨"
+      },
+      "summary": [
+        { "korean":"진짜 대박이에요!","reading":"jin-jja dae-ba-gi-e-yo!" },
+        { "korean":"진짜 맛있어",    "reading":"jin-jja ma-si-sseo" },
+        { "korean":"대박",           "reading":"dae-bak" },
+        { "korean":"화이팅!",        "reading":"hwa-i-ting!" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "id": "lesson35",
+  "stage": 5,
+  "stageTitle": "날씨 이야기",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "天気の話、<br>してみよう！"
+      },
+      "korean": "오늘 날씨 정말 좋네요!",
+      "reading": "オヌル ナルッシ チョンマル チョンネヨ！",
+      "meaning": "今日のお天気、本当に素晴らしいですね！",
+      "audioKey": "오늘 날씨 정말 좋네요!",
+      "scenes": [
+        {
+          "icon": "☀️",
+          "text": "天気は万国共通の会話テーマ。韓国人との小話（スモールトーク）に最適！"
+        },
+        {
+          "icon": "💬",
+          "text": "「-네요（ネヨ）」は「〜ですね」という感嘆・共感の語尾。自然な会話に欠かせません"
+        },
+        {
+          "icon": "🌸",
+          "text": "「봄 날씨 같아요（ポム ナルッシ カタヨ）＝春の天気みたいですね」も使えます"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "天気の言葉も似てる！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "天気も<br>韓国語で！"
+      },
+      "japanese": {
+        "sentence": "今日は\n暑いですね。",
+        "reading": "きょうはあついですね"
+      },
+      "korean": {
+        "sentence": "오늘\n덥네요.",
+        "reading": "オヌル トムネヨ"
+      },
+      "insight": "「덥다（トプタ）＝暑い」「춥다（チュプタ）＝寒い」「따뜻하다（タットゥタダ）＝暖かい」。<br>「-네요（ネヨ）」をつけると「〜ですね」という共感表現になります。",
+      "vocab": [
+        {
+          "korean": "날씨",
+          "japanese": "ナルッシ ＝ 天気（날씨）"
+        },
+        {
+          "korean": "더워요",
+          "japanese": "トウォヨ ＝ 暑いです"
+        },
+        {
+          "korean": "추워요",
+          "japanese": "チュウォヨ ＝ 寒いです"
+        },
+        {
+          "korean": "따뜻해요",
+          "japanese": "タトゥテヨ ＝ 暖かいです"
+        },
+        {
+          "korean": "비가 와요",
+          "japanese": "ピガ ワヨ ＝ 雨が降っています"
+        },
+        {
+          "korean": "흐려요",
+          "japanese": "フリョヨ ＝ 曇っています"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "天気を<br>話してみよう！"
+      },
+      "template": {
+        "korean": "오늘 ___ 네요.",
+        "reading": "（単語を選んでください）",
+        "japanese": "今日〜ですね",
+        "readingTemplate": "オヌル ___ ネヨ。",
+        "japaneseTemplate": "今日___ですね。"
+      },
+      "words": [
+        {
+          "korean": "덥",
+          "reading": "トム",
+          "japanese": "暑い",
+          "audioKey": "오늘 덥네요"
+        },
+        {
+          "korean": "춥",
+          "reading": "チュム",
+          "japanese": "寒い",
+          "audioKey": "오늘 춥네요"
+        },
+        {
+          "korean": "따뜻하",
+          "reading": "タトゥタ",
+          "japanese": "暖かい",
+          "audioKey": "오늘 따뜻하네요"
+        },
+        {
+          "korean": "흐리",
+          "reading": "フリ",
+          "japanese": "曇って",
+          "audioKey": "오늘 흐리네요"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "☀️",
+          "question": "「今日のお天気、本当に素晴らしいですね！」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "오늘 날씨 왜 이래요?",
+              "reading": "オヌル ナルッシ ウェ イレヨ？",
+              "correct": false
+            },
+            {
+              "korean": "오늘 날씨 정말 좋네요!",
+              "reading": "オヌル ナルッシ チョンマル チョンネヨ！",
+              "correct": true
+            },
+            {
+              "korean": "오늘 날씨 별로예요",
+              "reading": "オヌル ナルッシ ピョルロエヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "완벽해요！「오늘 날씨 정말 좋네요!」どこでも使える万能フレーズですよ！",
+          "wrongMsg": "아쉬워요！「오늘 날씨 정말 좋네요!（オヌル ナルッシ…）」。「-네요＝〜ですね」ですよ。"
+        },
+        {
+          "icon": "🥵",
+          "question": "「今日暑いですね」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "오늘 춥네요",
+              "reading": "オヌル チュムネヨ",
+              "correct": false
+            },
+            {
+              "korean": "오늘 덥네요",
+              "reading": "オヌル トムネヨ",
+              "correct": true
+            },
+            {
+              "korean": "오늘 흐리네요",
+              "reading": "オヌル フリネヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "맞아요！「오늘 덥네요」夏のソウルで使ってみて！",
+          "wrongMsg": "정답은 「오늘 덥네요（オヌル トムネヨ）」。「덥다＝暑い」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "天気の話、<br>上手になった！"
+      },
+      "culture": {
+        "icon": "🌸",
+        "title": "ソウルの四季と天気表現",
+        "body": "ソウルの季節ごとの天気：<br><br><hl>봄（ポム）＝春</hl>：따뜻하지만 미세먼지（タトゥタジマン ミセモンジ）＝暖かいけど黄砂<br><hl>여름（ヨルム）＝夏</hl>：덥고 습해요（トプコ スペヨ）＝暑くて蒸し暑い<br><hl>가을（カウル）＝秋</hl>：선선하고 맑아요（ソンソナゴ マルガヨ）＝涼しくて晴れ<br><hl>겨울（キョウル）＝冬</hl>：춥고 건조해요（チュプコ コンジョヘヨ）＝寒くて乾燥<br><br>旅行のベストシーズンは<hl>4月の봄</hl>と<hl>10月の가을</hl>がおすすめです！"
+      },
+      "drama": {
+        "lines": [
+          "오늘 날씨가 우리 첫만남 같네.",
+          "맞아, 그날도 이렇게 맑았었지."
+        ],
+        "reading": "オヌル ナルッシガ ウリ チョンマンナム カンネ。／ マジャ、クナルド イロケ マルガッソッチ。",
+        "japanese": "「今日の天気が私たちの初対面みたいだね。」 ／ 「そうだね、あの日もこんなに晴れてたね。」",
+        "note": "天気を使ったロマンチックなドラマ台詞です ✨"
+      },
+      "summary": [
+        {
+          "korean": "오늘 날씨 정말 좋네요!",
+          "reading": "オヌル ナルッシ チョンマル チョンネヨ！"
+        },
+        {
+          "korean": "오늘 덥네요",
+          "reading": "オヌル トムネヨ"
+        },
+        {
+          "korean": "비가 와요",
+          "reading": "ピガ ワヨ"
+        },
+        {
+          "korean": "따뜻해요",
+          "reading": "タトゥテヨ"
+        }
+      ]
+    }
+  ]
+}

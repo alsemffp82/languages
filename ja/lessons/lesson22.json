@@ -1,0 +1,228 @@
+{
+  "id": "lesson22",
+  "stage": 4,
+  "stageTitle": "약속 잡기",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "次のレッスン、<br>始めましょう！"
+      },
+      "korean": "언제 시간 있어요?",
+      "reading": "オンジェ シガン イッソヨ？",
+      "meaning": "いつ時間ありますか？",
+      "audioKey": "언제 시간 있어요?",
+      "scenes": [
+        {
+          "icon": "📅",
+          "text": "友達を誘うときの定番フレーズ！"
+        },
+        {
+          "icon": "⏰",
+          "text": "「언제（オンジェ）＝いつ」「시간＝時間」"
+        },
+        {
+          "icon": "☕",
+          "text": "「같이 커피 마셔요」と続けると完璧！"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "日本語と韓国語はそっくり！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "比べてみよう！"
+      },
+      "japanese": {
+        "sentence": "今週末、\n暇ですか？",
+        "reading": "こんしゅうまつ ひまですか"
+      },
+      "korean": {
+        "sentence": "이번 주말에\n시간 있어요?",
+        "reading": "イボン チュマレ シガン イッソヨ？"
+      },
+      "insight": "「이번（イボン）＝今回の」「주말（チュマル）＝週末」「에（エ）＝に」。日本語と語順が全く同じ！",
+      "vocab": [
+        {
+          "korean": "이번 주",
+          "japanese": "イボン チュ ＝ 今週"
+        },
+        {
+          "korean": "주말",
+          "japanese": "チュマル ＝ 週末"
+        },
+        {
+          "korean": "평일",
+          "japanese": "ピョンイル ＝ 平日"
+        },
+        {
+          "korean": "오후",
+          "japanese": "オフ ＝ 午後"
+        },
+        {
+          "korean": "다음에",
+          "japanese": "タウメ ＝ 今度"
+        },
+        {
+          "korean": "약속",
+          "japanese": "ヤクソク ＝ 約束"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "一緒に<br>行こう！"
+      },
+      "template": {
+        "korean": "___ 같이 가요!",
+        "reading": "（単語を選んでください）",
+        "japanese": "一緒に〜行きましょう！",
+        "readingTemplate": "___ カチ カヨ！",
+        "japaneseTemplate": "一緒に___行きましょう！"
+      },
+      "words": [
+        {
+          "korean": "카페",
+          "reading": "カペ",
+          "japanese": "カフェに",
+          "audioKey": "카페 같이 가요!"
+        },
+        {
+          "korean": "밥 먹으러",
+          "reading": "パプ モグロ",
+          "japanese": "ご飯食べに",
+          "audioKey": "밥 먹으러 같이 가요!"
+        },
+        {
+          "korean": "쇼핑",
+          "reading": "ショピン",
+          "japanese": "ショッピング",
+          "audioKey": "쇼핑 같이 가요!"
+        },
+        {
+          "korean": "드라이브",
+          "reading": "ドゥライブ",
+          "japanese": "ドライブ",
+          "audioKey": "드라이브 같이 가요!"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "📅",
+          "question": "「いつ時間ありますか？」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "어디서 시간 있어요?",
+              "reading": "オディソ シガン イッソヨ？",
+              "correct": false
+            },
+            {
+              "korean": "언제 시간 있어요?",
+              "reading": "オンジェ シガン イッソヨ？",
+              "correct": true
+            },
+            {
+              "korean": "왜 시간 있어요?",
+              "reading": "ウェ シガン イッソヨ？",
+              "correct": false
+            }
+          ],
+          "correctMsg": "完璧！「언제＝いつ」。気になる人に声をかけてみましょう！",
+          "wrongMsg": "惜しい！「언제 시간 있어요?（オンジェ シガン イッソヨ？）」。「언제＝いつ」ですよ。"
+        },
+        {
+          "icon": "☕",
+          "question": "「一緒にカフェ行きましょう！」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "밥 먹으러 같이 가요",
+              "reading": "パプ モグロ カチ カヨ",
+              "correct": false
+            },
+            {
+              "korean": "카페 같이 가요",
+              "reading": "カペ カチ カヨ",
+              "correct": true
+            },
+            {
+              "korean": "드라이브 같이 가요",
+              "reading": "ドゥライブ カチ カヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "その通り！「같이（カチ）＝一緒に」は毎日使う言葉です！",
+          "wrongMsg": "正解は「카페 같이 가요」。「같이＝一緒に」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "今日もできました！<br>すごいです！"
+      },
+      "culture": {
+        "icon": "📅",
+        "title": "韓国の約束文化！",
+        "body": "약束の返し方：<br>・<hl>「<kr>좋아요! 가요!</kr>（チョアヨ！カヨ！）」</hl>＝「行きましょう！」<br>・<hl>「<kr>다음에 꼭 가요!</kr>（タウメ コク カヨ！）」</hl>＝「今度は絶対！」"
+      },
+      "drama": {
+        "lines": [
+          "우리 이번 주말에 만나요!",
+          "기대돼요!"
+        ],
+        "reading": "ウリ イボン チュマレ マンナヨ！／ キデテヨ！",
+        "japanese": "「今週末会いましょう！」 ／ 「楽しみです！」",
+        "note": "약속を取り付けたときの嬉しい一言 ✨"
+      },
+      "summary": [
+        {
+          "korean": "언제 시간 있어요?",
+          "reading": "オンジェ シガン イッソヨ？"
+        },
+        {
+          "korean": "카페 같이 가요",
+          "reading": "カペ カチ カヨ"
+        },
+        {
+          "korean": "좋아요! 가요!",
+          "reading": "チョアヨ！カヨ！"
+        },
+        {
+          "korean": "기대돼요",
+          "reading": "キデテヨ"
+        }
+      ]
+    }
+  ]
+}

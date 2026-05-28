@@ -1,0 +1,79 @@
+{
+  "id": "lesson14", "stage": 2, "stageTitle": "헤어샵에서", "appTitle": "ソウル旅行シミュレーション",
+  "character": { "default": "images/1.png", "correct": "images/2.png", "wrong": "images/3.png", "cheer": "images/4.png", "complete": "images/6.png" },
+  "sections": [
+    { "type": "phrase", "stepLabel": "今日の一言", "stepTitle": "まず、この言葉を覚えましょう",
+      "character": { "img": "images/1.png", "msg": "ヘアサロン、<br>挑戦しましょう！" },
+      "korean": "조금만 잘라 주세요.", "reading": "チョグムマン チャルラ ジュセヨ。", "meaning": "少しだけ切ってください。", "audioKey": "조금만 잘라 주세요",
+      "scenes": [
+        { "icon": "💇", "text": "韓国のヘアサロンは日本より安くて技術が高いと人気！" },
+        { "icon": "✂️", "text": "「조금만（チョグムマン）＝少しだけ」は失敗しないための魔法の言葉。" },
+        { "icon": "📱", "text": "スマホの写真を見せながら言えば完璧です！" }
+      ]
+    },
+    { "type": "compare", "stepLabel": "日本語と比べる", "stepTitle": "美容室の言葉もそっくり！",
+      "character": { "img": "images/1.png", "msg": "美容語も<br>似てますよ！" },
+      "japanese": { "sentence": "パーマを\nかけたいです。", "reading": "パーマ を かけたいです" },
+      "korean": { "sentence": "파마를\n하고 싶어요.", "reading": "パマルル ハゴ シポヨ" },
+      "insight": "「파마（パマ）＝パーマ」はそのまま！「를（ルル）」は目的格助詞「を」と同じです。",
+      "vocab": [
+        { "korean": "파마", "japanese": "パマ ＝ パーマ" },
+        { "korean": "염색", "japanese": "ヨムセク ＝ カラーリング（染色）" },
+        { "korean": "트리트먼트", "japanese": "トゥリトゥモントゥ ＝ トリートメント" },
+        { "korean": "앞머리", "japanese": "アンモリ ＝ 前髪" },
+        { "korean": "끝부분", "japanese": "クッブブン ＝ 毛先" },
+        { "korean": "자연스럽게", "japanese": "チャヨンスロプケ ＝ 自然に" }
+      ]
+    },
+    { "type": "pattern", "stepLabel": "パターン練習", "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": { "img": "images/4.png", "msg": "ヘアスタイルを<br>伝えよう！" },
+      "template": { "korean": "___ 해 주세요.", "reading": "（単語を選んでください）", "japanese": "〜にしてください", "readingTemplate": "___ ヘ ジュセヨ。", "japaneseTemplate": "___にしてください。" },
+      "words": [
+        { "korean": "자연스럽게", "reading": "チャヨンスロプケ", "japanese": "自然に", "audioKey": "자연스럽게 해 주세요" },
+        { "korean": "앞머리만 정리", "reading": "アンモリマン チョンニ", "japanese": "前髪だけ整える", "audioKey": "앞머리만 정리해 주세요" },
+        { "korean": "끝만 조금", "reading": "クッマン チョグム", "japanese": "毛先だけ少し", "audioKey": "끝만 조금 해 주세요" },
+        { "korean": "드라이도", "reading": "トゥライド", "japanese": "ドライもお願い", "audioKey": "드라이도 해 주세요" }
+      ]
+    },
+    { "type": "quiz", "stepLabel": "確認クイズ", "stepTitle": "覚えているか確認しましょう",
+      "character": { "img": "images/1.png", "msg": "さあ、クイズ！<br>大丈夫ですよ 😊" },
+      "questions": [
+        { "icon": "✂️", "question": "「少しだけ切ってください」は？", "sub": "今日の一言を思い出して！",
+          "options": [
+            { "korean": "많이 잘라 주세요", "reading": "マニ チャルラ ジュセヨ", "correct": false },
+            { "korean": "조금만 잘라 주세요", "reading": "チョグムマン チャルラ ジュセヨ", "correct": true },
+            { "korean": "전부 잘라 주세요", "reading": "チョンブ チャルラ ジュセヨ", "correct": false }
+          ],
+          "correctMsg": "完璧！「조금만＝少しだけ」、ヘアサロンで失敗しないための言葉です！", "wrongMsg": "惜しい！「조금만 잘라 주세요」。「조금만＝少しだけ」ですよ。" },
+        { "icon": "💇", "question": "「自然にしてください」は？", "sub": "パターン練習を思い出して！",
+          "options": [
+            { "korean": "드라이도 해 주세요", "reading": "トゥライド ヘ ジュセヨ", "correct": false },
+            { "korean": "자연스럽게 해 주세요", "reading": "チャヨンスロプケ ヘ ジュセヨ", "correct": true },
+            { "korean": "앞머리만 정리해 주세요", "reading": "アンモリマン チョンニヘ ジュセヨ", "correct": false }
+          ],
+          "correctMsg": "その通り！「자연스럽게＝自然に」。覚えやすい言葉です！", "wrongMsg": "正解は「자연스럽게 해 주세요」。「자연스럽다＝自然だ」ですよ。" }
+      ]
+    },
+    { "type": "culture", "stepLabel": "韓国文化のひとさじ", "stepTitle": "知っておくと楽しい！",
+      "character": { "img": "images/6.png", "msg": "ヘアサロン、<br>楽しめます！" },
+      "culture": {
+        "icon": "💇",
+        "title": "韓国のヘアサロン、実はお得！",
+        "body": "ソウルのヘアサロンはカット約<hl>1万5千〜2万ウォン</hl>（約1,700〜2,200円）と日本より安め。<br><br>カウンセリングで使えるフレーズ：<br>・<hl>「<kr>이 사진처럼 해 주세요.</kr>（イ サジンチョロム ヘ ジュセヨ）」</hl><br>＝「この写真のようにしてください」<br>・<hl>「<kr>너무 짧게는 하지 마세요.</kr>（ノム チャルケヌン ハジ マセヨ）」</hl><br>＝「あまり短くしないでください」",
+        "icon2": ""
+      },
+      "drama": {
+        "lines": ["머리 잘랐어요? 예쁘다!", "완전 잘 어울려요!"],
+        "reading": "モリ チャルラッソヨ？ イェップダ！／ ワンジョン チャル オウルリョヨ！",
+        "japanese": "「髪切ったんですか？かわいい！」 ／ 「すごく似合ってます！」",
+        "note": "新しいヘアスタイルをほめてもらったらこの言葉！ ✨"
+      },
+      "summary": [
+        { "korean": "조금만 잘라 주세요", "reading": "チョグムマン チャルラ ジュセヨ" },
+        { "korean": "자연스럽게 해 주세요", "reading": "チャヨンスロプケ ヘ ジュセヨ" },
+        { "korean": "이 사진처럼 해 주세요", "reading": "イ サジンチョロム ヘ ジュセヨ" },
+        { "korean": "잘 어울려요", "reading": "チャル オウルリョヨ" }
+      ]
+    }
+  ]
+}

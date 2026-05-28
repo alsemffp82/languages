@@ -1,0 +1,228 @@
+{
+  "id": "lesson8",
+  "stage": 2,
+  "stageTitle": "告白・恋愛",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "ドラマの名場面、<br>覚えましょう！"
+      },
+      "korean": "좋아해요.",
+      "reading": "チョアヘヨ。",
+      "meaning": "好きです。（告白のフレーズ）",
+      "audioKey": "좋아해요",
+      "scenes": [
+        {
+          "icon": "💘",
+          "text": "ドラマの告白シーンで必ず出てくる一言！"
+        },
+        {
+          "icon": "🌸",
+          "text": "「좋아하다（チョアハダ）」＝好きだ。「좋아요」は「いいね」の意味にもなります。"
+        },
+        {
+          "icon": "💬",
+          "text": "もっと強い愛情は「사랑해요（サランヘヨ）＝愛しています」。"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "愛の言葉もそっくり！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "気持ちを<br>伝えよう！"
+      },
+      "japanese": {
+        "sentence": "あなたが\n好きです。",
+        "reading": "あなた が すきです"
+      },
+      "korean": {
+        "sentence": "당신이\n좋아요.",
+        "reading": "タンシニ チョアヨ"
+      },
+      "insight": "「が」＝「이/가（イ／ガ）」、語順も同じ。<br>ただしドラマでは「당신（タンシン）＝あなた」より名前を呼ぶのが自然です。",
+      "vocab": [
+        {
+          "korean": "좋아하다",
+          "japanese": "チョアハダ ＝ 好きだ"
+        },
+        {
+          "korean": "사랑하다",
+          "japanese": "サランハダ ＝ 愛する"
+        },
+        {
+          "korean": "보고 싶다",
+          "japanese": "ポゴシッタ ＝ 会いたい"
+        },
+        {
+          "korean": "잡지 마요",
+          "japanese": "チャプチ マヨ ＝ 引き止めないで"
+        },
+        {
+          "korean": "사귀다",
+          "japanese": "サギダ ＝ 付き合う"
+        },
+        {
+          "korean": "고백",
+          "japanese": "コベク ＝ 告白（漢字語！）"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "ドラマの台詞、<br>言ってみよう！"
+      },
+      "template": {
+        "korean": "___ 보고 싶어요.",
+        "reading": "（単語を選んでください）",
+        "japanese": "〜に会いたいです",
+        "readingTemplate": "___ ポゴ シポヨ。",
+        "japaneseTemplate": "___に会いたいです。"
+      },
+      "words": [
+        {
+          "korean": "오빠",
+          "reading": "オッパ",
+          "japanese": "お兄さん（彼氏への呼び方）",
+          "audioKey": "오빠 보고 싶어요"
+        },
+        {
+          "korean": "언니",
+          "reading": "オンニ",
+          "japanese": "お姉さん（女性が女性へ）",
+          "audioKey": "언니 보고 싶어요"
+        },
+        {
+          "korean": "너무",
+          "reading": "ノム",
+          "japanese": "とても（あなたに）",
+          "audioKey": "너무 보고 싶어요"
+        },
+        {
+          "korean": "많이",
+          "reading": "マニ",
+          "japanese": "すごく",
+          "audioKey": "많이 보고 싶어요"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "💘",
+          "question": "ドラマの告白シーン。「好きです」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "싫어해요",
+              "reading": "シロヘヨ",
+              "correct": false
+            },
+            {
+              "korean": "좋아해요",
+              "reading": "チョアヘヨ",
+              "correct": true
+            },
+            {
+              "korean": "괜찮아요",
+              "reading": "クェンチャナヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "完璧！「좋아해요」、ドラマの告白シーンで絶対聞こえます 💘",
+          "wrongMsg": "惜しい！「좋아해요（チョアヘヨ）」。「좋다＝良い・好き」から来ています。"
+        },
+        {
+          "icon": "🌸",
+          "question": "「すごく会いたいです」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "많이 보고 싶어요",
+              "reading": "マニ ポゴ シポヨ",
+              "correct": true
+            },
+            {
+              "korean": "많이 가고 싶어요",
+              "reading": "マニ カゴ シポヨ",
+              "correct": false
+            },
+            {
+              "korean": "많이 먹고 싶어요",
+              "reading": "マニ モクコ シポヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "その調子！「보고 싶어요＝会いたいです」。「보다＝見る・会う」から来ています。",
+          "wrongMsg": "正解は「많이 보고 싶어요（マニ ポゴ シポヨ）」。「보고 싶다＝会いたい」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "ドラマの言葉、<br>増えましたね！"
+      },
+      "culture": {
+        "icon": "💘",
+        "title": "韓国ドラマの告白、なぜあんなに素敵？",
+        "body": "韓国語の告白には<hl>「이름（名前）」</hl>を呼ぶのが鉄則。<br>「사토 씨, 좋아해요.（サトウさん、好きです）」のように。<br><br>ドラマでよく聞く告白のシチュエーション：<br>・<hl>빗속 고백（ビッソク コベク）</hl>＝雨の中の告白<br>・<hl>손목 잡기（ソンモク チャプキ）</hl>＝手首をつかんで引き止める<br><br>知っておくと倍楽しめます 😊"
+      },
+      "drama": {
+        "lines": [
+          "나 너 좋아하나봐.",
+          "사귀어 줄래요?"
+        ],
+        "reading": "ナ ノ チョアハナバ。／ サギオ ジュルレヨ？",
+        "japanese": "「私、あなたのこと好きみたい。」 ／ 「付き合ってくれますか？」",
+        "note": "この2フレーズを聞いたら告白シーンです！ ✨"
+      },
+      "summary": [
+        {
+          "korean": "좋아해요",
+          "reading": "チョアヘヨ"
+        },
+        {
+          "korean": "사랑해요",
+          "reading": "サランヘヨ"
+        },
+        {
+          "korean": "보고 싶어요",
+          "reading": "ポゴ シポヨ"
+        },
+        {
+          "korean": "많이 보고 싶어요",
+          "reading": "マニ ポゴ シポヨ"
+        }
+      ]
+    }
+  ]
+}

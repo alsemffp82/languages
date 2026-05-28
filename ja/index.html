@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ソウル旅行シミュレーション</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+KR:wght@400;700&display=swap');
+    :root {
+      --cream:#FDF6EE; --warm-pink:#E8827A; --soft-rose:#EDD5D0; --blush:#FAF0EC;
+      --brown:#7B5B4C; --dark-brown:#4A3328; --sage:#7FB5A0; --soft-sage:#D8EDE6;
+      --gold:#C9973A; --light-gold:#FFF5DC; --text:#2E1F18; --muted:#9E7E72;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Noto Sans JP',sans-serif;background:var(--cream);color:var(--text);min-height:100vh;font-size:15px;line-height:1.7;}
+
+    /* ── 헤더 ── */
+    header{background:linear-gradient(135deg,#C9604A 0%,#A84A60 100%);color:white;padding:36px 24px 28px;text-align:center;position:relative;overflow:hidden;}
+    header::before{content:'✈️';position:absolute;font-size:120px;opacity:.07;left:-20px;top:-10px;transform:rotate(-15deg);}
+    header::after{content:'🇰🇷';position:absolute;font-size:80px;opacity:.1;right:10px;bottom:-10px;}
+    .logo-wrap{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:14px;}
+    .logo-img{width:52px;height:52px;border-radius:50%;border:2px solid rgba(255,255,255,.4);object-fit:cover;}
+    .app-name{font-size:13px;letter-spacing:2px;opacity:.85;font-weight:500;}
+    header h1{font-size:24px;font-weight:700;line-height:1.4;margin-bottom:6px;}
+    header .sub{font-size:13px;opacity:.75;}
+
+    /* ── 진행 요약 ── */
+    .summary-bar{background:white;border-bottom:1px solid #EDE0D8;padding:16px 20px;}
+    .summary-inner{max-width:600px;margin:0 auto;display:flex;align-items:center;gap:16px;}
+    .prog-circle{position:relative;width:54px;height:54px;flex-shrink:0;}
+    .prog-circle svg{transform:rotate(-90deg);}
+    .prog-circle .pct{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--warm-pink);}
+    .prog-text{}
+    .prog-text .title{font-size:14px;font-weight:700;color:var(--dark-brown);}
+    .prog-text .sub{font-size:12px;color:var(--muted);margin-top:2px;}
+
+    /* ── 메인 컨텐츠 ── */
+    .content{max-width:600px;margin:0 auto;padding:20px 16px 40px;}
+
+    /* ── 시즌 헤더 ── */
+    .season-header{margin:24px 0 12px;padding:14px 16px;border-radius:14px;display:flex;align-items:center;gap:12px;}
+    .season-header .s-emoji{font-size:28px;flex-shrink:0;}
+    .season-header .s-info .s-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;opacity:.7;}
+    .season-header .s-info .s-title{font-size:17px;font-weight:700;margin-top:1px;}
+    .season-header .s-info .s-desc{font-size:12px;opacity:.75;margin-top:2px;}
+    .season-header .s-prog{margin-left:auto;text-align:center;flex-shrink:0;}
+    .season-header .s-prog .s-done{font-size:18px;font-weight:700;}
+    .season-header .s-prog .s-total{font-size:11px;opacity:.6;}
+
+    .season-s1{background:linear-gradient(135deg,#FFF0EE,#FFE4E0);color:#7A3628;}
+    .season-s2{background:linear-gradient(135deg,#EEF4FF,#E0ECFF);color:#2844A8;}
+    .season-s3{background:linear-gradient(135deg,#FFF0FF,#F5E0FF);color:#7A28A8;}
+    .season-s4{background:linear-gradient(135deg,#EEFAF6,#D8F5EC);color:#286050;}
+    .season-s5{background:linear-gradient(135deg,#FFFBEE,#FFF5D8);color:#7A6028;}
+    .season-s6{background:linear-gradient(135deg,#FFF0F4,#FFE0E8);color:#A82844;}
+
+    /* ── 레슨 카드 ── */
+    .lesson-card{background:white;border-radius:14px;padding:14px 16px;margin-bottom:8px;box-shadow:0 2px 8px rgba(0,0,0,.05);display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s;border:2px solid transparent;cursor:pointer;}
+    .lesson-card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.1);}
+    .lesson-card.active{border-color:var(--warm-pink);}
+    .lesson-card.locked{opacity:.45;cursor:default;pointer-events:none;}
+    .lesson-card.done{border-color:var(--sage);}
+    .stage-badge{width:46px;height:46px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+    .stage-badge.color-s1{background:#FFF0EE;}
+    .stage-badge.color-s2{background:#EEF4FF;}
+    .stage-badge.color-s3{background:#F5EEFF;}
+    .stage-badge.color-s4{background:#EEFAF6;}
+    .stage-badge.color-s5{background:#FFFBEE;}
+    .stage-badge.color-s6{background:#FFF0F4;}
+    .stage-badge .stage-num{font-size:9px;font-weight:700;color:var(--muted);margin-top:2px;}
+    .lesson-info{flex:1;min-width:0;}
+    .lesson-info .stage-label{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.5px;}
+    .lesson-info .lesson-title{font-size:15px;font-weight:700;color:var(--dark-brown);margin:2px 0 3px;}
+    .lesson-info .lesson-desc{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .lesson-status{flex-shrink:0;text-align:right;}
+    .status-icon{font-size:18px;}
+    .status-text{font-size:11px;color:var(--muted);margin-top:2px;}
+    .mini-bar{height:3px;background:#EDE0D8;border-radius:2px;margin-top:5px;overflow:hidden;}
+    .mini-bar-fill{height:100%;background:var(--sage);border-radius:2px;transition:width .4s ease;}
+
+    /* ── 동기부여 배너 ── */
+    .motivation{background:linear-gradient(135deg,var(--light-gold),#FFF8F0);border:1.5px solid var(--soft-rose);border-radius:16px;padding:18px 18px;margin-bottom:20px;display:flex;gap:14px;align-items:center;}
+    .motivation .char{width:60px;height:60px;object-fit:contain;flex-shrink:0;}
+    .motivation .msg{font-size:13px;color:var(--dark-brown);line-height:1.7;}
+    .motivation .msg strong{color:var(--warm-pink);}
+
+    /* ── 다음 레슨 버튼 ── */
+    .start-btn{display:block;width:100%;padding:16px;background:linear-gradient(135deg,var(--warm-pink),#A84A60);color:white;border:none;border-radius:14px;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer;text-align:center;text-decoration:none;margin-bottom:20px;transition:opacity .2s,transform .1s;}
+    .start-btn:active{opacity:.9;transform:scale(.99);}
+
+    /* ── 잠금 안내 ── */
+    .lock-note{text-align:center;font-size:12px;color:var(--muted);padding:4px 0 24px;}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-wrap">
+    <img class="logo-img" src="images/main-logo.png" alt="キャラクター" onerror="this.style.display='none'">
+    <span class="app-name">ソウル旅行シミュレーション</span>
+  </div>
+  <h1>韓国語、<br>一緒に始めましょう！</h1>
+  <div class="sub">サトウさん専用レッスン</div>
+</header>
+
+<div class="summary-bar">
+  <div class="summary-inner">
+    <div class="prog-circle">
+      <svg width="54" height="54" viewBox="0 0 54 54">
+        <circle cx="27" cy="27" r="22" fill="none" stroke="#EDE0D8" stroke-width="5"/>
+        <circle cx="27" cy="27" r="22" fill="none" stroke="#E8827A" stroke-width="5"
+          stroke-dasharray="138.2" stroke-dashoffset="138.2" stroke-linecap="round"
+          id="progCircle"/>
+      </svg>
+      <div class="pct" id="progPct">0%</div>
+    </div>
+    <div class="prog-text">
+      <div class="title" id="progTitle">最初のレッスンを始めましょう！</div>
+      <div class="sub" id="progSub">全36課 · 6シーズン · ソウルの旅が待っています ✈️</div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="motivation" id="motivationBanner">
+    <img class="char" src="images/1.png" alt="" id="motivChar">
+    <div class="msg" id="motivMsg">
+      <strong>こんにちは、サトウさん！</strong><br>
+      ソウルの旅、一緒に始めましょう。<br>毎日ひとつで十分ですよ 😊
+    </div>
+  </div>
+
+  <a class="start-btn" id="continueBtn" href="lesson.html?id=lesson1">
+    ✈️ &nbsp;第1課から始める
+  </a>
+
+  <div id="lessonList"></div>
+
+  <div class="lock-note">🔒 前のレッスンを完了すると次が解放されます</div>
+
+</div>
+
+<script>
+// ── 시즌 메타데이터 ──
+const SEASONS = [
+  {
+    num: 1,
+    emoji: '✈️',
+    title: 'ソウル旅行編',
+    desc: '空港・カフェ・ホテル・地下鉄・市場',
+    cls: 'season-s1',
+    badgeCls: 'color-s1',
+  },
+  {
+    num: 2,
+    emoji: '🎬',
+    title: 'ドラマ・感情編',
+    desc: '設レイ・恋愛・応援・驚き・クリシェ・OST',
+    cls: 'season-s2',
+    badgeCls: 'color-s2',
+  },
+  {
+    num: 3,
+    emoji: '💄',
+    title: 'K-ビューティ編',
+    desc: 'オリーブヤング・ヘアサロン・ネイル・スパ',
+    cls: 'season-s3',
+    badgeCls: 'color-s3',
+  },
+  {
+    num: 4,
+    emoji: '🤝',
+    title: '友達作り編',
+    desc: '自己紹介・趣味・誘い・SNS・칭찬',
+    cls: 'season-s4',
+    badgeCls: 'color-s4',
+  },
+  {
+    num: 5,
+    emoji: '📚',
+    title: '中級表現編',
+    desc: 'タメ語・丁寧なお願い・可能・過去・理由・計画',
+    cls: 'season-s5',
+    badgeCls: 'color-s5',
+  },
+  {
+    num: 6,
+    emoji: '🌸',
+    title: '生活韓国語編',
+    desc: '食堂・ノレバン・病院・タクシー・天気・別れ',
+    cls: 'season-s6',
+    badgeCls: 'color-s6',
+  },
+];
+
+// ── 레슨 메타데이터 ──
+const LESSONS = [
+  // シーズン1
+  { id:'lesson1',  season:1, stage:1, emoji:'✈️',  title:'空港で',       desc:'「저기요」「이거 주세요」など空港・食堂の基本フレーズ', totalSteps:5 },
+  { id:'lesson2',  season:1, stage:2, emoji:'☕',  title:'カフェで',      desc:'注文、サイズ選び、テイクアウトの言い方', totalSteps:5 },
+  { id:'lesson3',  season:1, stage:3, emoji:'🏨',  title:'ホテルで',      desc:'チェックイン、リクエスト、トラブル対応', totalSteps:5 },
+  { id:'lesson4',  season:1, stage:4, emoji:'🚇',  title:'地下鉄で',      desc:'行き先の聞き方、乗り換え、交通カード', totalSteps:5 },
+  { id:'lesson5',  season:1, stage:5, emoji:'🛍️', title:'市場で',        desc:'値段を聞く、値引き、気持ちを伝える', totalSteps:5 },
+  { id:'lesson6',  season:1, stage:6, emoji:'🎬',  title:'ドラマ撮影地で', desc:'ドラマの名台詞、感情表現、旅の締めくくり', totalSteps:5 },
+  // シーズン2
+  { id:'lesson7',  season:2, stage:1, emoji:'💗',  title:'設レイ・感情',   desc:'설레요, ときめき表現、感情を言葉にする', totalSteps:5 },
+  { id:'lesson8',  season:2, stage:2, emoji:'💌',  title:'告白・恋愛',     desc:'좋아해요, 好意を伝える表現', totalSteps:5 },
+  { id:'lesson9',  season:2, stage:3, emoji:'🤗',  title:'위로・応援',     desc:'괜찮아요?, 大丈夫？心配しないで', totalSteps:5 },
+  { id:'lesson10', season:2, stage:4, emoji:'😱',  title:'놀람・感嘆',     desc:'말도 안 돼!, ありえない！驚きの表現', totalSteps:5 },
+  { id:'lesson11', season:2, stage:5, emoji:'🏃',  title:'ドラマクリシェ',  desc:'잠깐만요!, ちょっと待って！ドラマ定番', totalSteps:5 },
+  { id:'lesson12', season:2, stage:6, emoji:'🎵',  title:'그리움・OST',    desc:'그리워요, 恋しいです。OSTの言葉', totalSteps:5 },
+  // シーズン3
+  { id:'lesson13', season:3, stage:1, emoji:'💄',  title:'オリーブヤングで', desc:'추천해 주세요, コスメのおすすめ', totalSteps:5 },
+  { id:'lesson14', season:3, stage:2, emoji:'✂️',  title:'ヘアサロンで',   desc:'조금만 잘라 주세요, ヘアスタイルのお願い', totalSteps:5 },
+  { id:'lesson15', season:3, stage:3, emoji:'💅',  title:'ネイルサロンで',  desc:'예쁘게 해 주세요, ネイルデザイン選び', totalSteps:5 },
+  { id:'lesson16', season:3, stage:4, emoji:'🧖',  title:'マッサージ・スパ', desc:'세게 해 주세요, 強さのお願い', totalSteps:5 },
+  { id:'lesson17', season:3, stage:5, emoji:'🏪',  title:'コンビニで',     desc:'데워 주세요, 温めて・袋ください', totalSteps:5 },
+  { id:'lesson18', season:3, stage:6, emoji:'🛵',  title:'配達フード',      desc:'배달 돼요?, デリバリー注文', totalSteps:5 },
+  // シーズン4
+  { id:'lesson19', season:4, stage:1, emoji:'🙇',  title:'はじめまして',   desc:'잘 부탁드립니다, 自己紹介の基本', totalSteps:5 },
+  { id:'lesson20', season:4, stage:2, emoji:'👥',  title:'年齢・仕事',     desc:'몇 살이에요?, 年齢や職業の話し方', totalSteps:5 },
+  { id:'lesson21', season:4, stage:3, emoji:'🎮',  title:'趣味を話す',     desc:'저도요!, 共感と趣味の共有', totalSteps:5 },
+  { id:'lesson22', season:4, stage:4, emoji:'📅',  title:'約束を作る',     desc:'언제 시간 있어요?, 誘い方・日程調整', totalSteps:5 },
+  { id:'lesson23', season:4, stage:5, emoji:'📱',  title:'連絡する',       desc:'카톡 해요, SNS交換・連絡の取り方', totalSteps:5 },
+  { id:'lesson24', season:4, stage:6, emoji:'✨',  title:'ほめる',         desc:'너무 잘 어울려요!, 褒め言葉の表現', totalSteps:5 },
+  // シーズン5
+  { id:'lesson25', season:5, stage:1, emoji:'🗣️',  title:'タメ語入門',    desc:'잘 지냈어?, 友達との反語表現', totalSteps:5 },
+  { id:'lesson26', season:5, stage:2, emoji:'🙏',  title:'丁寧なお願い',   desc:'부탁드려도 될까요?, 上品な依頼', totalSteps:5 },
+  { id:'lesson27', season:5, stage:3, emoji:'💪',  title:'できる・できない', desc:'할 수 있어요, 可能・不可能の表現', totalSteps:5 },
+  { id:'lesson28', season:5, stage:4, emoji:'📖',  title:'過去の話',       desc:'어렸을 때, 昔話・過去形の使い方', totalSteps:5 },
+  { id:'lesson29', season:5, stage:5, emoji:'💡',  title:'理由を言う',     desc:'때문이에요, なぜなら〜だからです', totalSteps:5 },
+  { id:'lesson30', season:5, stage:6, emoji:'🌟',  title:'計画・意図',     desc:'오고 싶어요, したいです・するつもりです', totalSteps:5 },
+  // シーズン6
+  { id:'lesson31', season:6, stage:1, emoji:'🍲',  title:'韓国食堂で',     desc:'맛있게 먹겠습니다!, 食堂での表現', totalSteps:5 },
+  { id:'lesson32', season:6, stage:2, emoji:'🎤',  title:'ノレバンで',     desc:'이 노래 신청할 수 있어요?, カラオケ', totalSteps:5 },
+  { id:'lesson33', season:6, stage:3, emoji:'🏥',  title:'病院で',         desc:'여기가 아파요, 体の不調を伝える', totalSteps:5 },
+  { id:'lesson34', season:6, stage:4, emoji:'🚕',  title:'タクシー・交通',  desc:'여기서 세워 주세요, 交通手段の使い方', totalSteps:5 },
+  { id:'lesson35', season:6, stage:5, emoji:'☀️',  title:'天気の話',       desc:'날씨 정말 좋네요!, 天気・季節表現', totalSteps:5 },
+  { id:'lesson36', season:6, stage:6, emoji:'🌸',  title:'別れ・再会',     desc:'또 만나요!, 旅の終わりに使う表現', totalSteps:5 },
+];
+
+// ── localStorage から 진행 상황 읽기 ──
+function getProgress(id) {
+  try {
+    const raw = localStorage.getItem(`progress_${id}`);
+    return raw ? JSON.parse(raw) : { done: false, step: 0 };
+  } catch { return { done: false, step: 0 }; }
+}
+
+// ── 진행 상황 계산 ──
+function calcOverall() {
+  const done = LESSONS.filter(l => getProgress(l.id).done).length;
+  return { done, total: LESSONS.length, pct: Math.round((done / LESSONS.length) * 100) };
+}
+
+// ── 시즌별 진행 계산 ──
+function calcSeasonProgress(seasonNum) {
+  const lessons = LESSONS.filter(l => l.season === seasonNum);
+  const done = lessons.filter(l => getProgress(l.id).done).length;
+  return { done, total: lessons.length };
+}
+
+// ── 진행 원형 차트 업데이트 ──
+function updateProgress() {
+  const { done, total, pct } = calcOverall();
+  const circumference = 2 * Math.PI * 22;
+  const offset = circumference * (1 - pct / 100);
+  document.getElementById('progCircle').style.strokeDashoffset = offset;
+  document.getElementById('progPct').textContent = pct + '%';
+
+  if (done === 0) {
+    document.getElementById('progTitle').textContent = '最初のレッスンを始めましょう！';
+    document.getElementById('progSub').textContent = `全${total}課 · 6シーズン · ソウルの旅が待っています ✈️`;
+  } else if (done === total) {
+    document.getElementById('progTitle').textContent = '全レッスン完了！おめでとうございます 🎉';
+    document.getElementById('progSub').textContent = 'ソウルの旅、完全準備完了です！';
+  } else {
+    document.getElementById('progTitle').textContent = `${done}/${total}課 完了`;
+    document.getElementById('progSub').textContent = 'このまま続けましょう！응원합니다 💪';
+  }
+}
+
+// ── 다음 레슨 버튼 업데이트 ──
+function updateContinueBtn() {
+  const btn = document.getElementById('continueBtn');
+  const motivChar = document.getElementById('motivChar');
+  const motivMsg = document.getElementById('motivMsg');
+
+  const next = LESSONS.find(l => !getProgress(l.id).done);
+
+  if (!next) {
+    btn.textContent = '🎊 全レッスン完了！もう一度復習する';
+    btn.href = 'lesson.html?id=lesson1';
+    motivChar.src = 'images/6.png';
+    motivMsg.innerHTML = '<strong>素晴らしい！サトウさん！</strong><br>全36課・6シーズン完了しました。<br>ソウルでそのまま使えます 🇰🇷';
+    return;
+  }
+
+  const prog = getProgress(next.id);
+  const idx = LESSONS.findIndex(l => l.id === next.id);
+  const season = SEASONS.find(s => s.num === next.season);
+
+  if (idx === 0 && prog.step === 0) {
+    btn.textContent = `✈️ シーズン1・第1課から始める`;
+    motivChar.src = 'images/1.png';
+    motivMsg.innerHTML = '<strong>こんにちは、サトウさん！</strong><br>ソウルの旅、一緒に始めましょう。<br>毎日ひとつで十分ですよ 😊';
+  } else if (prog.step > 0) {
+    btn.textContent = `▶ ${season.emoji} ${next.title}を続ける`;
+    motivChar.src = 'images/4.png';
+    motivMsg.innerHTML = `<strong>おかえりなさい！</strong><br>${season.title}の続きから始めましょう。<br>もう少しで完了ですよ ✨`;
+  } else {
+    btn.textContent = `✨ ${season.emoji} ${next.title}を始める`;
+    motivChar.src = 'images/2.png';
+    motivMsg.innerHTML = `<strong>すごい！前のレッスン完了！</strong><br>次は「${next.title}」です。<br>どんどん上達していますよ 🎉`;
+  }
+  btn.href = `lesson.html?id=${next.id}`;
+}
+
+// ── 레슨 카드 렌더링 ──
+function renderLessons() {
+  const container = document.getElementById('lessonList');
+  const firstUnlocked = LESSONS.findIndex(l => !getProgress(l.id).done);
+  let html = '';
+
+  SEASONS.forEach(season => {
+    const sLessons = LESSONS.filter(l => l.season === season.num);
+    const { done, total } = calcSeasonProgress(season.num);
+
+    html += `
+    <div class="season-header ${season.cls}">
+      <div class="s-emoji">${season.emoji}</div>
+      <div class="s-info">
+        <div class="s-label">シーズン ${season.num}</div>
+        <div class="s-title">${season.title}</div>
+        <div class="s-desc">${season.desc}</div>
+      </div>
+      <div class="s-prog">
+        <div class="s-done">${done}/${total}</div>
+        <div class="s-total">完了</div>
+      </div>
+    </div>`;
+
+    sLessons.forEach((l) => {
+      const i = LESSONS.findIndex(x => x.id === l.id);
+      const prog = getProgress(l.id);
+      const isDone = prog.done;
+      const isActive = i === firstUnlocked;
+      const isLocked = !isDone && i > firstUnlocked;
+      const stepPct = isDone ? 100 : (prog.step / l.totalSteps) * 100;
+
+      let statusIcon, statusText, stateClass;
+      if (isDone) {
+        statusIcon = '✅'; statusText = '完了'; stateClass = 'done';
+      } else if (isActive) {
+        statusIcon = '▶'; statusText = prog.step > 0 ? `${prog.step}/${l.totalSteps}` : 'スタート'; stateClass = 'active';
+      } else {
+        statusIcon = '🔒'; statusText = 'ロック中'; stateClass = 'locked';
+      }
+
+      const href = (isDone || isActive) ? `lesson.html?id=${l.id}` : '#';
+      html += `
+      <a class="lesson-card ${stateClass}" href="${href}" ${isLocked ? 'tabindex="-1" aria-disabled="true"' : ''}>
+        <div class="stage-badge ${season.badgeCls}">
+          <span>${l.emoji}</span>
+          <span class="stage-num">第${l.stage}課</span>
+        </div>
+        <div class="lesson-info">
+          <div class="stage-label">シーズン${season.num} · ${season.title}</div>
+          <div class="lesson-title">${l.title}</div>
+          <div class="lesson-desc">${l.desc}</div>
+          ${!isLocked ? `<div class="mini-bar"><div class="mini-bar-fill" style="width:${stepPct}%"></div></div>` : ''}
+        </div>
+        <div class="lesson-status">
+          <div class="status-icon">${statusIcon}</div>
+          <div class="status-text">${statusText}</div>
+        </div>
+      </a>`;
+    });
+  });
+
+  container.innerHTML = html;
+}
+
+// ── 초기화 ──
+updateProgress();
+updateContinueBtn();
+renderLessons();
+</script>
+</body>
+</html>

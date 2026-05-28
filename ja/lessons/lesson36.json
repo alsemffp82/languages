@@ -1,0 +1,228 @@
+{
+  "id": "lesson36",
+  "stage": 6,
+  "stageTitle": "작별·재회",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "最高の別れの<br>一言！"
+      },
+      "korean": "또 만나요!",
+      "reading": "ット マンナヨ！",
+      "meaning": "またね！/ またお会いしましょう！",
+      "audioKey": "또 만나요!",
+      "scenes": [
+        {
+          "icon": "👋",
+          "text": "別れる時の明るい挨拶。「また会いましょう！」の気持ちがこもった表現"
+        },
+        {
+          "icon": "🌸",
+          "text": "「또（ット）＝また・再び」。「다시（タシ）」より自然で温かい印象"
+        },
+        {
+          "icon": "💕",
+          "text": "「언제 또 와요?（オンジェ ット ワヨ？）＝またいつ来ますか？」も覚えましょう"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "別れの言葉も豊か！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さよならも<br>韓国語で！"
+      },
+      "japanese": {
+        "sentence": "お元気で\nいてください。",
+        "reading": "おげんきでいてください"
+      },
+      "korean": {
+        "sentence": "건강하게\n지내세요.",
+        "reading": "コンガンハゲ チネセヨ"
+      },
+      "insight": "「건강（コンガン）＝健康」は漢字語。「-하게 지내세요（ハゲ チネセヨ）」は「〜に過ごしてください」。<br>別れる時の丁寧で温かい表現です。",
+      "vocab": [
+        {
+          "korean": "또 만나요",
+          "japanese": "ット マンナヨ ＝ またね・またお会いしましょう"
+        },
+        {
+          "korean": "잘 있어요",
+          "japanese": "チャル イッソヨ ＝ 元気でいてください"
+        },
+        {
+          "korean": "건강하세요",
+          "japanese": "コンガンハセヨ ＝ お体に気をつけて"
+        },
+        {
+          "korean": "연락해요",
+          "japanese": "ヨルラケヨ ＝ 連絡しましょう"
+        },
+        {
+          "korean": "보고 싶을 거예요",
+          "japanese": "ポゴ シプル コエヨ ＝ 会いたくなると思います"
+        },
+        {
+          "korean": "감사했어요",
+          "japanese": "カムサヘッソヨ ＝ ありがとうございました"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "別れの言葉を<br>伝えよう！"
+      },
+      "template": {
+        "korean": "꼭 ___ 거예요.",
+        "reading": "（単語を選んでください）",
+        "japanese": "きっと〜ます",
+        "readingTemplate": "コク ___ コエヨ。",
+        "japaneseTemplate": "きっと___ます。"
+      },
+      "words": [
+        {
+          "korean": "다시 올",
+          "reading": "タシ オル",
+          "japanese": "また来",
+          "audioKey": "꼭 다시 올 거예요"
+        },
+        {
+          "korean": "연락할",
+          "reading": "ヨルラカル",
+          "japanese": "連絡し",
+          "audioKey": "꼭 연락할 거예요"
+        },
+        {
+          "korean": "보고 싶을",
+          "reading": "ポゴ シプル",
+          "japanese": "会いたくなり",
+          "audioKey": "꼭 보고 싶을 거예요"
+        },
+        {
+          "korean": "기억할",
+          "reading": "キオカル",
+          "japanese": "覚えてい",
+          "audioKey": "꼭 기억할 거예요"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "シーズン6・最終クイズ！全36レッスン制覇！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "最後のクイズ！<br>全力で！🎉"
+      },
+      "questions": [
+        {
+          "icon": "👋",
+          "question": "「またお会いしましょう！」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "안녕히 가세요",
+              "reading": "アンニョンヒ カセヨ",
+              "correct": false
+            },
+            {
+              "korean": "또 만나요!",
+              "reading": "ット マンナヨ！",
+              "correct": true
+            },
+            {
+              "korean": "잘 가요",
+              "reading": "チャル カヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "완벽해요！「또 만나요!」全36レッスン修了おめでとうございます！！ 🎉",
+          "wrongMsg": "아쉬워요！「또 만나요!（ット マンナヨ！）」。「또＝また」ですよ。"
+        },
+        {
+          "icon": "💕",
+          "question": "「きっとまた来ます」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "꼭 연락할 거예요",
+              "reading": "コク ヨルラカル コエヨ",
+              "correct": false
+            },
+            {
+              "korean": "꼭 다시 올 거예요",
+              "reading": "コク タシ オル コエヨ",
+              "correct": true
+            },
+            {
+              "korean": "꼭 기억할 거예요",
+              "reading": "コク キオカル コエヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "맞아요！「꼭 다시 올 거예요」ぜひ本当に来てください！待っています！",
+          "wrongMsg": "정답은 「꼭 다시 올 거예요（コク タシ オル コエヨ）」。「꼭＝必ず・きっと」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "🎉 全36レッスン修了おめでとうございます！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "全レッスン<br>完了！🎉"
+      },
+      "culture": {
+        "icon": "🌸",
+        "title": "また会う日まで、한국어 화이팅！",
+        "body": "全36レッスンを修了したあなたへ：<br><br>シーズン1から積み上げてきた言葉の数々——<br><hl>여기요！（ヨギヨ！）</hl>から始まって、<br><hl>또 만나요！（ット マンナヨ！）</hl>まで。<br><br>これだけの表現があれば、ソウルの旅がぐっと豊かになります。<br><br>旅先で韓国の人たちが笑顔で答えてくれる瞬間。<br>それがこのアプリの目標でした。<br><br><hl>천천히 해도 괜찮아요。</hl><br>ゆっくりで大丈夫。<br>あなたのペースで、ソウルへの旅を楽しんでください 🌸<br><br><hl>진심으로 응원합니다！</hl>"
+      },
+      "drama": {
+        "lines": [
+          "다음에 꼭 같이 가요.",
+          "약속해요, 꼭 또 만나요!"
+        ],
+        "reading": "タウメ コク カッチ カヨ。／ ヤクソケヨ、コク ット マンナヨ！",
+        "japanese": "「次はきっと一緒に行きましょう。」 ／ 「約束します、きっとまた会いましょう！」",
+        "note": "旅の終わりに使いたい、心温まる言葉です 🌸"
+      },
+      "summary": [
+        {
+          "korean": "또 만나요!",
+          "reading": "ット マンナヨ！"
+        },
+        {
+          "korean": "꼭 다시 올 거예요",
+          "reading": "コク タシ オル コエヨ"
+        },
+        {
+          "korean": "건강하세요",
+          "reading": "コンガンハセヨ"
+        },
+        {
+          "korean": "감사했어요",
+          "reading": "カムサヘッソヨ"
+        }
+      ]
+    }
+  ]
+}

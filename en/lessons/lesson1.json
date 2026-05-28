@@ -1,0 +1,116 @@
+{
+  "id": "lesson1",
+  "stage": 1,
+  "stageTitle": "At the Airport",
+  "appTitle": "Seoul Korean",
+  "character": { "default":"images/1.png","correct":"images/2.png","wrong":"images/3.png","cheer":"images/4.png","complete":"images/6.png" },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "Today's Phrase",
+      "stepTitle": "Learn this one phrase first",
+      "character": { "img":"images/1.png","msg":"Let's start!<br>You've got this! 😊" },
+      "korean": "저기요~",
+      "reading": "jeo-gi-yo~",
+      "meaning": "Excuse me~ / Hey there~",
+      "audioKey": "저기요",
+      "scenes": [
+        { "icon":"🛄","text":"At the airport and your bag hasn't arrived. You need to get a staff member's attention!" },
+        { "icon":"🍜","text":"At a Korean restaurant and you're ready to order. Time to call the server over!" },
+        { "icon":"🛍️","text":"Shopping at a market and you want to ask about a product. Catch the staff's eye!" }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "English vs Korean",
+      "stepTitle": "Good news: you already know hundreds of Korean words!",
+      "character": { "img":"images/1.png","msg":"Coffee = 커피!<br>You already know Korean! 😄" },
+      "japanese": { "sentence":"Give me\nthis, please.","reading":"Verb comes before the object" },
+      "korean":   { "sentence":"이거\n주세요.","reading":"i-geo ju-se-yo — This + give me" },
+      "insight": "Korean puts the verb at the end of the sentence. It feels different at first, but the pattern <strong>never changes</strong> — and once you see it, you can build endless sentences from one template.",
+      "vocab": [
+        { "korean":"커피","japanese":"keopi → coffee ☕" },
+        { "korean":"버스","japanese":"beoseu → bus 🚌" },
+        { "korean":"호텔","japanese":"hotel → hotel 🏨" },
+        { "korean":"택시","japanese":"taeksi → taxi 🚕" },
+        { "korean":"인터넷","japanese":"inteonet → internet 💻" },
+        { "korean":"파스타","japanese":"paseuteo → pasta 🍝" }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "Pattern Practice",
+      "stepTitle": "Swap the word — make a sentence!",
+      "character": { "img":"images/4.png","msg":"Pick a word and<br>build your sentence!" },
+      "instruction": "\"___ juseyo\" = \"Give me ___.\" Tap a word to try it! 👇",
+      "template": {
+        "korean":"___ 주세요.",
+        "reading":"(tap a word below)",
+        "japanese":"___ please.",
+        "readingTemplate":"___ ju-se-yo.",
+        "japaneseTemplate":"___ please."
+      },
+      "words": [
+        { "korean":"이거",  "reading":"i-geo",          "japanese":"this",    "audioKey":"이거 주세요" },
+        { "korean":"저거",  "reading":"jeo-geo",         "japanese":"that",    "audioKey":"저거 주세요" },
+        { "korean":"영수증","reading":"yeong-su-jeung",  "japanese":"receipt", "audioKey":"영수증 주세요" },
+        { "korean":"사진",  "reading":"sa-jin",          "japanese":"photo",   "audioKey":"사진 주세요" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "Mini Quiz",
+      "stepTitle": "Let's check what you remember!",
+      "character": { "img":"images/1.png","msg":"Quiz time!<br>You'll do great 😊" },
+      "questions": [
+        {
+          "icon":"🛄",
+          "question":"At the airport, how do you get a staff member's attention?",
+          "sub":"Think back to today's phrase!",
+          "options": [
+            { "korean":"감사합니다","reading":"gam-sa-ham-ni-da","correct":false },
+            { "korean":"저기요",   "reading":"jeo-gi-yo",       "correct":true  },
+            { "korean":"미안합니다","reading":"mi-an-ham-ni-da", "correct":false }
+          ],
+          "correctMsg":"Correct! 저기요 is a universal phrase — use it anywhere you need someone's attention.",
+          "wrongMsg":"Not quite! The answer is 저기요 (jeo-gi-yo). Think of it as a friendly 'Excuse me~' — works everywhere."
+        },
+        {
+          "icon":"🍜",
+          "question":"At a restaurant, how do you say \"Give me this\"?",
+          "sub":"Think back to the pattern practice!",
+          "options": [
+            { "korean":"이거 괜찮아요","reading":"i-geo gwaen-cha-na-yo","correct":false },
+            { "korean":"이거 주세요", "reading":"i-geo ju-se-yo",        "correct":true  },
+            { "korean":"이거 미안해요","reading":"i-geo mi-an-hae-yo",   "correct":false }
+          ],
+          "correctMsg":"Perfect! 이거 주세요 works at any restaurant, café, or market in Seoul!",
+          "wrongMsg":"Not quite! The answer is 이거 주세요 (i-geo ju-se-yo). 이거 = this, 주세요 = give me please."
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "Culture Note",
+      "stepTitle": "Fun things to know about Korea!",
+      "character": { "img":"images/6.png","msg":"Lesson complete!<br>You're amazing! 🎉" },
+      "culture": {
+        "icon":"🔔",
+        "title":"Korean restaurants have table call buttons!",
+        "body":"You don't need to wave your arm or try to make eye contact — most Korean restaurants have a <hl>call bell</hl> right on your table!<br><br>But when you want to call out, just say:<br><hl>\"<kr>저기요</kr>～！(jeo-gi-yo!)\"</hl><br>It works exactly like \"Excuse me!\" in English — friendly and natural.<br><br>Also worth knowing: <hl><kr>물</kr> (mul) = water</hl> is often self-service at Korean restaurants. Look for the water dispenser near the kitchen or counter."
+      },
+      "drama": {
+        "lines":["진짜？","대박！"],
+        "reading":"jin-jja? / dae-bak!",
+        "japanese":"\"Really?\" / \"Amazing! / No way!\"",
+        "note":"You've definitely heard these in K-dramas! Now you know exactly what they mean ✨"
+      },
+      "summary": [
+        { "korean":"저기요",    "reading":"jeo-gi-yo" },
+        { "korean":"이거 주세요","reading":"i-geo ju-se-yo" },
+        { "korean":"감사합니다","reading":"gam-sa-ham-ni-da" },
+        { "korean":"진짜",     "reading":"jin-jja" }
+      ]
+    }
+  ]
+}

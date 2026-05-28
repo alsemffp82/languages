@@ -1,0 +1,109 @@
+{
+  "id": "lesson7",
+  "stage": 1,
+  "stageTitle": "感情表現",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": { "default": "images/1.png", "correct": "images/2.png", "wrong": "images/3.png", "cheer": "images/4.png", "complete": "images/6.png" },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": { "img": "images/1.png", "msg": "ドラマ編、<br>始めましょう！" },
+      "korean": "설레요.",
+      "reading": "ソルレヨ。",
+      "meaning": "ドキドキします。/ 胸が躍ります。",
+      "audioKey": "설레요",
+      "scenes": [
+        { "icon": "💓", "text": "好きな人を前にしたとき。ドラマで一番よく出てくる感情！" },
+        { "icon": "✈️", "text": "旅行の前日、韓国に行くワクワク感もまさにこれ。" },
+        { "icon": "🎬", "text": "「설레다（ソルレダ）」は日本語に訳しにくい韓国語の宝石。" }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "感情の言葉、実はシンプル！",
+      "character": { "img": "images/1.png", "msg": "感情も<br>そのまま言える！" },
+      "japanese": { "sentence": "とても\n嬉しいです。", "reading": "とても うれしいです" },
+      "korean": { "sentence": "너무\n기뻐요.", "reading": "ノム キッポヨ" },
+      "insight": "「とても」＝「너무（ノム）」。感情の形容詞に「요」をつけるだけでていねい語になります。簡単！",
+      "vocab": [
+        { "korean": "기쁘다", "japanese": "キップダ ＝ 嬉しい" },
+        { "korean": "슬프다", "japanese": "スルプダ ＝ 悲しい" },
+        { "korean": "무섭다", "japanese": "ムソプタ ＝ 怖い" },
+        { "korean": "행복하다", "japanese": "ヘンボカダ ＝ 幸せだ" },
+        { "korean": "외롭다", "japanese": "ウェロプタ ＝ 寂しい" },
+        { "korean": "설레다", "japanese": "ソルレダ ＝ ドキドキする" }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": { "img": "images/4.png", "msg": "気持ちを<br>言葉にしよう！" },
+      "template": { "korean": "너무 ___요.", "reading": "（単語を選んでください）", "japanese": "とても〜です", "readingTemplate": "ノム ___ヨ。", "japaneseTemplate": "とても___です。" },
+      "words": [
+        { "korean": "기뻐", "reading": "キッポ", "japanese": "嬉しい", "audioKey": "너무 기뻐요" },
+        { "korean": "슬퍼", "reading": "スルポ", "japanese": "悲しい", "audioKey": "너무 슬퍼요" },
+        { "korean": "행복해", "reading": "ヘンボケ", "japanese": "幸せ", "audioKey": "너무 행복해요" },
+        { "korean": "설레", "reading": "ソルレ", "japanese": "ドキドキする", "audioKey": "너무 설레요" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": { "img": "images/1.png", "msg": "さあ、クイズ！<br>大丈夫ですよ 😊" },
+      "questions": [
+        {
+          "icon": "💓",
+          "question": "「ドキドキします」を韓国語で言うと？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            { "korean": "무서워요", "reading": "ムソウォヨ", "correct": false },
+            { "korean": "설레요", "reading": "ソルレヨ", "correct": true },
+            { "korean": "슬퍼요", "reading": "スルポヨ", "correct": false }
+          ],
+          "correctMsg": "完璧！「설레요」はドラマでも旅行でも使える素敵な言葉です 💓",
+          "wrongMsg": "惜しい！「설레요（ソルレヨ）」です。ドキドキ・胸が躍る気持ち、覚えてくださいね。"
+        },
+        {
+          "icon": "😊",
+          "question": "「とても幸せです」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            { "korean": "너무 슬퍼요", "reading": "ノム スルポヨ", "correct": false },
+            { "korean": "너무 행복해요", "reading": "ノム ヘンボケヨ", "correct": true },
+            { "korean": "너무 무서워요", "reading": "ノム ムソウォヨ", "correct": false }
+          ],
+          "correctMsg": "その通り！「너무 행복해요」、ぜひ韓国で声に出してみて 😊",
+          "wrongMsg": "正解は「너무 행복해요（ノム ヘンボケヨ）」。「행복하다＝幸せだ」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": { "img": "images/6.png", "msg": "感情表現、<br>マスターです！" },
+      "culture": {
+        "icon": "💓",
+        "title": "韓国語には感情の言葉が豊か！",
+        "body": "韓国語には日本語に訳せない感情語がたくさんあります。<br><br><hl>설레다（ソルレダ）</hl>＝胸がときめく・ワクワクドキドキする<br><hl>눈치（ヌンチ）</hl>＝空気を読む能力（これも독특한 개념！）<br><hl>정（チョン）</hl>＝情け・愛着・絆（時間とともに育つ深い感情）<br><br>特に「정」はドラマで頻出。<br><hl>「<kr>정 들었어요.</kr>（チョン ドゥロッソヨ）」</hl><br>＝「情が移りました」という深い表現です。"
+      },
+      "drama": {
+        "lines": ["설레잖아요.", "가슴이 두근거려요!"],
+        "reading": "ソルレジャナヨ。／ カスミ トゥグンゴリョヨ！",
+        "japanese": "「ドキドキするじゃないですか。」 ／ 「胸がドキドキします！」",
+        "note": "ロマンスドラマの王道表現。聞こえてきたら絶対分かります ✨"
+      },
+      "summary": [
+        { "korean": "설레요", "reading": "ソルレヨ" },
+        { "korean": "너무 기뻐요", "reading": "ノム キッポヨ" },
+        { "korean": "너무 행복해요", "reading": "ノム ヘンボケヨ" },
+        { "korean": "너무 슬퍼요", "reading": "ノム スルポヨ" }
+      ]
+    }
+  ]
+}

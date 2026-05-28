@@ -1,0 +1,228 @@
+{
+  "id": "lesson11",
+  "stage": 5,
+  "stageTitle": "드라마 클리셰",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "ドラマの定番！<br>覚えましょう！"
+      },
+      "korean": "잠깐만요!",
+      "reading": "チャムカンマンニョ！",
+      "meaning": "ちょっと待って！",
+      "audioKey": "잠깐만요!",
+      "scenes": [
+        {
+          "icon": "🏃",
+          "text": "去っていく相手を引き止めるシーン。ドラマの王道！"
+        },
+        {
+          "icon": "🚪",
+          "text": "エレベーターが閉まりかけているとき。日常でも使えます。"
+        },
+        {
+          "icon": "📞",
+          "text": "電話で「ちょっと待ってください」にも。"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "ドラマ定番フレーズを比べよう！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "定番シーン、<br>完全理解！"
+      },
+      "japanese": {
+        "sentence": "行か\nないで！",
+        "reading": "いかないで"
+      },
+      "korean": {
+        "sentence": "가지\n마요!",
+        "reading": "カジ マヨ！"
+      },
+      "insight": "「가다（カダ）＝行く」＋「지 마요」で「行かないで」。<br>前の課で「걱정 마요・울지 마요」を学びましたね。同じパターンです！",
+      "vocab": [
+        {
+          "korean": "잠깐만",
+          "japanese": "チャムカンマン ＝ ちょっとだけ"
+        },
+        {
+          "korean": "기다려요",
+          "japanese": "キダリョヨ ＝ 待って"
+        },
+        {
+          "korean": "가지 마요",
+          "japanese": "カジ マヨ ＝ 行かないで"
+        },
+        {
+          "korean": "들어봐요",
+          "japanese": "トゥロボワヨ ＝ 聞いてみて"
+        },
+        {
+          "korean": "오해예요",
+          "japanese": "オヘエヨ ＝ 誤解です（誤解）"
+        },
+        {
+          "korean": "설명해요",
+          "japanese": "ソルミョンヘヨ ＝ 説明します（説明）"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "ドラマの台詞！<br>言ってみよう！"
+      },
+      "template": {
+        "korean": "___ 마요!",
+        "reading": "（単語を選んでください）",
+        "japanese": "〜しないで！",
+        "readingTemplate": "___ マヨ！",
+        "japaneseTemplate": "___しないで！"
+      },
+      "words": [
+        {
+          "korean": "가지",
+          "reading": "カジ",
+          "japanese": "行か",
+          "audioKey": "가지 마요!"
+        },
+        {
+          "korean": "떠나지",
+          "reading": "トナジ",
+          "japanese": "去ら",
+          "audioKey": "떠나지 마요!"
+        },
+        {
+          "korean": "잊지",
+          "reading": "イッジ",
+          "japanese": "忘れ",
+          "audioKey": "잊지 마요!"
+        },
+        {
+          "korean": "오해하지",
+          "reading": "オヘハジ",
+          "japanese": "誤解し",
+          "audioKey": "오해하지 마요!"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "🏃",
+          "question": "去っていく相手を引き止めるとき？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "어서 오세요!",
+              "reading": "オソ オセヨ！",
+              "correct": false
+            },
+            {
+              "korean": "잠깐만요!",
+              "reading": "チャムカンマンニョ！",
+              "correct": true
+            },
+            {
+              "korean": "안녕히 가세요!",
+              "reading": "アンニョンヒ カセヨ！",
+              "correct": false
+            }
+          ],
+          "correctMsg": "完璧！「잠깐만요！」はドラマで毎話聞こえる引き止めフレーズです！",
+          "wrongMsg": "惜しい！「잠깐만요!（チャムカンマンニョ！）」。「잠깐＝少しの間」ですよ。"
+        },
+        {
+          "icon": "💔",
+          "question": "「忘れないで！」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "가지 마요!",
+              "reading": "カジ マヨ！",
+              "correct": false
+            },
+            {
+              "korean": "잊지 마요!",
+              "reading": "イッジ マヨ！",
+              "correct": true
+            },
+            {
+              "korean": "오해하지 마요!",
+              "reading": "オヘハジ マヨ！",
+              "correct": false
+            }
+          ],
+          "correctMsg": "その通り！「잊다＝忘れる」＋「지 마요」で「忘れないで！」です 💕",
+          "wrongMsg": "正解は「잊지 마요!（イッジ マヨ！）」。「잊다＝忘れる」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "ドラマ語録、<br>増えましたね！"
+      },
+      "culture": {
+        "icon": "🎬",
+        "title": "韓国ドラマの「お約束」シーン！",
+        "body": "韓国ドラマには定番の「クリシェ（お約束シーン）」があります：<br><br><hl>손목 잡기（ソンモク チャプキ）</hl>＝手首をつかんで引き止める<br><hl>우산 씬（ウサン シン）</hl>＝雨の中で傘をさしかけるシーン<br><hl>눈물 닦아주기（ヌンムル タガジュギ）</hl>＝涙をぬぐってあげる<br><br>これらのシーンで聞こえてくる言葉がまさに今日の表現。<br>次にドラマを見るとき、ぜひ聞き取ってみてください 😊"
+      },
+      "drama": {
+        "lines": [
+          "가지 마요, 제발.",
+          "잠깐만요, 오해예요!"
+        ],
+        "reading": "カジ マヨ、チェバル。／ チャムカンマンニョ、オヘエヨ！",
+        "japanese": "「行かないで、お願い。」 ／ 「ちょっと待って、誤解です！」",
+        "note": "どのドラマにも必ず1回は出てくる名言たちです ✨"
+      },
+      "summary": [
+        {
+          "korean": "잠깐만요!",
+          "reading": "チャムカンマンニョ！"
+        },
+        {
+          "korean": "가지 마요",
+          "reading": "カジ マヨ"
+        },
+        {
+          "korean": "잊지 마요",
+          "reading": "イッジ マヨ"
+        },
+        {
+          "korean": "오해예요",
+          "reading": "オヘエヨ"
+        }
+      ]
+    }
+  ]
+}

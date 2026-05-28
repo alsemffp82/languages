@@ -1,0 +1,116 @@
+{
+  "id": "lesson3",
+  "stage": 3,
+  "stageTitle": "At the Hotel",
+  "appTitle": "Seoul Korean",
+  "character": { "default":"images/1.png","correct":"images/2.png","wrong":"images/3.png","cheer":"images/4.png","complete":"images/6.png" },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "Today's Phrase",
+      "stepTitle": "Check into your Seoul hotel",
+      "character": { "img":"images/1.png","msg":"Welcome to<br>Seoul! 🏨" },
+      "korean": "체크인 하려고요",
+      "reading": "che-keu-in ha-ryeo-go-yo",
+      "meaning": "I'm here to check in",
+      "audioKey": "체크인 하려고요",
+      "scenes": [
+        { "icon":"🏨","text":"You arrive at your hotel. Walk up to the front desk and say this — the staff will take care of the rest!" },
+        { "icon":"🕐","text":"Early check-in? Say this and ask if your room is ready." },
+        { "icon":"🧳","text":"Great for guesthouses and traditional hanok stays too!" }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "English vs Korean",
+      "stepTitle": "The \"-ryeogo-yo\" ending is super useful!",
+      "character": { "img":"images/1.png","msg":"One ending,<br>endless uses! 🗝️" },
+      "japanese": { "sentence":"I'm here\nto check in.","reading":"English: 'I'm here to + verb'" },
+      "korean":   { "sentence":"체크인\n하려고요.","reading":"che-keu-in ha-ryeo-go-yo" },
+      "insight": "<strong>-려고요 (-ryeo-go-yo)</strong> means 'I'm here to / I'm going to'. It's a super polite way to state your intention. You can attach it to any action: 체크인 하려고요 (check in), 예약 하려고요 (make a reservation), 주문 하려고요 (order)...",
+      "vocab": [
+        { "korean":"체크인",  "japanese":"chekeu-in → check-in 🏨" },
+        { "korean":"체크아웃","japanese":"chekeu-aut → check-out 🚪" },
+        { "korean":"룸서비스","japanese":"rum-seo-bi-seu → room service 🍽️" },
+        { "korean":"와이파이","japanese":"wa-i-pa-i → WiFi 📶" },
+        { "korean":"에어컨",  "japanese":"e-eo-kon → air conditioner ❄️" },
+        { "korean":"샴푸",    "japanese":"syam-pu → shampoo 🧴" }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "Pattern Practice",
+      "stepTitle": "Ask if they have what you need!",
+      "character": { "img":"images/4.png","msg":"Ask away!<br>They'll help you 😊" },
+      "instruction": "\"___ isseoyo?\" = \"Do you have ___?\" Tap a word to practice! 👇",
+      "template": {
+        "korean":"___ 있어요?",
+        "reading":"(tap a word below)",
+        "japanese":"Do you have ___?",
+        "readingTemplate":"___ is-seo-yo?",
+        "japaneseTemplate":"Do you have ___?"
+      },
+      "words": [
+        { "korean":"수건",    "reading":"su-geon",      "japanese":"towel",      "audioKey":"수건 있어요" },
+        { "korean":"와이파이","reading":"wa-i-pa-i",    "japanese":"WiFi",        "audioKey":"와이파이 있어요" },
+        { "korean":"칫솔",   "reading":"chit-sol",     "japanese":"toothbrush", "audioKey":"칫솔 있어요" },
+        { "korean":"짐 보관","reading":"jim bo-gwan",  "japanese":"luggage storage","audioKey":"짐 보관 있어요" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "Mini Quiz",
+      "stepTitle": "Let's check what you remember!",
+      "character": { "img":"images/1.png","msg":"Quiz time!<br>You can do it! 😊" },
+      "questions": [
+        {
+          "icon":"🏨",
+          "question":"How do you say \"I'm here to check in\" at the front desk?",
+          "sub":"Think back to today's phrase!",
+          "options": [
+            { "korean":"체크인 하려고요","reading":"che-keu-in ha-ryeo-go-yo","correct":true  },
+            { "korean":"체크인 있어요", "reading":"che-keu-in is-seo-yo",    "correct":false },
+            { "korean":"체크인 감사해요","reading":"che-keu-in gam-sa-hae-yo","correct":false }
+          ],
+          "correctMsg":"Perfect! 체크인 하려고요 — polite and natural. The hotel staff will love it!",
+          "wrongMsg":"Not quite! The answer is 체크인 하려고요 (che-keu-in ha-ryeo-go-yo). -하려고요 means 'I'm here to / I intend to'."
+        },
+        {
+          "icon":"📶",
+          "question":"How do you ask \"Do you have WiFi?\"",
+          "sub":"Think back to the pattern practice!",
+          "options": [
+            { "korean":"와이파이 있어요?","reading":"wa-i-pa-i is-seo-yo?","correct":true  },
+            { "korean":"와이파이 주세요", "reading":"wa-i-pa-i ju-se-yo",  "correct":false },
+            { "korean":"와이파이 하려고요","reading":"wa-i-pa-i ha-ryeo-go-yo","correct":false }
+          ],
+          "correctMsg":"Correct! 있어요? (is-seo-yo?) is 'do you have / is there' — use this pattern to ask about anything!",
+          "wrongMsg":"Not quite! 와이파이 있어요? (wa-i-pa-i is-seo-yo?) — 있어요 means 'is there / do you have'."
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "Culture Note",
+      "stepTitle": "Where to stay in Seoul",
+      "character": { "img":"images/6.png","msg":"Lesson complete!<br>You're amazing! 🎉" },
+      "culture": {
+        "icon":"🏡",
+        "title":"Try a 한옥 (hanok) guesthouse!",
+        "body":"Seoul has everything from luxury hotels to cozy <hl>한옥 (ha-nok)</hl> — traditional Korean wooden houses. Staying in one in neighborhoods like <hl>Bukchon or Ikseon-dong</hl> is a truly unique experience.<br><br>Useful hotel vocab:<br>• <hl><kr>욕실</kr> (yok-sil)</hl> = bathroom<br>• <hl><kr>수건</kr> (su-geon)</hl> = towel<br>• <hl><kr>조식</kr> (jo-sik)</hl> = breakfast<br><br>Many guesthouses are run by friendly locals who love talking to international guests — even a little Korean goes a long way! 😊"
+      },
+      "drama": {
+        "lines":["잘 자!","잘 자요."],
+        "reading":"jal ja! / jal ja-yo.",
+        "japanese":"\"Sleep well! / Good night!\" (casual / polite)",
+        "note":"The polite version ends in -요 (-yo). You'll hear both in dramas ✨"
+      },
+      "summary": [
+        { "korean":"체크인 하려고요","reading":"che-keu-in ha-ryeo-go-yo" },
+        { "korean":"수건 있어요?",  "reading":"su-geon is-seo-yo?" },
+        { "korean":"와이파이 있어요?","reading":"wa-i-pa-i is-seo-yo?" },
+        { "korean":"감사합니다",    "reading":"gam-sa-ham-ni-da" }
+      ]
+    }
+  ]
+}

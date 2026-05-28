@@ -1,0 +1,228 @@
+{
+  "id": "lesson21",
+  "stage": 3,
+  "stageTitle": "취미 공유",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "友達作り편、<br>始めましょう！"
+      },
+      "korean": "저도요!",
+      "reading": "チョドヨ！",
+      "meaning": "私もです！",
+      "audioKey": "저도요!",
+      "scenes": [
+        {
+          "icon": "🎵",
+          "text": "相手の話に共感する最強フレーズ！"
+        },
+        {
+          "icon": "💬",
+          "text": "「저도（チョド）＝私も」「요」をつけるだけ。"
+        },
+        {
+          "icon": "🤝",
+          "text": "「저도 좋아해요！」と組み합わせると最高！"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "日本語と韓国語はそっくり！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "比べてみよう！"
+      },
+      "japanese": {
+        "sentence": "私も\n韓国が好きです。",
+        "reading": "わたしも かんこくが すきです"
+      },
+      "korean": {
+        "sentence": "저도\n한국이 좋아요.",
+        "reading": "チョド ハングギ チョアヨ"
+      },
+      "insight": "「も」＝「도（ド）」。「저도」で「私も」。この「도」を使いこなすと会話が盛り上がります！",
+      "vocab": [
+        {
+          "korean": "취미",
+          "japanese": "チュィミ ＝ 趣味"
+        },
+        {
+          "korean": "드라마",
+          "japanese": "ドゥラマ ＝ ドラマ"
+        },
+        {
+          "korean": "요리",
+          "japanese": "ヨリ ＝ 料理"
+        },
+        {
+          "korean": "여행",
+          "japanese": "ヨヘン ＝ 旅行"
+        },
+        {
+          "korean": "음악",
+          "japanese": "ウマク ＝ 音楽"
+        },
+        {
+          "korean": "독서",
+          "japanese": "トクソ ＝ 読書"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "共感を<br>伝えよう！"
+      },
+      "template": {
+        "korean": "저도 ___ 좋아해요!",
+        "reading": "（単語を選んでください）",
+        "japanese": "私も〜が好きです！",
+        "readingTemplate": "チョド ___ チョアヘヨ！",
+        "japaneseTemplate": "私も___が好きです！"
+      },
+      "words": [
+        {
+          "korean": "드라마",
+          "reading": "ドゥラマ",
+          "japanese": "ドラマ",
+          "audioKey": "저도 드라마 좋아해요!"
+        },
+        {
+          "korean": "케이팝",
+          "reading": "ケイパプ",
+          "japanese": "K-POP",
+          "audioKey": "저도 케이팝 좋아해요!"
+        },
+        {
+          "korean": "한국 음식",
+          "reading": "ハングク ウムシク",
+          "japanese": "韓国料理",
+          "audioKey": "저도 한국 음식 좋아해요!"
+        },
+        {
+          "korean": "여행",
+          "reading": "ヨヘン",
+          "japanese": "旅行",
+          "audioKey": "저도 여행 좋아해요!"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "🎵",
+          "question": "「私もです！」と共感するとき？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "저만요!",
+              "reading": "チョマンニョ！",
+              "correct": false
+            },
+            {
+              "korean": "저도요!",
+              "reading": "チョドヨ！",
+              "correct": true
+            },
+            {
+              "korean": "저한테요?",
+              "reading": "チョハンテヨ？",
+              "correct": false
+            }
+          ],
+          "correctMsg": "完璧！「저도요！」一言で距離が縮まります！",
+          "wrongMsg": "惜しい！「저도요!（チョドヨ！）」。「도＝も」ですよ。"
+        },
+        {
+          "icon": "🎶",
+          "question": "「私もK-POPが好きです」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "저도 드라마 좋아해요",
+              "reading": "チョド ドゥラマ チョアヘヨ",
+              "correct": false
+            },
+            {
+              "korean": "저도 케이팝 좋아해요",
+              "reading": "チョド ケイパプ チョアヘヨ",
+              "correct": true
+            },
+            {
+              "korean": "저도 여행 좋아해요",
+              "reading": "チョド ヨヘン チョアヘヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "その通り！共通の趣味で友達になれますね！",
+          "wrongMsg": "正解は「저도 케이팝 좋아해요」。「케이팝＝K-POP」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "今日もできました！<br>すごいです！"
+      },
+      "culture": {
+        "icon": "🎵",
+        "title": "韓国人と友達になるコツ！",
+        "body": "共感フレーズをもう少し：<br>・<hl>「<kr>맞아요!</kr>（マジャヨ！）」</hl>＝「そうですよね！」<br>・<hl>「<kr>저도 그렇게 생각해요.</kr>（チョド クロッケ センガケヨ）」</hl>＝「私もそう思います」"
+      },
+      "drama": {
+        "lines": [
+          "취미가 같네요!",
+          "우리 친하게 지내요!"
+        ],
+        "reading": "チュィミガ カンネヨ！／ ウリ チナケ チネヨ！",
+        "japanese": "「趣味が同じですね！」 ／ 「仲良くしましょう！」",
+        "note": "友達になれる瞬間の言葉です ✨"
+      },
+      "summary": [
+        {
+          "korean": "저도요!",
+          "reading": "チョドヨ！"
+        },
+        {
+          "korean": "저도 드라마 좋아해요",
+          "reading": "チョド ドゥラマ チョアヘヨ"
+        },
+        {
+          "korean": "맞아요!",
+          "reading": "マジャヨ！"
+        },
+        {
+          "korean": "친하게 지내요",
+          "reading": "チナケ チネヨ"
+        }
+      ]
+    }
+  ]
+}

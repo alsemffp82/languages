@@ -1,0 +1,228 @@
+{
+  "id": "lesson18",
+  "stage": 6,
+  "stageTitle": "배달 음식",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "次のレッスン、<br>始めましょう！"
+      },
+      "korean": "배달 돼요?",
+      "reading": "ペダル テヨ？",
+      "meaning": "デリバリーできますか？",
+      "audioKey": "배달 돼요?",
+      "scenes": [
+        {
+          "icon": "🛵",
+          "text": "韓国はデリバリー大国！ほぼ何でも配達してくれます。"
+        },
+        {
+          "icon": "📱",
+          "text": "「배달의민족（ペダルエミンジョク）」などのアプリが便利。"
+        },
+        {
+          "icon": "🍕",
+          "text": "ホテルに滞在中も「배달 돼요?」の一言で食が広がります！"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "日本語と韓国語はそっくり！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "比べてみよう！"
+      },
+      "japanese": {
+        "sentence": "何分\nかかりますか？",
+        "reading": "なんぷん かかりますか"
+      },
+      "korean": {
+        "sentence": "몇 분\n걸려요?",
+        "reading": "ミョッ プン コルリョヨ？"
+      },
+      "insight": "「몇（ミョッ）＝何・いくつ」、「분（プン）＝分」、「걸려요（コルリョヨ）＝かかります」。<br>数字の質問には「몇（ミョッ）」を使います！",
+      "vocab": [
+        {
+          "korean": "배달",
+          "japanese": "ペダル ＝ 配達（配達）"
+        },
+        {
+          "korean": "주문",
+          "japanese": "チュムン ＝ 注文（注文）"
+        },
+        {
+          "korean": "메뉴",
+          "japanese": "メニュ ＝ メニュー"
+        },
+        {
+          "korean": "최소 금액",
+          "japanese": "チェソ クムエク ＝ 最低注文金額"
+        },
+        {
+          "korean": "픽업",
+          "japanese": "ピゴプ ＝ ピックアップ"
+        },
+        {
+          "korean": "포장",
+          "japanese": "ポジャン ＝ テイクアウト（包装）"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "単語を選んで<br>文を作ろう！"
+      },
+      "template": {
+        "korean": "___ 돼요?",
+        "reading": "（単語を選んでください）",
+        "japanese": "〜できますか？",
+        "readingTemplate": "___ テヨ？",
+        "japaneseTemplate": "___できますか？"
+      },
+      "words": [
+        {
+          "korean": "배달",
+          "reading": "ペダル",
+          "japanese": "配達",
+          "audioKey": "배달 돼요?"
+        },
+        {
+          "korean": "포장",
+          "reading": "ポジャン",
+          "japanese": "テイクアウト",
+          "audioKey": "포장 돼요?"
+        },
+        {
+          "korean": "카드",
+          "reading": "カドゥ",
+          "japanese": "カード払い",
+          "audioKey": "카드 돼요?"
+        },
+        {
+          "korean": "예약",
+          "reading": "イェヤク",
+          "japanese": "予約",
+          "audioKey": "예약 돼요?"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "🛵",
+          "question": "「デリバリーできますか？」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "주문 돼요?",
+              "reading": "チュムン テヨ？",
+              "correct": false
+            },
+            {
+              "korean": "배달 돼요?",
+              "reading": "ペダル テヨ？",
+              "correct": true
+            },
+            {
+              "korean": "포장 돼요?",
+              "reading": "ポジャン テヨ？",
+              "correct": false
+            }
+          ],
+          "correctMsg": "完璧！「배달 돼요?」はホテルでも外でも使えます！",
+          "wrongMsg": "惜しい！「배달 돼요?（ペダル テヨ？）」。「배달＝配達」ですよ。"
+        },
+        {
+          "icon": "💳",
+          "question": "「カード払いできますか？」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "예약 돼요?",
+              "reading": "イェヤク テヨ？",
+              "correct": false
+            },
+            {
+              "korean": "카드 돼요?",
+              "reading": "カドゥ テヨ？",
+              "correct": true
+            },
+            {
+              "korean": "포장 돼요?",
+              "reading": "ポジャン テヨ？",
+              "correct": false
+            }
+          ],
+          "correctMsg": "その通り！「카드 돼요?」は市場でも食堂でも使える万能フレーズです！",
+          "wrongMsg": "正解は「카드 돼요?（カドゥ テヨ？）」。「돼요?＝できますか？」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "今日もできました！<br>すごいです！"
+      },
+      "culture": {
+        "icon": "🛵",
+        "title": "韓国のデリバリー文化！",
+        "body": "韓国のデリバリー文化は世界トップクラス。<hl>배달의민족（ペダルエミンジョク）</hl>通称「배민」は国民的アプリ。<br><br>豆知識：韓国ではチキンのデリバリーが特に人気で「<hl>치킨（チキン）</hl>＝フライドチキン」を夜遅くに頼む文化があります。<br><br>ドラマで「야식（ヤシク）＝夜食」シーンが多いのはこのため！"
+      },
+      "drama": {
+        "lines": [
+          "야, 치킨 시킬까?",
+          "배달 왔어요!"
+        ],
+        "reading": "ヤ、チキン シキルカ？／ ペダル ワッソヨ！",
+        "japanese": "「ねえ、チキン頼む？」 ／ 「デリバリー来たよ！」",
+        "note": "韓国ドラマの夜食シーン、これが鉄板です ✨"
+      },
+      "summary": [
+        {
+          "korean": "배달 돼요?",
+          "reading": "ペダル テヨ？"
+        },
+        {
+          "korean": "포장 돼요?",
+          "reading": "ポジャン テヨ？"
+        },
+        {
+          "korean": "카드 돼요?",
+          "reading": "カドゥ テヨ？"
+        },
+        {
+          "korean": "몇 분 걸려요?",
+          "reading": "ミョッ プン コルリョヨ？"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "id": "lesson20",
+  "stage": 2,
+  "stageTitle": "나이·직업",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "次のレッスン、<br>始めましょう！"
+      },
+      "korean": "몇 살이에요?",
+      "reading": "ミョッ サリエヨ？",
+      "meaning": "何歳ですか？",
+      "audioKey": "몇 살이에요?",
+      "scenes": [
+        {
+          "icon": "🎂",
+          "text": "韓国では年齢を聞くのはごく自然。敬語を決めるための大事な情報！"
+        },
+        {
+          "icon": "🔢",
+          "text": "「몇（ミョッ）＝何・いくつ」「살（サル）＝歳」"
+        },
+        {
+          "icon": "😄",
+          "text": "聞かれたら「마흔 살이에요（40歳です）」などと答えましょう！"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "日本語と韓国語はそっくり！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "比べてみよう！"
+      },
+      "japanese": {
+        "sentence": "お仕事は\n何ですか？",
+        "reading": "おしごと は なんですか"
+      },
+      "korean": {
+        "sentence": "직업이\n뭐예요?",
+        "reading": "チゴビ ムォエヨ？"
+      },
+      "insight": "「직업（チゴプ）＝職業」は漢字語。「뭐（ムォ）＝何」は日常会話でよく使います。<br>「뭐예요?」で「何ですか？」になります！",
+      "vocab": [
+        {
+          "korean": "직업",
+          "japanese": "チゴプ ＝ 職業"
+        },
+        {
+          "korean": "회사원",
+          "japanese": "フェサウォン ＝ 会社員"
+        },
+        {
+          "korean": "주부",
+          "japanese": "チュブ ＝ 主婦"
+        },
+        {
+          "korean": "선생님",
+          "japanese": "ソンセンニム ＝ 先生"
+        },
+        {
+          "korean": "의사",
+          "japanese": "ウィサ ＝ 医師"
+        },
+        {
+          "korean": "학생",
+          "japanese": "ハクセン ＝ 学生"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": [
+          {
+            "korean": "마흔 살",
+            "reading": "マフン サル",
+            "japanese": "40歳",
+            "audioKey": "저는 마흔 살 이에요"
+          },
+          {
+            "korean": "주부",
+            "reading": "チュブ",
+            "japanese": "主婦",
+            "audioKey": "저는 주부 이에요"
+          },
+          {
+            "korean": "회사원",
+            "reading": "フェサウォン",
+            "japanese": "会社員",
+            "audioKey": "저는 회사원 이에요"
+          },
+          {
+            "korean": "한국어 팬",
+            "reading": "ハングゴ ペン",
+            "japanese": "韓国語ファン",
+            "audioKey": "저는 한국어 팬 이에요"
+          }
+        ]
+      },
+      "template": {
+        "korean": "저는 ___ 이에요.",
+        "reading": "（単語を選んでください）",
+        "japanese": "チョヌン ___ イエヨ。",
+        "readingTemplate": "私は〜です",
+        "japaneseTemplate": "チョヌン ___ イエヨ。"
+      },
+      "words": "私は___です。"
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "🎂",
+          "question": "「何歳ですか？」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "몇 명이에요?",
+              "reading": "ミョン ミョンイエヨ？",
+              "correct": false
+            },
+            {
+              "korean": "몇 살이에요?",
+              "reading": "ミョッ サリエヨ？",
+              "correct": true
+            },
+            {
+              "korean": "몇 시예요?",
+              "reading": "ミョッ シエヨ？",
+              "correct": false
+            }
+          ],
+          "correctMsg": "完璧！「몇 살이에요?」、韓国人の友達に聞いてみましょう！",
+          "wrongMsg": "惜しい！「몇 살이에요?（ミョッ サリエヨ？）」。「살＝歳」ですよ。"
+        },
+        {
+          "icon": "😊",
+          "question": "「私は会社員です」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "저는 학생 이에요",
+              "reading": "チョヌン ハクセン イエヨ",
+              "correct": false
+            },
+            {
+              "korean": "저는 회사원 이에요",
+              "reading": "チョヌン フェサウォン イエヨ",
+              "correct": true
+            },
+            {
+              "korean": "저는 주부 이에요",
+              "reading": "チョヌン チュブ イエヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "その通り！「회사원＝会社員」。自己紹介が豊かになりますね！",
+          "wrongMsg": "正解は「저는 회사원 이에요」。「회사원＝会社員」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "今日もできました！<br>すごいです！"
+      },
+      "culture": {
+        "icon": "🎂",
+        "title": "韓国の年齢文化！",
+        "body": "韓国では2023年から国際標準の「満年齢」に統一されました。<br><br>年齢を答えるとき：<br>・<hl>「<kr>마흔 살이에요.</kr>（マフン サリエヨ）」</hl>＝「40歳です」<br>・<hl>「<kr>비밀이에요~</kr>（ビミリエヨ〜）」</hl>＝「ひ・み・つ〜」←これもあり！"
+      },
+      "drama": {
+        "lines": [
+          "나이가 어떻게 되세요?",
+          "그냥 편하게 말해요!"
+        ],
+        "reading": "ナイガ オットケ テセヨ？／ クニャン ピョナケ マレヨ！",
+        "japanese": "「年齢はおいくつですか？」 ／ 「気軽に言ってください！」",
+        "note": "年齢を聞かれたときのやり取りです ✨"
+      },
+      "summary": [
+        {
+          "korean": "몇 살이에요?",
+          "reading": "ミョッ サリエヨ？"
+        },
+        {
+          "korean": "저는 마흔 살 이에요",
+          "reading": "チョヌン マフン サル イエヨ"
+        },
+        {
+          "korean": "직업이 뭐예요?",
+          "reading": "チゴビ ムォエヨ？"
+        },
+        {
+          "korean": "비밀이에요~",
+          "reading": "ビミリエヨ〜"
+        }
+      ]
+    }
+  ]
+}

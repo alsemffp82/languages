@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seoul Korean</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Noto+Sans+KR:wght@400;700&display=swap');
+    :root {
+      --cream:#F0F6FF; --ocean:#2563EB; --soft-blue:#BFDBFE; --blush:#EFF6FF;
+      --navy:#1E3A8A; --dark-navy:#0F172A; --teal:#0891B2; --soft-teal:#CFFAFE;
+      --gold:#D97706; --light-gold:#FEF3C7; --text:#1E293B; --muted:#64748B;
+      --kr-bg:#EFF6FF; --kr-border:#93C5FD;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);min-height:100vh;font-size:15px;line-height:1.7;}
+    header{background:linear-gradient(135deg,#2563EB 0%,#1E3A8A 100%);color:white;padding:30px 24px 24px;text-align:center;position:relative;overflow:hidden;}
+    header::after{content:'✈️';position:absolute;font-size:90px;opacity:.1;right:-12px;bottom:-16px;}
+    header .badge{display:inline-block;background:rgba(255,255,255,.2);border-radius:20px;padding:4px 14px;font-size:11px;letter-spacing:1.5px;margin-bottom:12px;}
+    header h1{font-size:22px;font-weight:700;line-height:1.4;}
+    header .sub{font-size:13px;opacity:.8;margin-top:6px;}
+    .progress-wrap{background:white;border-bottom:1px solid #DBEAFE;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;}
+    .progress-label{font-size:12px;color:var(--muted);}
+    .dots{display:flex;gap:7px;}
+    .dot{width:9px;height:9px;border-radius:50%;background:#BFDBFE;transition:all .3s;}
+    .dot.active{background:var(--ocean);transform:scale(1.3);}
+    .dot.done{background:var(--teal);}
+    .section{display:none;padding:28px 20px 100px;width:100%;animation:fadeIn .35s ease;}
+    .section.visible{display:block;}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    @media(min-width:769px){
+      .section{max-width:600px;margin:0 auto;}
+      .nav{width:calc(600px - 40px);transform:translateX(-50%);left:50% !important;}
+      .char-wrap{right:calc(50% - 320px);}
+    }
+    .step-label{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:700;color:var(--ocean);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;}
+    .step-label::after{content:'';flex:1;height:1px;background:var(--soft-blue);}
+    .step-title{font-size:19px;font-weight:700;color:var(--dark-navy);margin-bottom:20px;}
+    .card{background:white;border-radius:18px;padding:24px 20px;margin-bottom:14px;box-shadow:0 2px 12px rgba(0,0,0,.05);}
+    .kr-block{background:var(--kr-bg);border:2px solid var(--kr-border);border-radius:16px;padding:24px 20px;text-align:center;margin-bottom:16px;}
+    .kr-block .label{font-size:11px;color:var(--ocean);font-weight:700;letter-spacing:1px;margin-bottom:10px;}
+    .kr-text{font-family:'Noto Sans KR',sans-serif;font-size:52px;font-weight:700;color:var(--dark-navy);line-height:1.1;}
+    .reading{font-size:20px;color:var(--ocean);margin-top:8px;font-weight:500;letter-spacing:1px;}
+    .meaning{font-size:15px;color:var(--muted);margin-top:6px;}
+    .listen-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:16px;padding:13px;background:var(--ocean);color:white;border:none;border-radius:12px;font-size:14px;font-family:inherit;font-weight:600;cursor:pointer;transition:opacity .15s,transform .1s;}
+    .listen-btn:active{opacity:.85;transform:scale(.98);}
+    .scene-list{display:flex;flex-direction:column;gap:10px;margin-top:4px;}
+    .scene-item{display:flex;align-items:flex-start;gap:12px;padding:13px 14px;background:var(--blush);border-radius:12px;}
+    .scene-item .icon{font-size:20px;flex-shrink:0;margin-top:1px;}
+    .scene-item .text{font-size:14px;color:var(--text);line-height:1.6;}
+    .compare-box{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1.5px solid var(--soft-blue);border-radius:14px;overflow:hidden;margin-bottom:14px;}
+    .compare-col{padding:16px;}
+    .compare-col.jp-col{background:white;border-right:1px solid var(--soft-blue);}
+    .compare-col.kr-col{background:var(--kr-bg);}
+    .compare-col .col-label{font-size:10px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:8px;}
+    .compare-col .sentence{font-size:15px;font-weight:600;color:var(--dark-navy);line-height:1.6;white-space:pre-line;}
+    .compare-col.kr-col .sentence{font-family:'Noto Sans KR',sans-serif;}
+    .compare-col .ruby-text{font-size:13px;color:var(--ocean);margin-top:4px;}
+    .arrow-row{text-align:center;font-size:13px;color:var(--muted);margin:8px 0 14px;}
+    .insight{background:var(--light-gold);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:13px 15px;font-size:13px;color:var(--dark-navy);line-height:1.75;}
+    .insight strong{color:var(--gold);}
+    .vocab-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+    .vocab-pill{background:var(--blush);border-radius:10px;padding:8px 13px;font-size:13px;line-height:1.4;}
+    .vocab-pill .kr{font-family:'Noto Sans KR',sans-serif;font-weight:700;color:var(--dark-navy);}
+    .vocab-pill .jp{color:var(--muted);font-size:12px;}
+    .pattern-frame{background:var(--kr-bg);border:2px solid var(--kr-border);border-radius:14px;padding:20px;text-align:center;margin-bottom:18px;}
+    .pattern-frame .instruction{font-size:12px;color:var(--muted);margin-bottom:10px;}
+    .pattern-frame .kr-big{font-family:'Noto Sans KR',sans-serif;font-size:30px;font-weight:700;color:var(--dark-navy);}
+    .pattern-frame .p-reading{font-size:15px;color:var(--ocean);margin-top:5px;}
+    .pattern-frame .p-jp{font-size:13px;color:var(--muted);margin-top:4px;}
+    .word-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+    .word-btn{background:white;border:2px solid var(--soft-blue);border-radius:13px;padding:14px 12px;text-align:center;cursor:pointer;transition:all .18s;font-family:inherit;}
+    .word-btn:hover{border-color:var(--ocean);transform:translateY(-1px);}
+    .word-btn.selected{border-color:var(--ocean);background:var(--blush);}
+    .word-btn .kr{font-family:'Noto Sans KR',sans-serif;font-size:20px;font-weight:700;color:var(--dark-navy);}
+    .word-btn .read{font-size:12px;color:var(--ocean);margin-top:3px;}
+    .word-btn .jp{font-size:12px;color:var(--muted);}
+    .result-box{display:none;margin-top:16px;background:var(--soft-teal);border-radius:14px;padding:18px;text-align:center;animation:fadeIn .3s ease;}
+    .result-box.show{display:block;}
+    .result-box .kr{font-family:'Noto Sans KR',sans-serif;font-size:28px;font-weight:700;color:var(--dark-navy);}
+    .result-box .read{font-size:14px;color:var(--teal);margin-top:5px;}
+    .result-box .jp{font-size:13px;color:var(--muted);margin-top:5px;}
+    .result-box .cheer{font-size:13px;color:var(--teal);font-weight:700;margin-top:10px;}
+    .quiz-header{text-align:center;margin-bottom:20px;}
+    .quiz-header .quiz-icon{font-size:36px;margin-bottom:10px;}
+    .quiz-header .q-text{font-size:16px;font-weight:600;color:var(--dark-navy);margin-bottom:4px;}
+    .quiz-header .q-sub{font-size:13px;color:var(--muted);}
+    .option-list{display:flex;flex-direction:column;gap:10px;}
+    .option-btn{display:flex;align-items:center;gap:12px;background:white;border:2px solid #DBEAFE;border-radius:13px;padding:14px 16px;cursor:pointer;transition:all .18s;font-family:inherit;text-align:left;}
+    .option-btn:hover:not(.disabled){border-color:var(--ocean);}
+    .option-btn .num{width:26px;height:26px;background:var(--blush);color:var(--navy);border-radius:50%;font-size:12px;font-weight:700;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+    .option-btn .kr-opt{font-family:'Noto Sans KR',sans-serif;font-size:17px;font-weight:700;color:var(--dark-navy);}
+    .option-btn .read-opt{font-size:12px;color:var(--muted);margin-top:1px;}
+    .option-btn.correct{border-color:var(--teal);background:var(--soft-teal);}
+    .option-btn.wrong{border-color:#F0AAAA;background:#FFF3F3;}
+    .q-result{display:none;margin-top:14px;border-radius:13px;padding:14px 16px;font-size:14px;line-height:1.7;animation:fadeIn .3s ease;}
+    .q-result.show{display:block;}
+    .q-result.ok{background:var(--soft-teal);color:#0E7490;}
+    .q-result.ng{background:#FFF3F3;color:#9B4040;}
+    .q-result .big{font-size:24px;margin-bottom:6px;}
+    .culture-card{border:1px solid var(--soft-blue);}
+    .culture-icon{font-size:32px;margin-bottom:10px;}
+    .culture-title{font-size:16px;font-weight:700;color:var(--dark-navy);margin-bottom:10px;}
+    .culture-body{font-size:14px;color:var(--text);line-height:1.85;}
+    .culture-body .hl{color:var(--ocean);font-weight:700;}
+    .culture-body .kr-inline{font-family:'Noto Sans KR',sans-serif;font-weight:700;}
+    .drama-box{background:#18182E;color:white;border-radius:14px;padding:20px 18px;margin-top:14px;}
+    .drama-box .d-label{font-size:10px;letter-spacing:2px;color:#8888AA;margin-bottom:10px;}
+    .drama-box .d-kr{font-family:'Noto Sans KR',sans-serif;font-size:28px;font-weight:700;line-height:1.4;}
+    .drama-box .d-read{font-size:15px;color:#90B0E8;margin-top:6px;}
+    .drama-box .d-jp{font-size:14px;color:#AAAABB;margin-top:6px;}
+    .drama-box .d-note{font-size:12px;color:#77778A;margin-top:10px;}
+    .complete{text-align:center;padding:32px 16px 16px;}
+    .complete .big{font-size:56px;margin-bottom:16px;}
+    .complete h2{font-size:22px;font-weight:700;color:var(--dark-navy);margin-bottom:10px;}
+    .complete p{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:22px;}
+    .summary-list{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-bottom:24px;}
+    .s-pill{background:white;border:1.5px solid var(--soft-blue);border-radius:20px;padding:8px 15px;font-size:13px;}
+    .s-pill .kr{font-family:'Noto Sans KR',sans-serif;font-weight:700;color:var(--dark-navy);}
+    .s-pill .read{color:var(--ocean);}
+    .char-wrap{position:fixed;bottom:74px;right:20px;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:6px;pointer-events:none;}
+    .char-bubble{background:white;border:1.5px solid var(--soft-blue);border-radius:14px 14px 4px 14px;padding:8px 12px;font-size:12px;color:var(--dark-navy);max-width:130px;text-align:center;line-height:1.5;box-shadow:0 2px 8px rgba(0,0,0,.10);display:none;}
+    .char-bubble.show{display:block;animation:bubblePop .3s ease;}
+    .char-img{width:80px;height:80px;object-fit:contain;filter:drop-shadow(0 4px 10px rgba(0,0,0,.18));animation:charBounce .4s ease;display:block;}
+    @keyframes charBounce{0%{transform:translateY(14px);opacity:0}60%{transform:translateY(-5px);opacity:1}100%{transform:translateY(0);opacity:1}}
+    @keyframes bubblePop{0%{transform:scale(.8) translateY(4px);opacity:0}100%{transform:scale(1) translateY(0);opacity:1}}
+    .nav{position:fixed;bottom:0;left:0;right:0;background:white;border-top:1px solid #DBEAFE;padding:14px 20px;display:flex;gap:10px;}
+    .btn-back{flex:0 0 52px;height:50px;background:var(--blush);color:var(--navy);border:none;border-radius:13px;font-size:18px;cursor:pointer;}
+    .btn-next{flex:1;height:50px;background:linear-gradient(135deg,var(--ocean),#1E3A8A);color:white;border:none;border-radius:13px;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;transition:opacity .2s;}
+    .btn-next:disabled{opacity:.45;cursor:default;}
+    .review-card{margin-top:20px;background:#EFF6FF;border:2px solid var(--ocean);border-radius:18px;padding:20px;}
+    .review-card .rc-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+    .review-card .rc-icon{font-size:28px;}
+    .review-card .rc-title{font-size:17px;font-weight:700;color:var(--dark-navy);}
+    .review-card .rc-sub{font-size:13px;color:var(--muted);margin-top:2px;}
+    .review-card .rc-empty{text-align:center;padding:20px 0;font-size:14px;color:var(--teal);line-height:1.8;}
+    .wi{background:white;border-radius:13px;padding:14px 16px;margin-bottom:10px;border:1.5px solid var(--soft-blue);transition:opacity .3s;}
+    .wi .wi-lesson{font-size:11px;color:var(--ocean);font-weight:700;letter-spacing:.5px;margin-bottom:4px;}
+    .wi .wi-q{font-size:13px;color:var(--muted);margin-bottom:7px;line-height:1.5;}
+    .wi .wi-answer{font-family:'Noto Sans KR',sans-serif;font-size:20px;font-weight:700;color:var(--dark-navy);}
+    .wi .wi-reading{font-size:13px;color:var(--ocean);margin-top:2px;}
+    .wi .wi-msg{font-size:13px;color:var(--text);margin-top:8px;line-height:1.65;border-top:1px solid var(--soft-blue);padding-top:8px;}
+    .wi-btn{display:inline-flex;align-items:center;gap:5px;margin-top:10px;background:none;border:1.5px solid var(--soft-blue);border-radius:10px;padding:6px 14px;font-size:12px;color:var(--muted);cursor:pointer;font-family:inherit;transition:all .15s;}
+    .wi-btn:hover{border-color:var(--teal);color:var(--teal);}
+    .wi.wi-cleared{opacity:.35;pointer-events:none;}
+  </style>
+  <script src="lessons/lessons-data.js"></script>
+</head>
+<body>
+<header id="appHeader">
+  <a href="index.html" style="position:absolute;top:14px;left:16px;background:rgba(255,255,255,.2);color:white;border:none;border-radius:10px;padding:6px 12px;font-size:12px;font-family:inherit;cursor:pointer;text-decoration:none;">← Home</a>
+  <div class="badge" id="headerBadge">Loading...</div>
+  <h1 id="headerTitle">Seoul Korean</h1>
+  <div class="sub" id="headerSub">Let's learn Korean! 🇰🇷</div>
+</header>
+<div class="progress-wrap">
+  <span class="progress-label" id="stepLabel">Step 1 / 5</span>
+  <div class="dots" id="dots"></div>
+</div>
+<div id="sections"></div>
+<div class="char-wrap" id="charWrap">
+  <div class="char-bubble" id="charBubble"></div>
+  <img class="char-img" id="charImg" src="" alt="Character">
+</div>
+<div class="nav" id="navBar">
+  <button class="btn-back" id="backBtn" onclick="prev()" style="display:none">◀</button>
+  <button class="btn-next" id="nextBtn" onclick="next()">Next →</button>
+</div>
+<script>
+const params = new URLSearchParams(location.search);
+const lessonId = params.get('id') || 'lesson1';
+let lesson = null, cur = 0, quizDone = [], picked = false;
+
+const _audio = new Audio();
+function speak(key) {
+  const map = {
+    '저기요':'audio/jogiyo.wav','이거 주세요':'audio/igeo_juseyo.wav','저거 주세요':'audio/jogeo_juseyo.wav',
+    '영수증 주세요':'audio/yeongsujeung_juseyo.wav','사진 주세요':'audio/sajin_juseyo.wav',
+    '감사합니다':'audio/gamsahamnida.wav','미안합니다':'audio/mianhamnida.wav',
+    '진짜':'audio/jinjja.wav','대박':'audio/daebak.wav',
+    '아메리카노 하나 주세요':'audio/americano_hana_juseyo.wav','아이스 주세요':'audio/aiseu_juseyo.wav',
+    '따뜻하게 주세요':'audio/ttatteutage_juseyo.wav','큰 걸로 주세요':'audio/keun_georlo_juseyo.wav',
+    '체크인 하려고요':'audio/checkin_haryeogoyo.wav','수건 있어요':'audio/sugeon_isseoyo.wav',
+    '와이파이 있어요':'audio/waipai_isseoyo.wav','칫솔 있어요':'audio/chitsol_isseoyo.wav',
+    '짐 보관 있어요':'audio/jim_bogwan_isseoyo.wav',
+    '어디서 갈아타요':'audio/eodiseo_garatayo.wav','명동에 가고 싶어요':'audio/myeongdong_gago_sipeoyo.wav',
+    '홍대에 가고 싶어요':'audio/hongdae_gago_sipeoyo.wav','경복궁에 가고 싶어요':'audio/gyeongbokgung_gago_sipeoyo.wav',
+    '인사동에 가고 싶어요':'audio/insadong_gago_sipeoyo.wav',
+    '얼마예요':'audio/eolmayeyo.wav','조금 깎아 주세요':'audio/jogeum_kkakka_juseyo.wav',
+    '이거 다른 색 있어요':'audio/igeo_dareun_saek_isseoyo.wav','이거 더 큰 거 있어요':'audio/igeo_deo_keun_geo_isseoyo.wav',
+    '이거 더 작은 거 있어요':'audio/igeo_deo_jageun_geo_isseoyo.wav','이거 다른 디자인 있어요':'audio/igeo_dareun_dijain_isseoyo.wav',
+    '진짜 대박이에요':'audio/jinjja_daebagieyo.wav','진짜 대박':'audio/jinjja_daebak.wav',
+    '진짜 맛있어':'audio/jinjja_massisseo.wav','진짜 예쁘다':'audio/jinjja_yeppeuda.wav','진짜 좋다':'audio/jinjja_jota.wav',
+  };
+  const src = map[key];
+  if (src) { _audio.src = src; _audio.play().catch(()=>{}); }
+}
+
+function showChar(img, msg, duration) {
+  const i = document.getElementById('charImg'), b = document.getElementById('charBubble');
+  if (img) { i.src = img; i.style.animation = 'none'; setTimeout(()=>i.style.animation='charBounce .4s ease',10); }
+  if (msg) { b.innerHTML = msg; b.classList.add('show'); if (duration) setTimeout(()=>b.classList.remove('show'),duration); }
+  else { b.classList.remove('show'); }
+}
+
+function render() {
+  const TOTAL = lesson.sections.length;
+  document.getElementById('dots').innerHTML = lesson.sections.map((_,i)=>
+    `<div class="dot ${i<cur?'done':i===cur?'active':''}"></div>`).join('');
+  document.getElementById('stepLabel').textContent = `Step ${cur+1} / ${TOTAL}`;
+  document.getElementById('backBtn').style.display = cur > 0 ? 'block' : 'none';
+  const nb = document.getElementById('nextBtn'), nav = document.getElementById('navBar'), sec = lesson.sections[cur];
+  if (cur === TOTAL - 1) {
+    nav.style.display = 'flex';
+    document.getElementById('backBtn').style.display = 'none';
+    nb.disabled = false; nb.textContent = '🏠 Back to Home';
+    nb.onclick = ()=>{ location.href='index.html'; };
+    const c = lesson.sections[cur].character;
+    if (c) showChar(c.img, c.msg, 4000);
+    return;
+  }
+  nb.onclick = next; nav.style.display = 'flex';
+  if (sec.type==='pattern' && !picked) { nb.disabled=true; nb.textContent='Choose a word 👆'; }
+  else if (sec.type==='quiz' && quizDone.length < sec.questions.length) { nb.disabled=true; nb.textContent='Answer the quiz 🧡'; }
+  else { nb.disabled=false; nb.textContent = cur===TOTAL-2 ? 'Complete 🎉' : 'Next →'; }
+  const c = sec.character;
+  if (c) showChar(c.img, c.msg, 3000);
+}
+
+function show(n) {
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('visible'));
+  document.getElementById(`sec-${n}`).classList.add('visible');
+  window.scrollTo({top:0,behavior:'smooth'});
+  render();
+  if (n===lesson.sections.length-1 && lesson.stage===6) injectSeasonReview();
+}
+
+function saveProgress(done) {
+  try { localStorage.setItem(`ek_progress_${lesson.id}`, JSON.stringify({done, step:cur})); } catch {}
+}
+function next() {
+  if (cur < lesson.sections.length-1) { cur++; saveProgress(cur===lesson.sections.length-1); show(cur); }
+}
+function prev() { if (cur>0) { cur--; show(cur); } }
+
+function buildPhrase(s,idx) {
+  return `<div class="section" id="sec-${idx}">
+    <div class="step-label">${s.stepLabel}</div><div class="step-title">${s.stepTitle}</div>
+    <div class="kr-block">
+      <div class="label">🇰🇷 Korean</div>
+      <div class="kr-text">${s.korean}</div>
+      <div class="reading">${s.reading}</div>
+      <div class="meaning">${s.meaning}</div>
+      <button class="listen-btn" onclick="speak('${s.audioKey}')">🔊 &nbsp;Hear the pronunciation</button>
+    </div>
+    <div class="card">
+      <div style="font-size:13px;color:var(--muted);margin-bottom:12px;font-weight:600;">When to use this phrase</div>
+      <div class="scene-list">${s.scenes.map(sc=>`<div class="scene-item"><div class="icon">${sc.icon}</div><div class="text">${sc.text}</div></div>`).join('')}</div>
+    </div></div>`;
+}
+
+function buildCompare(s,idx) {
+  return `<div class="section" id="sec-${idx}">
+    <div class="step-label">${s.stepLabel}</div><div class="step-title">${s.stepTitle}</div>
+    <div class="card">
+      <div style="font-size:13px;color:var(--muted);margin-bottom:14px;">Let's compare word order</div>
+      <div class="compare-box">
+        <div class="compare-col jp-col"><div class="col-label">🇬🇧 English</div><div class="sentence">${s.japanese.sentence}</div><div class="ruby-text">${s.japanese.reading}</div></div>
+        <div class="compare-col kr-col"><div class="col-label">🇰🇷 Korean</div><div class="sentence">${s.korean.sentence}</div><div class="ruby-text">${s.korean.reading}</div></div>
+      </div>
+      <div class="arrow-row">↑ Different order — but once you learn the pattern, it never changes! ↑</div>
+      <div class="insight"><strong>Key Point: </strong>${s.insight}</div>
+    </div>
+    <div class="card">
+      <div style="font-size:13px;color:var(--muted);margin-bottom:4px;font-weight:600;">Korean words you already know! 😊</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">Korean borrowed thousands of English words — you know more than you think!</div>
+      <div class="vocab-grid">${s.vocab.map(v=>`<div class="vocab-pill"><div class="kr">${v.korean}</div><div class="jp">${v.japanese}</div></div>`).join('')}</div>
+      <div style="margin-top:14px;font-size:12px;color:var(--muted);">10,000+ English loanwords in Korean. You're already ahead! 🚀</div>
+    </div></div>`;
+}
+
+function buildPattern(s,idx) {
+  return `<div class="section" id="sec-${idx}">
+    <div class="step-label">${s.stepLabel}</div><div class="step-title">${s.stepTitle}</div>
+    <div class="card">
+      <div style="font-size:13px;color:var(--muted);margin-bottom:14px;">${s.instruction||'Pick a word below to complete the sentence! 👇'}</div>
+      <div class="pattern-frame">
+        <div class="instruction">Your sentence</div>
+        <div class="kr-big" id="pDisplay">${s.template.korean}</div>
+        <div class="p-reading" id="pReading">${s.template.reading}</div>
+        <div class="p-jp" id="pJp">${s.template.japanese}</div>
+      </div>
+      <div class="word-grid">${s.words.map(w=>`<button class="word-btn" onclick="pickWord(this,'${w.korean}','${w.reading}','${w.japanese}','${w.audioKey}')"><div class="kr">${w.korean}</div><div class="read">${w.reading}</div><div class="jp">${w.japanese}</div></button>`).join('')}</div>
+      <div class="result-box" id="resultBox"><div class="kr" id="rKr"></div><div class="read" id="rRead"></div><div class="jp" id="rJp"></div><div class="cheer">✨ Perfect! That works in Seoul.</div></div>
+    </div></div>`;
+}
+
+function buildQuiz(s,idx) {
+  return `<div class="section" id="sec-${idx}">
+    <div class="step-label">${s.stepLabel}</div><div class="step-title">${s.stepTitle}</div>
+    ${s.questions.map((q,qi)=>`
+    <div class="card" id="qcard-${idx}-${qi}" ${qi>0?'style="display:none"':''}>
+      <div class="quiz-header"><div class="quiz-icon">${q.icon}</div><div class="q-text">${q.question}</div><div class="q-sub">${q.sub}</div></div>
+      <div class="option-list" id="qopts-${idx}-${qi}">
+        ${q.options.map((o,oi)=>`<button class="option-btn" onclick="answerQuiz(this,${o.correct},${idx},${qi})"><span class="num">${oi+1}</span><span><div class="kr-opt">${o.korean}</div><div class="read-opt">${o.reading}</div></span></button>`).join('')}
+      </div>
+      <div class="q-result" id="qresult-${idx}-${qi}"><div class="big" id="qicon-${idx}-${qi}"></div><div id="qtext-${idx}-${qi}"></div></div>
+    </div>`).join('')}
+  </div>`;
+}
+
+function buildCulture(s,idx) {
+  const bodyHtml = s.culture.body.replace(/<hl>/g,'<span class="hl">').replace(/<\/hl>/g,'</span>').replace(/<kr>/g,'<span class="kr-inline">').replace(/<\/kr>/g,'</span>');
+  return `<div class="section" id="sec-${idx}">
+    <div class="step-label">${s.stepLabel}</div><div class="step-title">${s.stepTitle}</div>
+    <div class="card culture-card">
+      <div class="culture-icon">${s.culture.icon}</div>
+      <div class="culture-title">${s.culture.title}</div>
+      <div class="culture-body">${bodyHtml}</div>
+    </div>
+    <div class="drama-box">
+      <div class="d-label">🎬 HEARD IN K-DRAMAS</div>
+      <div class="d-kr">${s.drama.lines.join('<br>')}</div>
+      <div class="d-read">${s.drama.reading}</div>
+      <div class="d-jp">${s.drama.japanese}</div>
+      <div class="d-note">${s.drama.note}</div>
+    </div>
+    <div class="card" style="margin-top:14px;">
+      <div class="complete">
+        <div class="big">🎉</div>
+        <h2>Great job today!</h2>
+        <p>Here are the phrases from this lesson.<br>Say them out loud for extra practice! 🎤</p>
+        <div class="summary-list">${s.summary.map(item=>`<div class="s-pill"><span class="kr">${item.korean}</span><span class="read"> · ${item.reading}</span></div>`).join('')}</div>
+        <div style="font-size:13px;color:var(--muted);">Take it slow — you're doing great!<br>천천히 해도 괜찮아요 😊</div>
+      </div>
+    </div></div>`;
+}
+
+const builders = {phrase:buildPhrase,compare:buildCompare,pattern:buildPattern,quiz:buildQuiz,culture:buildCulture};
+
+function pickWord(el,kr,reading,jp,audioKey) {
+  const t = lesson.sections[cur].template;
+  const krText = t.korean.replace('___',kr);
+  const rdText = (t.readingTemplate||'___ ju-se-yo.').replace('___',reading);
+  const jpText = (t.japaneseTemplate||'___ please.').replace('___',jp);
+  document.querySelectorAll('.word-btn').forEach(b=>b.classList.remove('selected'));
+  el.classList.add('selected');
+  document.getElementById('pDisplay').textContent = krText;
+  document.getElementById('pReading').textContent = rdText;
+  document.getElementById('pJp').textContent = jpText;
+  document.getElementById('rKr').textContent = krText;
+  document.getElementById('rRead').textContent = rdText;
+  document.getElementById('rJp').textContent = jpText;
+  document.getElementById('resultBox').classList.add('show');
+  speak(audioKey);
+  showChar(lesson.character.cheer,'Perfect! 🎉<br>That works!',3000);
+  picked = true; render();
+}
+
+function answerQuiz(btn,correct,secIdx,qIdx) {
+  const q = lesson.sections[secIdx].questions[qIdx];
+  if (quizDone.includes(`${secIdx}-${qIdx}`)) return;
+  quizDone.push(`${secIdx}-${qIdx}`);
+  document.querySelectorAll(`#qopts-${secIdx}-${qIdx} .option-btn`).forEach(b=>{b.classList.add('disabled');b.onclick=null;});
+  btn.classList.add(correct?'correct':'wrong');
+  if (!correct) saveWrongAnswer(secIdx,qIdx);
+  const result = document.getElementById(`qresult-${secIdx}-${qIdx}`);
+  result.classList.add('show',correct?'ok':'ng');
+  document.getElementById(`qicon-${secIdx}-${qIdx}`).textContent = correct?'🎉':'😊';
+  document.getElementById(`qtext-${secIdx}-${qIdx}`).textContent = correct?q.correctMsg:q.wrongMsg;
+  showChar(correct?lesson.character.correct:lesson.character.wrong,correct?'Correct! 🎉':'So close!<br>You\'ll get it! 😊',4000);
+  const nextCard = document.getElementById(`qcard-${secIdx}-${qIdx+1}`);
+  if (nextCard) setTimeout(()=>{nextCard.style.display='block';nextCard.style.animation='fadeIn .4s ease';},700);
+  render();
+}
+
+function saveWrongAnswer(secIdx,qIdx) {
+  const q = lesson.sections[secIdx].questions[qIdx];
+  const correct = q.options.find(o=>o.correct);
+  const key = `${lessonId}_${secIdx}_${qIdx}`;
+  const season = Math.ceil(parseInt(lessonId.replace('lesson',''))/6);
+  let wrongs = [];
+  try { wrongs = JSON.parse(localStorage.getItem('ek_wrong_answers')||'[]'); } catch {}
+  if (wrongs.some(w=>w.key===key)) return;
+  wrongs.push({key,lessonId,season,stageTitle:lesson.stageTitle,icon:q.icon,question:q.question,wrongMsg:q.wrongMsg,correctKorean:correct?correct.korean:'',correctReading:correct?correct.reading:'',timestamp:Date.now()});
+  try { localStorage.setItem('ek_wrong_answers',JSON.stringify(wrongs)); } catch {}
+}
+
+function clearWrong(key) {
+  const el = document.getElementById(`wi-${CSS.escape(key)}`);
+  if (el) el.classList.add('wi-cleared');
+  let wrongs = [];
+  try { wrongs = JSON.parse(localStorage.getItem('ek_wrong_answers')||'[]'); } catch {}
+  try { localStorage.setItem('ek_wrong_answers',JSON.stringify(wrongs.filter(w=>w.key!==key))); } catch {}
+}
+
+function injectSeasonReview() {
+  const season = Math.ceil(parseInt(lessonId.replace('lesson',''))/6);
+  const lastSecIdx = lesson.sections.length-1;
+  const lastSec = document.getElementById(`sec-${lastSecIdx}`);
+  if (!lastSec||lastSec.querySelector('.review-card')) return;
+  let wrongs = [];
+  try { wrongs = JSON.parse(localStorage.getItem('ek_wrong_answers')||'[]'); } catch {}
+  const sw = wrongs.filter(w=>w.season===season);
+  const itemsHtml = sw.length===0
+    ? `<div class="rc-empty">✨ Perfect score this season!<br>Amazing work! 🏆</div>`
+    : sw.map(w=>`<div class="wi" id="wi-${w.key}"><div class="wi-lesson">${w.icon} ${w.stageTitle}</div><div class="wi-q">${w.question}</div><div class="wi-answer">${w.correctKorean}</div><div class="wi-reading">${w.correctReading}</div><div class="wi-msg">${w.wrongMsg}</div><button class="wi-btn" onclick="clearWrong('${w.key}')">✅ Got it!</button></div>`).join('');
+  const card = document.createElement('div');
+  card.className = 'review-card';
+  card.innerHTML = `<div class="rc-header"><div class="rc-icon">📝</div><div><div class="rc-title">Season ${season} · Review</div><div class="rc-sub">Let's go over what you missed</div></div></div>${itemsHtml}`;
+  const lc = lastSec.querySelector('.card:last-child');
+  lc ? lc.after(card) : lastSec.appendChild(card);
+}
+
+(function(){
+  const data = window.LESSON_DATA && window.LESSON_DATA[lessonId];
+  if (!data) {
+    document.getElementById('sections').innerHTML = '<div style="padding:40px;text-align:center;color:red;">Lesson not found: ' + lessonId + '</div>';
+    return;
+  }
+  lesson = data;
+  document.title = data.stageTitle + ' · Seoul Korean';
+  document.getElementById('headerBadge').textContent = 'Lesson ' + data.stage + ' · ' + data.stageTitle;
+  document.getElementById('headerTitle').textContent = data.appTitle;
+  document.getElementById('sections').innerHTML = data.sections.map((s,i)=>builders[s.type](s,i)).join('');
+  quizDone = []; picked = false; cur = 0; show(0);
+})();
+</script>
+</body>
+</html>

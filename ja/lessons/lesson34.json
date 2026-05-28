@@ -1,0 +1,228 @@
+{
+  "id": "lesson34",
+  "stage": 4,
+  "stageTitle": "교통·택시",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "택시 필수！<br>覚えましょう！"
+      },
+      "korean": "여기서 세워 주세요.",
+      "reading": "ヨギソ セウォ ジュセヨ。",
+      "meaning": "ここで止めてください。",
+      "audioKey": "여기서 세워 주세요",
+      "scenes": [
+        {
+          "icon": "🚕",
+          "text": "タクシーで降りるときの必須フレーズ！「세우다（セウダ）＝止める」"
+        },
+        {
+          "icon": "📍",
+          "text": "「저기서（チョギソ）＝あそこで」「저 앞에서（チョ アペソ）＝あの前で」も使えます"
+        },
+        {
+          "icon": "🗺️",
+          "text": "カカオタクシーなどのアプリを使えば行先はアプリで設定できて便利"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "交通の言葉を比べよう！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "交通も<br>韓国語で！"
+      },
+      "japanese": {
+        "sentence": "〇〇まで\nお願いします。",
+        "reading": "〇〇までおねがいします"
+      },
+      "korean": {
+        "sentence": "〇〇까지\n가 주세요.",
+        "reading": "〇〇カジ カ ジュセヨ"
+      },
+      "insight": "「까지（カジ）＝まで」「가 주세요（カ ジュセヨ）＝行ってください」。<br>行先の後に「까지 가 주세요」をつけるだけで目的地を伝えられます！",
+      "vocab": [
+        {
+          "korean": "세워 주세요",
+          "japanese": "セウォ ジュセヨ ＝ 止めてください"
+        },
+        {
+          "korean": "까지 가 주세요",
+          "japanese": "カジ カ ジュセヨ ＝ まで行ってください"
+        },
+        {
+          "korean": "미터기",
+          "japanese": "ミトギ ＝ メーター"
+        },
+        {
+          "korean": "영수증",
+          "japanese": "ヨンスジュン ＝ 領収書"
+        },
+        {
+          "korean": "빨리",
+          "japanese": "パルリ ＝ 早く"
+        },
+        {
+          "korean": "천천히",
+          "japanese": "チョンチョニ ＝ ゆっくり"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "タクシーで<br>使ってみよう！"
+      },
+      "template": {
+        "korean": "___ 까지 가 주세요.",
+        "reading": "（単語を選んでください）",
+        "japanese": "〜まで行ってください",
+        "readingTemplate": "___ カジ カ ジュセヨ。",
+        "japaneseTemplate": "___まで行ってください。"
+      },
+      "words": [
+        {
+          "korean": "명동",
+          "reading": "ミョンドン",
+          "japanese": "明洞",
+          "audioKey": "명동까지 가 주세요"
+        },
+        {
+          "korean": "홍대",
+          "reading": "ホンデ",
+          "japanese": "弘大",
+          "audioKey": "홍대까지 가 주세요"
+        },
+        {
+          "korean": "인천공항",
+          "reading": "インチョンゴンハン",
+          "japanese": "仁川空港",
+          "audioKey": "인천공항까지 가 주세요"
+        },
+        {
+          "korean": "이 주소",
+          "reading": "イ ジュソ",
+          "japanese": "この住所",
+          "audioKey": "이 주소까지 가 주세요"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "🚕",
+          "question": "タクシーで「ここで止めてください」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "여기서 가 주세요",
+              "reading": "ヨギソ カ ジュセヨ",
+              "correct": false
+            },
+            {
+              "korean": "여기서 세워 주세요",
+              "reading": "ヨギソ セウォ ジュセヨ",
+              "correct": true
+            },
+            {
+              "korean": "여기서 기다려 주세요",
+              "reading": "ヨギソ キダリョ ジュセヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "완벽해요！「여기서 세워 주세요」ソウルのタクシーで使ってみてください！",
+          "wrongMsg": "아쉬워요！「여기서 세워 주세요（ヨギソ セウォ ジュセヨ）」。「세우다＝止める」ですよ。"
+        },
+        {
+          "icon": "🗺️",
+          "question": "「明洞まで行ってください」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "홍대까지 가 주세요",
+              "reading": "ホンデカジ カ ジュセヨ",
+              "correct": false
+            },
+            {
+              "korean": "명동까지 가 주세요",
+              "reading": "ミョンドンカジ カ ジュセヨ",
+              "correct": true
+            },
+            {
+              "korean": "인천공항까지 가 주세요",
+              "reading": "インチョンゴンハンカジ カ ジュセヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "맞아요！「명동까지 가 주세요」明洞ショッピングを楽しんでください！",
+          "wrongMsg": "정답은 「명동까지 가 주세요（ミョンドンカジ カ ジュセヨ）」。「명동＝明洞」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "교통 완벽！<br>ソウル満喫！"
+      },
+      "culture": {
+        "icon": "🚕",
+        "title": "ソウルの交通を賢く使う",
+        "body": "ソウルの移動のコツ：<br><br><hl>카카오택시（カカオタクシー）</hl>＝日本語設定も可。行先はアプリで入力できます<br><hl>지하철（チハチョル）</hl>＝地下鉄。안내방송が日本語でも流れます<br><hl>티머니（ティモニー）</hl>＝交通カード。バス・地下鉄・コンビニで使えます<br><br>タクシーで役立つ表現：<br>・<hl>「빨리 가야 해요（パルリ カヤ ヘヨ）」</hl>＝「急いでいます」<br>・<hl>「영수증 주세요（ヨンスジュン ジュセヨ）」</hl>＝「領収書ください」"
+      },
+      "drama": {
+        "lines": [
+          "빨리 가주세요, 급해요!",
+          "네, 안전하게 모셔다 드릴게요."
+        ],
+        "reading": "パルリ カジュセヨ、クペヨ！／ ネ、アンジョナゲ モショダ トゥリルケヨ。",
+        "japanese": "「早く行ってください、急いでます！」 ／ 「はい、安全にお届けします。」",
+        "note": "ドラマのタクシーシーンでよく見るやり取りです ✨"
+      },
+      "summary": [
+        {
+          "korean": "여기서 세워 주세요",
+          "reading": "ヨギソ セウォ ジュセヨ"
+        },
+        {
+          "korean": "명동까지 가 주세요",
+          "reading": "ミョンドンカジ カ ジュセヨ"
+        },
+        {
+          "korean": "영수증 주세요",
+          "reading": "ヨンスジュン ジュセヨ"
+        },
+        {
+          "korean": "빨리 가야 해요",
+          "reading": "パルリ カヤ ヘヨ"
+        }
+      ]
+    }
+  ]
+}

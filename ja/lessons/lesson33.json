@@ -1,0 +1,228 @@
+{
+  "id": "lesson33",
+  "stage": 3,
+  "stageTitle": "병원에서",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "もしもの時の<br>一言！"
+      },
+      "korean": "여기가 아파요.",
+      "reading": "ヨギガ アパヨ。",
+      "meaning": "ここが痛いです。",
+      "audioKey": "여기가 아파요",
+      "scenes": [
+        {
+          "icon": "🏥",
+          "text": "「여기（ヨギ）＝ここ」「아프다（アプダ）＝痛い」。体の場所を指しながら使えます"
+        },
+        {
+          "icon": "💊",
+          "text": "「배가 아파요（ペガ アパヨ）＝お腹が痛い」「머리가 아파요（モリガ アパヨ）＝頭が痛い」"
+        },
+        {
+          "icon": "🌡️",
+          "text": "「열이 있어요（ヨリ イッソヨ）＝熱があります」も必ず覚えましょう"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "体の言葉も比べよう！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "体の言葉も<br>韓国語で！"
+      },
+      "japanese": {
+        "sentence": "お腹が\n痛いです。",
+        "reading": "おなかがいたいです"
+      },
+      "korean": {
+        "sentence": "배가\n아파요.",
+        "reading": "ペガ アパヨ"
+      },
+      "insight": "「배（ペ）＝お腹」「머리（モリ）＝頭」「목（モク）＝喉・首」「다리（タリ）＝脚」。<br>体の部位＋「가/이 아파요」で「〜が痛いです」が完成します。",
+      "vocab": [
+        {
+          "korean": "아파요",
+          "japanese": "アパヨ ＝ 痛いです"
+        },
+        {
+          "korean": "배",
+          "japanese": "ペ ＝ お腹"
+        },
+        {
+          "korean": "머리",
+          "japanese": "モリ ＝ 頭"
+        },
+        {
+          "korean": "목",
+          "japanese": "モク ＝ 喉・首"
+        },
+        {
+          "korean": "열이 있어요",
+          "japanese": "ヨリ イッソヨ ＝ 熱があります"
+        },
+        {
+          "korean": "약국",
+          "japanese": "ヤックク ＝ 薬局（薬局）"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "体の症状を<br>伝えよう！"
+      },
+      "template": {
+        "korean": "___ 아파요.",
+        "reading": "（単語を選んでください）",
+        "japanese": "〜が痛いです",
+        "readingTemplate": "___ アパヨ。",
+        "japaneseTemplate": "___が痛いです。"
+      },
+      "words": [
+        {
+          "korean": "배가",
+          "reading": "ペガ",
+          "japanese": "お腹",
+          "audioKey": "배가 아파요"
+        },
+        {
+          "korean": "머리가",
+          "reading": "モリガ",
+          "japanese": "頭",
+          "audioKey": "머리가 아파요"
+        },
+        {
+          "korean": "목이",
+          "reading": "モギ",
+          "japanese": "喉",
+          "audioKey": "목이 아파요"
+        },
+        {
+          "korean": "다리가",
+          "reading": "タリガ",
+          "japanese": "脚",
+          "audioKey": "다리가 아파요"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "🏥",
+          "question": "病院で「ここが痛いです」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "여기가 좋아요",
+              "reading": "ヨギガ チョアヨ",
+              "correct": false
+            },
+            {
+              "korean": "여기가 아파요",
+              "reading": "ヨギガ アパヨ",
+              "correct": true
+            },
+            {
+              "korean": "여기가 있어요",
+              "reading": "ヨギガ イッソヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "완벽해요！「여기가 아파요」万が一のときに役立つ表現ですよ！",
+          "wrongMsg": "아쉬워요！「여기가 아파요（ヨギガ アパヨ）」。「아프다＝痛い」ですよ。"
+        },
+        {
+          "icon": "🤕",
+          "question": "「頭が痛いです」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "배가 아파요",
+              "reading": "ペガ アパヨ",
+              "correct": false
+            },
+            {
+              "korean": "머리가 아파요",
+              "reading": "モリガ アパヨ",
+              "correct": true
+            },
+            {
+              "korean": "다리가 아파요",
+              "reading": "タリガ アパヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "맞아요！「머리가 아파요」。「머리＝頭」、覚えましたね！",
+          "wrongMsg": "정답은 「머리가 아파요（モリガ アパヨ）」。「머리＝頭」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "긴급 표현、<br>覚えました！"
+      },
+      "culture": {
+        "icon": "🏥",
+        "title": "韓国で体調不良になったら",
+        "body": "旅行中の緊急時に役立つ表現：<br><br><hl>약국 어디예요?（ヤックク オディエヨ？）</hl>＝「薬局はどこですか？」<br><hl>가까운 병원 있어요?（カッカウン ピョンウォン イッソヨ？）</hl>＝「近くの病院はありますか？」<br><hl>일본어 할 수 있는 의사 있어요?（イルボノ ハル ス インヌン ウィサ イッソヨ？）</hl>＝「日本語ができる医者はいますか？」<br><br>緊急番号：<hl>119</hl>（救急・消防）<br>観光警察：<hl>1330</hl>（日本語対応あり）"
+      },
+      "drama": {
+        "lines": [
+          "괜찮아요? 어디 아파요?",
+          "병원에 같이 가요."
+        ],
+        "reading": "クェンチャナヨ？ オディ アパヨ？／ ピョンウォネ カッチ カヨ。",
+        "japanese": "「大丈夫ですか？どこか痛いですか？」 ／ 「病院に一緒に行きましょう。」",
+        "note": "ドラマの心配シーンの定番です ✨"
+      },
+      "summary": [
+        {
+          "korean": "여기가 아파요",
+          "reading": "ヨギガ アパヨ"
+        },
+        {
+          "korean": "머리가 아파요",
+          "reading": "モリガ アパヨ"
+        },
+        {
+          "korean": "열이 있어요",
+          "reading": "ヨリ イッソヨ"
+        },
+        {
+          "korean": "약국 어디예요?",
+          "reading": "ヤックク オディエヨ？"
+        }
+      ]
+    }
+  ]
+}

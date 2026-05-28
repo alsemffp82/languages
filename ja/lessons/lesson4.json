@@ -1,0 +1,115 @@
+{
+  "id": "lesson4",
+  "stage": 4,
+  "stageTitle": "地下鉄で",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong":   "images/3.png",
+    "cheer":   "images/4.png",
+    "complete":"images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": { "img": "images/1.png", "msg": "サトウさん、<br>地下鉄に乗ろう！" },
+      "korean": "어디서 갈아타요?",
+      "reading": "オディソ ガラタヨ？",
+      "meaning": "どこで乗り換えますか？",
+      "audioKey": "어디서 갈아타요",
+      "scenes": [
+        { "icon": "🚇", "text": "ソウルの地下鉄は9路線以上！乗り換えが必要な場面も多い。" },
+        { "icon": "🗺️", "text": "「어디서」は「どこで」、「갈아타요」は「乗り換えます」。" },
+        { "icon": "📱", "text": "Naverマップで調べながら聞けば完璧！" }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "移動の言葉もそっくり！",
+      "character": { "img": "images/1.png", "msg": "地図も<br>読みやすい！" },
+      "japanese": { "sentence": "明洞に\n行きたいです。", "reading": "ミョンドン に いきたいです" },
+      "korean":   { "sentence": "명동에\n가고 싶어요.", "reading": "ミョンドンエ カゴ シポヨ" },
+      "insight": "「に」＝「에（エ）」、「行きたいです」＝「가고 싶어요（カゴ シポヨ）」。<br>「〜에 가고 싶어요」で行きたい場所を全部言えます！",
+      "vocab": [
+        { "korean": "지하철", "japanese": "チハチョル ＝ 地下鉄" },
+        { "korean": "갈아타다", "japanese": "ガラタダ ＝ 乗り換える" },
+        { "korean": "출구", "japanese": "チュルグ ＝ 出口" },
+        { "korean": "교통카드", "japanese": "キョトンカドゥ ＝ 交通カード" },
+        { "korean": "어디", "japanese": "オディ ＝ どこ" },
+        { "korean": "몇 호선", "japanese": "ミョッ ホソン ＝ 何号線" }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": { "img": "images/4.png", "msg": "行きたい場所を<br>言ってみよう！" },
+      "template": { "korean": "___ 에 가고 싶어요.", "reading": "（単語を選んでください）", "japanese": "〜に行きたいです", "readingTemplate": "___ エ カゴ シポヨ。", "japaneseTemplate": "___に行きたいです。" },
+      "words": [
+        { "korean": "명동",   "reading": "ミョンドン",   "japanese": "明洞",       "audioKey": "명동에 가고 싶어요" },
+        { "korean": "홍대",   "reading": "ホンデ",       "japanese": "弘大",       "audioKey": "홍대에 가고 싶어요" },
+        { "korean": "경복궁", "reading": "キョンボックン","japanese": "景福宮",     "audioKey": "경복궁에 가고 싶어요" },
+        { "korean": "인사동", "reading": "インサドン",   "japanese": "仁寺洞",     "audioKey": "인사동에 가고 싶어요" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": { "img": "images/1.png", "msg": "さあ、クイズ！<br>大丈夫ですよ 😊" },
+      "questions": [
+        {
+          "icon": "🚇",
+          "question": "「どこで乗り換えますか？」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            { "korean": "어디서 내려요?",    "reading": "オディソ ネリョヨ？",    "correct": false },
+            { "korean": "어디서 갈아타요?",  "reading": "オディソ ガラタヨ？",    "correct": true  },
+            { "korean": "어디서 타요?",      "reading": "オディソ タヨ？",        "correct": false }
+          ],
+          "correctMsg": "正解！「갈아타요」は「乗り換えます」。地下鉄で必ず使える表現です！",
+          "wrongMsg":   "惜しい！「어디서 갈아타요?（オディソ ガラタヨ？）」。「갈아타요」は「乗り換えます」ですよ。"
+        },
+        {
+          "icon": "🗺️",
+          "question": "「明洞に行きたいです」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            { "korean": "명동에서 왔어요",    "reading": "ミョンドンエソ ワッソヨ",   "correct": false },
+            { "korean": "명동에 가고 싶어요", "reading": "ミョンドンエ カゴ シポヨ",  "correct": true  },
+            { "korean": "명동이 좋아요",      "reading": "ミョンドンイ チョアヨ",    "correct": false }
+          ],
+          "correctMsg": "その調子！「에 가고 싶어요」で、どこへでも行けます！",
+          "wrongMsg":   "正解は「명동에 가고 싶어요（ミョンドンエ カゴ シポヨ）」。「가고 싶어요＝行きたいです」ですね。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": { "img": "images/6.png", "msg": "地下鉄<br>マスターです！" },
+      "culture": {
+        "icon": "🚇",
+        "title": "ソウルの地下鉄、実は超便利！",
+        "body": "ソウルの地下鉄は<hl>T-money（티머니）カード</hl>が便利。コンビニで購入できます。<br><br>アナウンスで覚えておきたい言葉：<br>・<hl>다음 역（タウム ヨク）</hl>＝次の駅<br>・<hl>환승（ファンスン）</hl>＝乗り換え<br>・<hl>출구（チュルグ）</hl>＝出口<br><br>乗り越したときは：<br><hl>「<kr>잘못 탔어요.</kr>（チャルモッ タッソヨ）」</hl><br>＝「間違えて乗ってしまいました」"
+      },
+      "drama": {
+        "lines": ["다음 역이에요!", "빨리 가요!"],
+        "reading": "タウム ヨギエヨ！／ パルリ ガヨ！",
+        "japanese": "「次の駅ですよ！」 ／ 「早く行きましょう！」",
+        "note": "ドラマのロマンチックな追いかけシーンで聞こえてきます ✨"
+      },
+      "summary": [
+        { "korean": "어디서 갈아타요?",    "reading": "オディソ ガラタヨ？" },
+        { "korean": "명동에 가고 싶어요",  "reading": "ミョンドンエ カゴ シポヨ" },
+        { "korean": "출구",               "reading": "チュルグ" },
+        { "korean": "교통카드",           "reading": "キョトンカドゥ" }
+      ]
+    }
+  ]
+}

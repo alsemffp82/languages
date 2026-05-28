@@ -1,0 +1,116 @@
+{
+  "id": "lesson2",
+  "stage": 2,
+  "stageTitle": "At the Café",
+  "appTitle": "Seoul Korean",
+  "character": { "default":"images/1.png","correct":"images/2.png","wrong":"images/3.png","cheer":"images/4.png","complete":"images/6.png" },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "Today's Phrase",
+      "stepTitle": "Order at a Korean café like a pro",
+      "character": { "img":"images/1.png","msg":"Korean cafés are<br>the best! ☕" },
+      "korean": "아메리카노 하나 주세요",
+      "reading": "a-me-ri-ka-no ha-na ju-se-yo",
+      "meaning": "One Americano, please",
+      "audioKey": "아메리카노 하나 주세요",
+      "scenes": [
+        { "icon":"☕","text":"Ordering your first drink at a Korean café — Americanos are the most popular coffee in Korea!" },
+        { "icon":"🧾","text":"The cashier asks how many — 하나 (ha-na) = one. You've got this." },
+        { "icon":"🛒","text":"The same pattern works for any item — just swap the item name and number." }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "English vs Korean",
+      "stepTitle": "Korean has two number systems — and you'll use both!",
+      "character": { "img":"images/1.png","msg":"하나, 둘, 셋...<br>Let's count! 🔢" },
+      "japanese": { "sentence":"One coffee,\nplease.","reading":"English: item + quantity" },
+      "korean":   { "sentence":"아메리카노\n하나 주세요.","reading":"a-me-ri-ka-no ha-na ju-se-yo" },
+      "insight": "For counting items (1, 2, 3...) Korean uses native numbers: <strong>하나(1), 둘(2), 셋(3)</strong>. For money, floors, and minutes, it uses Sino-Korean: <strong>일(1), 이(2), 삼(3)</strong>. You'll learn both naturally through practice!",
+      "vocab": [
+        { "korean":"아메리카노","japanese":"americano → Americano ☕" },
+        { "korean":"라떼",    "japanese":"latte → Latte 🥛" },
+        { "korean":"카페",    "japanese":"kape → café 🏠" },
+        { "korean":"아이스",  "japanese":"aiseu → iced ❄️" },
+        { "korean":"바닐라",  "japanese":"banilla → vanilla 🍦" },
+        { "korean":"카라멜",  "japanese":"karamel → caramel 🍮" }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "Pattern Practice",
+      "stepTitle": "Customize your order!",
+      "character": { "img":"images/4.png","msg":"Pick your<br>preference! ☕" },
+      "instruction": "Add these to your order — just say it after the drink name! 👇",
+      "template": {
+        "korean":"___ 주세요.",
+        "reading":"(tap a word below)",
+        "japanese":"___ please.",
+        "readingTemplate":"___ ju-se-yo.",
+        "japaneseTemplate":"___ please."
+      },
+      "words": [
+        { "korean":"아이스",   "reading":"a-i-seu",           "japanese":"iced",       "audioKey":"아이스 주세요" },
+        { "korean":"따뜻하게", "reading":"tta-tteut-ha-ge",   "japanese":"hot/warm",   "audioKey":"따뜻하게 주세요" },
+        { "korean":"큰 걸로",  "reading":"keun geol-lo",      "japanese":"large size",  "audioKey":"큰 걸로 주세요" },
+        { "korean":"아메리카노 하나","reading":"a-me-ri-ka-no ha-na","japanese":"1 Americano","audioKey":"아메리카노 하나 주세요" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "Mini Quiz",
+      "stepTitle": "Let's check what you remember!",
+      "character": { "img":"images/1.png","msg":"Quiz time!<br>You've got this 😊" },
+      "questions": [
+        {
+          "icon":"☕",
+          "question":"How do you order \"One Americano, please\"?",
+          "sub":"Think back to today's phrase!",
+          "options": [
+            { "korean":"아메리카노 하나 주세요","reading":"a-me-ri-ka-no ha-na ju-se-yo","correct":true  },
+            { "korean":"아메리카노 하나 있어요","reading":"a-me-ri-ka-no ha-na is-seo-yo","correct":false },
+            { "korean":"아메리카노 하나 감사해요","reading":"a-me-ri-ka-no ha-na gam-sa-hae-yo","correct":false }
+          ],
+          "correctMsg":"Perfect! 아메리카노 하나 주세요 — you can order anything by swapping the item and number.",
+          "wrongMsg":"Not quite! The answer is 아메리카노 하나 주세요. 주세요 = 'please give me' — the magic ending for ordering anything!"
+        },
+        {
+          "icon":"❄️",
+          "question":"How do you say \"iced, please\" at a café?",
+          "sub":"Think back to the pattern practice!",
+          "options": [
+            { "korean":"따뜻하게 주세요","reading":"tta-tteut-ha-ge ju-se-yo","correct":false },
+            { "korean":"아이스 주세요",  "reading":"a-i-seu ju-se-yo",        "correct":true  },
+            { "korean":"큰 걸로 주세요", "reading":"keun geol-lo ju-se-yo",   "correct":false }
+          ],
+          "correctMsg":"Correct! 아이스 is borrowed directly from English — 'ice' → 아이스. Easy!",
+          "wrongMsg":"Not quite! 아이스 주세요 (a-i-seu ju-se-yo) — 아이스 comes from the English word 'ice'!"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "Culture Note",
+      "stepTitle": "Seoul has the most cafés per capita in the world!",
+      "character": { "img":"images/6.png","msg":"Lesson complete!<br>You're amazing! 🎉" },
+      "culture": {
+        "icon":"☕",
+        "title":"Korea's café culture is next level",
+        "body":"Seoul has more cafés per square kilometer than almost anywhere on earth. <hl>카공족 (ka-gong-jok)</hl> — people who study or work at cafés — are a real cultural phenomenon.<br><br>Popular order tips:<br>• Say <hl>\"<kr>아이스</kr> 주세요\"</hl> for iced (most Koreans drink iced year-round!)<br>• <hl>\"<kr>따뜻하게</kr> 주세요\"</hl> = hot/warm, please<br>• <hl>\"<kr>테이크아웃</kr> 주세요\"</hl> = to go, please (takeout = 테이크아웃)<br><br>Tip: many Korean cafés are incredibly Instagram-worthy. Themed cafés, rooftop cafés, and dessert cafés are everywhere!"
+      },
+      "drama": {
+        "lines":["같이 카페 갈까?","응, 가자!"],
+        "reading":"ga-chi ka-pe gal-kka? / eung, ga-ja!",
+        "japanese":"\"Shall we go to a café together?\" / \"Yeah, let's go!\"",
+        "note":"A classic K-drama scene. Now you can have this conversation! ✨"
+      },
+      "summary": [
+        { "korean":"아메리카노 하나 주세요","reading":"a-me-ri-ka-no ha-na ju-se-yo" },
+        { "korean":"아이스 주세요",          "reading":"a-i-seu ju-se-yo" },
+        { "korean":"따뜻하게 주세요",        "reading":"tta-tteut-ha-ge ju-se-yo" },
+        { "korean":"큰 걸로 주세요",         "reading":"keun geol-lo ju-se-yo" }
+      ]
+    }
+  ]
+}

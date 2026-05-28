@@ -1,0 +1,116 @@
+{
+  "id": "lesson4",
+  "stage": 4,
+  "stageTitle": "On the Subway",
+  "appTitle": "Seoul Korean",
+  "character": { "default":"images/1.png","correct":"images/2.png","wrong":"images/3.png","cheer":"images/4.png","complete":"images/6.png" },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "Today's Phrase",
+      "stepTitle": "Navigate the Seoul subway!",
+      "character": { "img":"images/1.png","msg":"Seoul subway is<br>amazing! 🚇" },
+      "korean": "어디서 갈아타요?",
+      "reading": "eo-di-seo ga-ra-ta-yo?",
+      "meaning": "Where do I transfer?",
+      "audioKey": "어디서 갈아타요",
+      "scenes": [
+        { "icon":"🚇","text":"On the Seoul Metro and not sure where to switch lines. Ask a fellow passenger or station staff!" },
+        { "icon":"🗺️","text":"The Seoul subway has 9+ lines and goes everywhere — transfers are common." },
+        { "icon":"📱","text":"Tip: Naver Maps and Kakao Maps are better than Google Maps for Seoul navigation!" }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "English vs Korean",
+      "stepTitle": "Korean question words are easy!",
+      "character": { "img":"images/1.png","msg":"어디 = where!<br>뭐 = what! 📍" },
+      "japanese": { "sentence":"Where do I\ntransfer?","reading":"English: question word comes first" },
+      "korean":   { "sentence":"어디서\n갈아타요?","reading":"eo-di-seo ga-ra-ta-yo?" },
+      "insight": "Korean question words: <strong>어디 (where), 뭐 (what), 언제 (when), 누구 (who), 왜 (why), 어떻게 (how)</strong>. Unlike English, they stay in their natural sentence position — the sentence just goes up in tone at the end to signal a question!",
+      "vocab": [
+        { "korean":"지하철","japanese":"ji-ha-cheol → subway/metro 🚇" },
+        { "korean":"버스",  "japanese":"beoseu → bus 🚌" },
+        { "korean":"택시",  "japanese":"taeksi → taxi 🚕" },
+        { "korean":"역",    "japanese":"yeok → station 🏢" },
+        { "korean":"출구",  "japanese":"chul-gu → exit 🚪" },
+        { "korean":"노선",  "japanese":"no-seon → line/route 🗺️" }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "Pattern Practice",
+      "stepTitle": "Say where you want to go!",
+      "character": { "img":"images/4.png","msg":"Tell them your<br>destination! 🗺️" },
+      "instruction": "\"___e gago sipeoyo\" = \"I want to go to ___\". Pick a destination! 👇",
+      "template": {
+        "korean":"___에 가고 싶어요.",
+        "reading":"(tap a destination below)",
+        "japanese":"I want to go to ___.",
+        "readingTemplate":"___-e ga-go si-peo-yo.",
+        "japaneseTemplate":"I want to go to ___."
+      },
+      "words": [
+        { "korean":"명동",  "reading":"Myeong-dong",   "japanese":"Myeongdong","audioKey":"명동에 가고 싶어요" },
+        { "korean":"홍대",  "reading":"Hong-dae",      "japanese":"Hongdae",   "audioKey":"홍대에 가고 싶어요" },
+        { "korean":"경복궁","reading":"Gyeong-bok-gung","japanese":"Gyeongbokgung","audioKey":"경복궁에 가고 싶어요" },
+        { "korean":"인사동","reading":"In-sa-dong",    "japanese":"Insadong",  "audioKey":"인사동에 가고 싶어요" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "Mini Quiz",
+      "stepTitle": "Let's check what you remember!",
+      "character": { "img":"images/1.png","msg":"Quiz time!<br>You can do it! 😊" },
+      "questions": [
+        {
+          "icon":"🚇",
+          "question":"How do you ask \"Where do I transfer?\"",
+          "sub":"Think back to today's phrase!",
+          "options": [
+            { "korean":"어디서 갈아타요?","reading":"eo-di-seo ga-ra-ta-yo?","correct":true  },
+            { "korean":"어디서 가려고요?","reading":"eo-di-seo ga-ryeo-go-yo?","correct":false },
+            { "korean":"어디서 주세요?", "reading":"eo-di-seo ju-se-yo?",    "correct":false }
+          ],
+          "correctMsg":"Correct! 어디서 갈아타요? — 어디 = where, 갈아타다 = to transfer. Natural and clear!",
+          "wrongMsg":"Not quite! The answer is 어디서 갈아타요? (eo-di-seo ga-ra-ta-yo?) — 갈아타다 specifically means 'to transfer between vehicles'."
+        },
+        {
+          "icon":"🏯",
+          "question":"How do you say \"I want to go to Gyeongbokgung\"?",
+          "sub":"Think back to the pattern practice!",
+          "options": [
+            { "korean":"경복궁에 있어요?",     "reading":"gyeong-bok-gung-e is-seo-yo?","correct":false },
+            { "korean":"경복궁에 가고 싶어요.", "reading":"gyeong-bok-gung-e ga-go si-peo-yo.","correct":true  },
+            { "korean":"경복궁에 주세요.",     "reading":"gyeong-bok-gung-e ju-se-yo.","correct":false }
+          ],
+          "correctMsg":"Perfect! 경복궁에 가고 싶어요 — the -에 particle marks direction (to/at). Swap any destination!",
+          "wrongMsg":"Not quite! 경복궁에 가고 싶어요 — 가고 싶어요 = I want to go. -에 = to (direction)."
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "Culture Note",
+      "stepTitle": "Seoul's subway is one of the best in the world",
+      "character": { "img":"images/6.png","msg":"Lesson complete!<br>You're amazing! 🎉" },
+      "culture": {
+        "icon":"🚇",
+        "title":"The Seoul Metro: clean, fast, and everywhere",
+        "body":"The Seoul subway has <hl>9 main lines + multiple branches</hl>, covers the entire city, and runs until midnight. It's cheap (about ₩1,400 per ride), air-conditioned, and has English signs at every station.<br><br>Essential tips:<br>• Get a <hl>T-money card (티머니)</hl> from any convenience store — tap in and out for discounts<br>• <hl>Line 2 (green)</hl> is the most-used line, circling the city<br>• <hl>Quiet cars</hl> exist — no calls, no loud music<br>• Phone signal works everywhere underground!"
+      },
+      "drama": {
+        "lines":["조심해!","괜찮아?"],
+        "reading":"jo-sim-hae! / gwaen-cha-na?",
+        "japanese":"\"Be careful!\" / \"Are you okay?\"",
+        "note":"These come up constantly in K-dramas. 조심해 is casual — say 조심하세요 to strangers ✨"
+      },
+      "summary": [
+        { "korean":"어디서 갈아타요?",    "reading":"eo-di-seo ga-ra-ta-yo?" },
+        { "korean":"명동에 가고 싶어요.", "reading":"myeong-dong-e ga-go si-peo-yo." },
+        { "korean":"홍대에 가고 싶어요.", "reading":"hong-dae-e ga-go si-peo-yo." },
+        { "korean":"출구",              "reading":"chul-gu (exit)" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "id": "lesson15",
+  "stage": 3,
+  "stageTitle": "네일샵에서",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "次のレッスン、<br>始めましょう！"
+      },
+      "korean": "예쁘게 해 주세요.",
+      "reading": "イェップケ ヘ ジュセヨ。",
+      "meaning": "かわいくしてください。",
+      "audioKey": "예쁘게 해 주세요",
+      "scenes": [
+        {
+          "icon": "💅",
+          "text": "韓国のネイルショップは日本より安くておしゃれ！"
+        },
+        {
+          "icon": "🎨",
+          "text": "「예쁘게（イェップケ）＝かわいく・きれいに」は美容語の万能フレーズ。"
+        },
+        {
+          "icon": "✨",
+          "text": "写真を見せながら言えば通じます！"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "日本語と韓国語はそっくり！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "比べてみよう！"
+      },
+      "japanese": {
+        "sentence": "この色に\nしてください。",
+        "reading": "この いろ に してください"
+      },
+      "korean": {
+        "sentence": "이 색으로\n해 주세요.",
+        "reading": "イ セグロ ヘ ジュセヨ"
+      },
+      "insight": "「색（セク）＝色」＋「으로（ウロ）＝〜で・〜に」。<br>「이 색으로」で「この色に」になります！",
+      "vocab": [
+        {
+          "korean": "색",
+          "japanese": "セク ＝ 色"
+        },
+        {
+          "korean": "디자인",
+          "japanese": "ディジャイン ＝ デザイン"
+        },
+        {
+          "korean": "글리터",
+          "japanese": "クルリト ＝ グリッター"
+        },
+        {
+          "korean": "무광",
+          "japanese": "ムグァン ＝ マット"
+        },
+        {
+          "korean": "유광",
+          "japanese": "ユグァン ＝ ツヤあり"
+        },
+        {
+          "korean": "젤네일",
+          "japanese": "チェルネイル ＝ ジェルネイル"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "単語を選んで<br>文を作ろう！"
+      },
+      "template": {
+        "korean": "___ 색으로 해 주세요.",
+        "reading": "（単語を選んでください）",
+        "japanese": "〜色にしてください",
+        "readingTemplate": "___ セグロ ヘ ジュセヨ。",
+        "japaneseTemplate": "___色にしてください。"
+      },
+      "words": [
+        {
+          "korean": "이",
+          "reading": "イ",
+          "japanese": "この",
+          "audioKey": "이 색으로 해 주세요"
+        },
+        {
+          "korean": "핑크",
+          "reading": "ピンク",
+          "japanese": "ピンク",
+          "audioKey": "핑크 색으로 해 주세요"
+        },
+        {
+          "korean": "베이지",
+          "reading": "ペイジ",
+          "japanese": "ベージュ",
+          "audioKey": "베이지 색으로 해 주세요"
+        },
+        {
+          "korean": "빨간",
+          "reading": "パルガン",
+          "japanese": "赤い",
+          "audioKey": "빨간 색으로 해 주세요"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "💅",
+          "question": "「かわいくしてください」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "많이 잘라 주세요",
+              "reading": "マニ チャルラ ジュセヨ",
+              "correct": false
+            },
+            {
+              "korean": "예쁘게 해 주세요",
+              "reading": "イェップケ ヘ ジュセヨ",
+              "correct": true
+            },
+            {
+              "korean": "조금만 해 주세요",
+              "reading": "チョグムマン ヘ ジュセヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "完璧！「예쁘게＝かわいく・きれいに」。ネイルショップで使ってみて！",
+          "wrongMsg": "惜しい！「예쁘게 해 주세요」。「예쁘다＝かわいい・きれい」ですよ。"
+        },
+        {
+          "icon": "🎨",
+          "question": "「ピンク色にしてください」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "베이지 색으로 해 주세요",
+              "reading": "ペイジ セグロ ヘ ジュセヨ",
+              "correct": false
+            },
+            {
+              "korean": "핑크 색으로 해 주세요",
+              "reading": "ピンク セグロ ヘ ジュセヨ",
+              "correct": true
+            },
+            {
+              "korean": "빨간 색으로 해 주세요",
+              "reading": "パルガン セグロ ヘ ジュセヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "その通り！「으로＝〜で・〜に」は色以外にも使える便利な助詞です！",
+          "wrongMsg": "正解は「핑크 색으로 해 주세요」。「으로＝〜に」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "今日もできました！<br>すごいです！"
+      },
+      "culture": {
+        "icon": "💅",
+        "title": "韓国のネイルショップ事情！",
+        "body": "ソウルのネイルショップはリーズナブルで技術も高い！<br><br>ジェルネイル約<hl>3〜5万ウォン</hl>（約3,300〜5,500円）。<br><br>便利な表現：<br>・<hl>「<kr>이 디자인으로 해 주세요.</kr>（イ ディジャイヌロ ヘ ジュセヨ）」</hl>＝「このデザインでお願いします」<br>・<hl>「<kr>얼마나 걸려요?</kr>（オルマナ コルリョヨ？）」</hl>＝「どのくらいかかりますか？」"
+      },
+      "drama": {
+        "lines": [
+          "손 예쁘다!",
+          "네일 너무 예뻐요!"
+        ],
+        "reading": "ソン イェップダ！／ ネイル ノム イェッポヨ！",
+        "japanese": "「手きれい！」 ／ 「ネイル、すごくかわいい！」",
+        "note": "新しいネイルをほめてもらえたら最高ですね ✨"
+      },
+      "summary": [
+        {
+          "korean": "예쁘게 해 주세요",
+          "reading": "イェップケ ヘ ジュセヨ"
+        },
+        {
+          "korean": "핑크 색으로 해 주세요",
+          "reading": "ピンク セグロ ヘ ジュセヨ"
+        },
+        {
+          "korean": "이 디자인으로 해 주세요",
+          "reading": "イ ディジャイヌロ ヘ ジュセヨ"
+        },
+        {
+          "korean": "얼마나 걸려요?",
+          "reading": "オルマナ コルリョヨ？"
+        }
+      ]
+    }
+  ]
+}

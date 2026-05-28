@@ -1,0 +1,228 @@
+{
+  "id": "lesson9",
+  "stage": 3,
+  "stageTitle": "위로·응원",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/3.png",
+        "msg": "優しい言葉、<br>覚えましょう！"
+      },
+      "korean": "괜찮아요?",
+      "reading": "クェンチャナヨ？",
+      "meaning": "大丈夫ですか？",
+      "audioKey": "괜찮아요?",
+      "scenes": [
+        {
+          "icon": "🤗",
+          "text": "相手を心配するとき。「大丈夫？」と声をかけるドラマの定番シーン。"
+        },
+        {
+          "icon": "😊",
+          "text": "「괜찮아요（クェンチャナヨ）」は「大丈夫です」の答えにもなります。"
+        },
+        {
+          "icon": "💪",
+          "text": "「힘내요（ヒムネヨ）＝頑張って」と合わせて覚えると便利！"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "励ましの言葉もそっくり！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "優しさも<br>そのまま伝わる！"
+      },
+      "japanese": {
+        "sentence": "大丈夫\nですよ。",
+        "reading": "だいじょうぶ ですよ"
+      },
+      "korean": {
+        "sentence": "괜찮아요,\n걱정 마요.",
+        "reading": "クェンチャナヨ、コクチョン マヨ"
+      },
+      "insight": "「걱정（コクチョン）＝心配」は漢字語「格情」から。<br>「마요」は「〜しないでください」。「걱정 마요」で「心配しないで」になります。",
+      "vocab": [
+        {
+          "korean": "괜찮다",
+          "japanese": "クェンチャンタ ＝ 大丈夫だ"
+        },
+        {
+          "korean": "걱정",
+          "japanese": "コクチョン ＝ 心配（格情）"
+        },
+        {
+          "korean": "힘내다",
+          "japanese": "ヒムネダ ＝ 頑張る・元気を出す"
+        },
+        {
+          "korean": "위로",
+          "japanese": "ウィロ ＝ 慰め（慰労）"
+        },
+        {
+          "korean": "응원",
+          "japanese": "ウンウォン ＝ 応援（応援）"
+        },
+        {
+          "korean": "천천히",
+          "japanese": "チョンチョニ ＝ ゆっくり"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "応援の言葉を<br>言ってみよう！"
+      },
+      "template": {
+        "korean": "___ 마요.",
+        "reading": "（単語を選んでください）",
+        "japanese": "〜しないで",
+        "readingTemplate": "___ マヨ。",
+        "japaneseTemplate": "___しないで。"
+      },
+      "words": [
+        {
+          "korean": "걱정",
+          "reading": "コクチョン",
+          "japanese": "心配",
+          "audioKey": "걱정 마요"
+        },
+        {
+          "korean": "포기하지",
+          "reading": "ポギハジ",
+          "japanese": "諦め",
+          "audioKey": "포기하지 마요"
+        },
+        {
+          "korean": "울지",
+          "reading": "ウルジ",
+          "japanese": "泣か",
+          "audioKey": "울지 마요"
+        },
+        {
+          "korean": "무리하지",
+          "reading": "ムリハジ",
+          "japanese": "無理し",
+          "audioKey": "무리하지 마요"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "🤗",
+          "question": "「大丈夫ですか？」と声をかけるとき？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "배고파요?",
+              "reading": "ペゴパヨ？",
+              "correct": false
+            },
+            {
+              "korean": "괜찮아요?",
+              "reading": "クェンチャナヨ？",
+              "correct": true
+            },
+            {
+              "korean": "피곤해요?",
+              "reading": "ピゴネヨ？",
+              "correct": false
+            }
+          ],
+          "correctMsg": "完璧！「괜찮아요?」、ドラマで誰かが倒れたシーンで必ず聞こえます！",
+          "wrongMsg": "惜しい！「괜찮아요?（クェンチャナヨ？）」。「괜찮다＝大丈夫だ」ですよ。"
+        },
+        {
+          "icon": "💪",
+          "question": "「泣かないで」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "걱정 마요",
+              "reading": "コクチョン マヨ",
+              "correct": false
+            },
+            {
+              "korean": "울지 마요",
+              "reading": "ウルジ マヨ",
+              "correct": true
+            },
+            {
+              "korean": "포기하지 마요",
+              "reading": "ポギハジ マヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "その通り！「울다＝泣く」＋「지 마요」で「泣かないで」です 😊",
+          "wrongMsg": "正解は「울지 마요（ウルジ マヨ）」。「울다＝泣く」に「지 마요＝〜しないで」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "優しい言葉、<br>増えましたね！"
+      },
+      "culture": {
+        "icon": "💪",
+        "title": "韓国人の応援文化「화이팅！」",
+        "body": "<hl>화이팅（ファイティン）！</hl>は英語の「Fighting」から来た応援語。<br>スポーツだけでなく、日常のあらゆる場面で使います。<br><br>試験前の友達に：<br><hl>「<kr>힘내요! 잘 할 수 있어요!</kr>」</hl><br>（ヒムネヨ！チャル ハル ス イッソヨ！）<br>＝「頑張って！きっとできるよ！」<br><br>自分を励ますときも：<br><hl>「<kr>나 자신, 화이팅!</kr>（ナ ジャシン ファイティン！）」</hl><br>＝「自分、頑張れ！」"
+      },
+      "drama": {
+        "lines": [
+          "그냥 내 곁에 있어줘.",
+          "다 잘 될 거야."
+        ],
+        "reading": "クニャン ネ ゴテ イッソジョ。／ タ チャル テル コヤ。",
+        "japanese": "「ただ私のそばにいてよ。」 ／ 「きっと全部うまくいくよ。」",
+        "note": "慰めのシーンで心にしみる言葉たちです ✨"
+      },
+      "summary": [
+        {
+          "korean": "괜찮아요?",
+          "reading": "クェンチャナヨ？"
+        },
+        {
+          "korean": "걱정 마요",
+          "reading": "コクチョン マヨ"
+        },
+        {
+          "korean": "울지 마요",
+          "reading": "ウルジ マヨ"
+        },
+        {
+          "korean": "힘내요",
+          "reading": "ヒムネヨ"
+        }
+      ]
+    }
+  ]
+}

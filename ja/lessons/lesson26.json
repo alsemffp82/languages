@@ -1,0 +1,228 @@
+{
+  "id": "lesson26",
+  "stage": 2,
+  "stageTitle": "부탁하기 심화",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "丁寧なお願い、<br>覚えましょう！"
+      },
+      "korean": "부탁드려도 될까요?",
+      "reading": "プタクトゥリョド テルッカヨ？",
+      "meaning": "お願いしてもよろしいですか？",
+      "audioKey": "부탁드려도 될까요?",
+      "scenes": [
+        {
+          "icon": "🙏",
+          "text": "「부탁해요」より丁寧。ホテルやレストランで使える上品な表現"
+        },
+        {
+          "icon": "💼",
+          "text": "「드리다（トゥリダ）」は「하다（ハダ）」の謙譲語。目上の人に使います"
+        },
+        {
+          "icon": "✨",
+          "text": "「될까요?（テルッカヨ？）」＝「〜してもいいですか？」という柔らかい許可求め"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "丁寧さの段階！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "丁寧さも<br>韓国語で！"
+      },
+      "japanese": {
+        "sentence": "写真を\n撮っていただけますか？",
+        "reading": "しゃしんをとっていただけますか"
+      },
+      "korean": {
+        "sentence": "사진을\n찍어 주시겠어요?",
+        "reading": "サジヌル チゴ ジュシゲッソヨ？"
+      },
+      "insight": "「주시겠어요?（ジュシゲッソヨ？）」は「〜していただけますか？」の最丁寧表現。<br>「주세요（ジュセヨ）」→「주시겠어요?」で一段上品になります。",
+      "vocab": [
+        {
+          "korean": "부탁드려요",
+          "japanese": "プタクトゥリョヨ ＝ お願いします（謙譲）"
+        },
+        {
+          "korean": "찍어 주세요",
+          "japanese": "チゴ ジュセヨ ＝ 撮ってください"
+        },
+        {
+          "korean": "도와주세요",
+          "japanese": "トワジュセヨ ＝ 手伝ってください"
+        },
+        {
+          "korean": "알려주세요",
+          "japanese": "アルリョジュセヨ ＝ 教えてください"
+        },
+        {
+          "korean": "확인해주세요",
+          "japanese": "ファギネジュセヨ ＝ 確認してください"
+        },
+        {
+          "korean": "잠시만요",
+          "japanese": "チャムシマンニョ ＝ 少々お待ちください"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "丁寧にお願い<br>してみよう！"
+      },
+      "template": {
+        "korean": "___ 주시겠어요?",
+        "reading": "（単語を選んでください）",
+        "japanese": "〜していただけますか？",
+        "readingTemplate": "___ ジュシゲッソヨ？",
+        "japaneseTemplate": "___していただけますか？"
+      },
+      "words": [
+        {
+          "korean": "찍어",
+          "reading": "チゴ",
+          "japanese": "撮って",
+          "audioKey": "찍어 주시겠어요?"
+        },
+        {
+          "korean": "도와",
+          "reading": "トワ",
+          "japanese": "手伝って",
+          "audioKey": "도와 주시겠어요?"
+        },
+        {
+          "korean": "알려",
+          "reading": "アルリョ",
+          "japanese": "教えて",
+          "audioKey": "알려 주시겠어요?"
+        },
+        {
+          "korean": "확인해",
+          "reading": "ファギネ",
+          "japanese": "確認して",
+          "audioKey": "확인해 주시겠어요?"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "🙏",
+          "question": "上品に「お願いしてもよろしいですか？」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "부탁해요",
+              "reading": "プタケヨ",
+              "correct": false
+            },
+            {
+              "korean": "부탁드려도 될까요?",
+              "reading": "プタクトゥリョド テルッカヨ？",
+              "correct": true
+            },
+            {
+              "korean": "부탁할게요",
+              "reading": "プタカルケヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "완벽해요！「부탁드려도 될까요?」ホテルで使ったら感心されますよ！",
+          "wrongMsg": "아쉬워요！「부탁드려도 될까요?（プタクトゥリョド テルッカヨ？）」。「드리다＝謙譲語」ですよ。"
+        },
+        {
+          "icon": "📸",
+          "question": "「撮っていただけますか？」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "알려 주시겠어요?",
+              "reading": "アルリョ ジュシゲッソヨ？",
+              "correct": false
+            },
+            {
+              "korean": "찍어 주시겠어요?",
+              "reading": "チゴ ジュシゲッソヨ？",
+              "correct": true
+            },
+            {
+              "korean": "도와 주시겠어요?",
+              "reading": "トワ ジュシゲッソヨ？",
+              "correct": false
+            }
+          ],
+          "correctMsg": "맞아요！「찍어 주시겠어요?」写真撮影をお願いする定番表現です！",
+          "wrongMsg": "정답은 「찍어 주시겠어요?（チゴ ジュシゲッソヨ？）」。「찍다＝撮る」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "丁寧表現、<br>マスター！"
+      },
+      "culture": {
+        "icon": "🙏",
+        "title": "韓国語の丁寧さレベル",
+        "body": "韓国語の「お願い」には丁寧さの段階があります：<br><br><hl>주세요（ジュセヨ）</hl>＝〜ください（基本・丁寧）<br><hl>주시겠어요?（ジュシゲッソヨ？）</hl>＝〜していただけますか？（より丁寧）<br><hl>부탁드려도 될까요?（プタクトゥリョドテルッカヨ？）</hl>＝お願いしてもよろしいですか？（最丁寧）<br><br>旅行では「주세요」で十分ですが、「주시겠어요?」を使うとより印象が良くなります。<hl>사람들이 미소로 반응할 거예요 😊</hl>"
+      },
+      "drama": {
+        "lines": [
+          "잠시 시간 괜찮으세요?",
+          "도와주시겠어요?"
+        ],
+        "reading": "チャムシ シガン クェンチャヌセヨ？／ トワジュシゲッソヨ？",
+        "japanese": "「少しお時間よろしいですか？」 ／ 「手伝っていただけますか？」",
+        "note": "丁寧な依頼の鉄板フレーズです ✨"
+      },
+      "summary": [
+        {
+          "korean": "부탁드려도 될까요?",
+          "reading": "プタクトゥリョド テルッカヨ？"
+        },
+        {
+          "korean": "찍어 주시겠어요?",
+          "reading": "チゴ ジュシゲッソヨ？"
+        },
+        {
+          "korean": "도와주세요",
+          "reading": "トワジュセヨ"
+        },
+        {
+          "korean": "알려주세요",
+          "reading": "アルリョジュセヨ"
+        }
+      ]
+    }
+  ]
+}

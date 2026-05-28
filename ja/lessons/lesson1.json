@@ -1,0 +1,115 @@
+{
+  "id": "lesson1",
+  "stage": 1,
+  "stageTitle": "空港で",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong":   "images/3.png",
+    "cheer":   "images/4.png",
+    "complete":"images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": { "img": "images/1.png", "msg": "サトウさん、<br>はじめましょう！" },
+      "korean": "저기요~",
+      "reading": "チョギョ〜",
+      "meaning": "すみません〜 / ちょっと〜",
+      "audioKey": "저기요",
+      "scenes": [
+        { "icon": "🛄", "text": "空港で荷物が出てこない。スタッフを呼びたい！" },
+        { "icon": "🍜", "text": "食堂で注文したい。店員さんを呼びたい！" },
+        { "icon": "🛍️", "text": "ショッピング中に、店員さんに声をかけたい！" }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "実は、日本語と韓国語はそっくり！",
+      "character": { "img": "images/1.png", "msg": "もう数百語、<br>知ってますよ！" },
+      "japanese": { "sentence": "私は\n日本人です。", "reading": "わたし は にほんじん です" },
+      "korean":   { "sentence": "저는\n일본 사람이에요.", "reading": "チョヌン イルボン サラミエヨ" },
+      "insight": "「は」＝「는（ヌン）」、「を」＝「을/를」、「に」＝「에」…<br>助詞も1対1で対応しています。",
+      "vocab": [
+        { "korean": "약속", "japanese": "ヤクソク ＝ 約束" },
+        { "korean": "준비", "japanese": "ジュンビ ＝ 準備" },
+        { "korean": "무리", "japanese": "ムリ ＝ 無理" },
+        { "korean": "가족", "japanese": "カジョク ＝ 家族" },
+        { "korean": "인기", "japanese": "インキ ＝ 人気" },
+        { "korean": "주의", "japanese": "チュイ ＝ 注意" }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": { "img": "images/4.png", "msg": "単語を選んで<br>文を作ろう！" },
+      "template": { "korean": "___ 주세요.", "reading": "（単語を選んでください）", "japanese": "〜をください", "readingTemplate": "___ ジュセヨ。", "japaneseTemplate": "___をください。" },
+      "words": [
+        { "korean": "이거",   "reading": "イゴ",        "japanese": "これ",       "audioKey": "이거 주세요" },
+        { "korean": "저거",   "reading": "チョゴ",      "japanese": "あれ",       "audioKey": "저거 주세요" },
+        { "korean": "영수증", "reading": "ヨンスジュン","japanese": "レシート",   "audioKey": "영수증 주세요" },
+        { "korean": "사진",   "reading": "サジン",      "japanese": "写真",       "audioKey": "사진 주세요" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": { "img": "images/1.png", "msg": "さあ、クイズ！<br>大丈夫ですよ 😊" },
+      "questions": [
+        {
+          "icon": "🛄",
+          "question": "空港でスタッフを呼ぶ時、何と言う？",
+          "sub": "学んだ表現を思い出して！",
+          "options": [
+            { "korean": "감사합니다", "reading": "カムサハムニダ", "correct": false },
+            { "korean": "저기요",    "reading": "チョギョ",       "correct": true  },
+            { "korean": "미안합니다","reading": "ミアナムニダ",   "correct": false }
+          ],
+          "correctMsg": "正解！「저기요」はどこでも使える万能フレーズ。覚えておくと必ず役立ちます。",
+          "wrongMsg":   "惜しい！正解は「저기요（チョギョ）」。「すみません〜」と同じ感覚で使えます。"
+        },
+        {
+          "icon": "🍜",
+          "question": "食堂で「これをください」は？",
+          "sub": "パターン練習で作った文を思い出して！",
+          "options": [
+            { "korean": "이거 괜찮아요", "reading": "イゴ クェンチャナヨ", "correct": false },
+            { "korean": "이거 주세요",  "reading": "イゴ ジュセヨ",       "correct": true  },
+            { "korean": "이거 미안해요","reading": "イゴ ミアネヨ",       "correct": false }
+          ],
+          "correctMsg": "完璧！「이거 주세요」、ソウルの食堂でそのまま使えます！",
+          "wrongMsg":   "惜しい！正解は「이거 주세요（イゴ ジュセヨ）」。「これをください」ですね。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": { "img": "images/6.png", "msg": "今日もできました！<br>すごいです！" },
+      "culture": {
+        "icon": "🔔",
+        "title": "韓国の食堂には呼び出しベルがある！",
+        "body": "手を上げてスタッフを呼ぶ必要はありません。テーブルに<hl>呼び出しベル</hl>があることが多いんです。<br><br>でも声をかけたい時は、<br><hl>「<kr>저기요</kr>〜！（チョギョ〜！）」</hl><br>これだけでOK。「すみません〜！」と全く同じ感覚です。<br><br>もうひとつ：テーブルに<hl>물（ムル）＝お水</hl>が置いてあることも多く、セルフサービスの場合も。慌てなくて大丈夫ですよ 😊"
+      },
+      "drama": {
+        "lines": ["진짜？", "대박！"],
+        "reading": "チンッチャ？ ／ テバク！",
+        "japanese": "「本当に？」 ／ 「すごい！（最高！）」",
+        "note": "ドラマで聞いたことがありませんか？実はもう知っている韓国語です ✨"
+      },
+      "summary": [
+        { "korean": "저기요",    "reading": "チョギョ" },
+        { "korean": "이거 주세요","reading": "イゴ ジュセヨ" },
+        { "korean": "저는",      "reading": "チョヌン" },
+        { "korean": "감사합니다","reading": "カムサハムニダ" }
+      ]
+    }
+  ]
+}

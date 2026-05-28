@@ -1,0 +1,228 @@
+{
+  "id": "lesson28",
+  "stage": 4,
+  "stageTitle": "과거 이야기",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "過去の話、<br>してみよう！"
+      },
+      "korean": "어렸을 때 꿈이 뭐였어요?",
+      "reading": "オリョッスル テ クミ ムォヨッソヨ？",
+      "meaning": "小さい頃の夢は何でしたか？",
+      "audioKey": "어렸을 때 꿈이 뭐였어요?",
+      "scenes": [
+        {
+          "icon": "🌟",
+          "text": "「어렸을 때（オリョッスル テ）＝小さい頃」は会話で自然に出てくる表現"
+        },
+        {
+          "icon": "💭",
+          "text": "「뭐였어요?（ムォヨッソヨ？）」は「何でしたか？」。過去形の基本パターン"
+        },
+        {
+          "icon": "🎵",
+          "text": "韓国ドラマで昔の話をするシーンに必ず出てくる懐かしい表現"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "過去形を使ってみよう！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "昔話も<br>韓国語で！"
+      },
+      "japanese": {
+        "sentence": "子どもの頃、\nよく歌っていました。",
+        "reading": "こどものころ、よくうたっていました"
+      },
+      "korean": {
+        "sentence": "어렸을 때,\n자주 노래했어요.",
+        "reading": "オリョッスル テ、チャジュ ノレヘッソヨ"
+      },
+      "insight": "韓国語の過去形は動詞語幹に「-았/었어요（アッソヨ/オッソヨ）」をつけます。<br>「했어요（ヘッソヨ）＝しました」「갔어요（カッソヨ）＝行きました」が最頻出です。",
+      "vocab": [
+        {
+          "korean": "어렸을 때",
+          "japanese": "オリョッスル テ ＝ 子どもの頃"
+        },
+        {
+          "korean": "그때",
+          "japanese": "クテ ＝ その頃・あの時"
+        },
+        {
+          "korean": "예전에",
+          "japanese": "イェジョネ ＝ 以前に"
+        },
+        {
+          "korean": "했어요",
+          "japanese": "ヘッソヨ ＝ しました"
+        },
+        {
+          "korean": "갔어요",
+          "japanese": "カッソヨ ＝ 行きました"
+        },
+        {
+          "korean": "봤어요",
+          "japanese": "ポァッソヨ ＝ 見ました"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "過去の話を<br>してみよう！"
+      },
+      "template": {
+        "korean": "예전에 ___ 봤어요.",
+        "reading": "（単語を選んでください）",
+        "japanese": "以前に〜を見ました",
+        "readingTemplate": "イェジョネ ___ ポァッソヨ。",
+        "japaneseTemplate": "以前に___を見ました。"
+      },
+      "words": [
+        {
+          "korean": "한국 드라마",
+          "reading": "ハングク トゥラマ",
+          "japanese": "韓国ドラマ",
+          "audioKey": "예전에 한국 드라마 봤어요"
+        },
+        {
+          "korean": "K-pop 공연",
+          "reading": "ケイポップ コンヨン",
+          "japanese": "K-POPライブ",
+          "audioKey": "예전에 K-pop 공연 봤어요"
+        },
+        {
+          "korean": "서울",
+          "reading": "ソウル",
+          "japanese": "ソウル（を）",
+          "audioKey": "예전에 서울 봤어요"
+        },
+        {
+          "korean": "한국 영화",
+          "reading": "ハングク ヨンファ",
+          "japanese": "韓国映画",
+          "audioKey": "예전에 한국 영화 봤어요"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "🌟",
+          "question": "「小さい頃の夢は何でしたか？」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "지금 꿈이 뭐예요?",
+              "reading": "チグム クミ ムォエヨ？",
+              "correct": false
+            },
+            {
+              "korean": "어렸을 때 꿈이 뭐였어요?",
+              "reading": "オリョッスル テ クミ ムォヨッソヨ？",
+              "correct": true
+            },
+            {
+              "korean": "꿈을 이뤘어요?",
+              "reading": "クムル イルォッソヨ？",
+              "correct": false
+            }
+          ],
+          "correctMsg": "완벽해요！「어렸을 때 꿈이 뭐였어요?」韓国人との会話が広がる素敵な質問です！",
+          "wrongMsg": "아쉬워요！「어렸을 때 꿈이 뭐였어요?（オリョッスル テ…）」。「어렸을 때＝子どもの頃」ですよ。"
+        },
+        {
+          "icon": "🎵",
+          "question": "「以前に韓国ドラマを見ました」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "예전에 한국 드라마 봤어요",
+              "reading": "イェジョネ ハングク トゥラマ ポァッソヨ",
+              "correct": true
+            },
+            {
+              "korean": "예전에 서울 봤어요",
+              "reading": "イェジョネ ソウル ポァッソヨ",
+              "correct": false
+            },
+            {
+              "korean": "예전에 한국 영화 봤어요",
+              "reading": "イェジョネ ハングク ヨンファ ポァッソヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "맞아요！「봤어요＝見ました」。「보다＝見る」の過去形ですね！",
+          "wrongMsg": "정답은 「예전에 한국 드라마 봤어요（イェジョネ ハングク トゥラマ ポァッソヨ）」。「한국 드라마＝韓国ドラマ」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "昔話、<br>上手になった！"
+      },
+      "culture": {
+        "icon": "📖",
+        "title": "韓国語の過去形あれこれ",
+        "body": "韓国語過去形のコツ：<br><br>語幹の最後の母音が陽母音（ㅏ・ㅗ）<br>→ <hl>-았어요</hl>（例：갔어요・봤어요）<br><br>その他の母音<br>→ <hl>-었어요</hl>（例：먹었어요・없었어요）<br><br>하다（ハダ）動詞<br>→ <hl>했어요</hl>（例：공부했어요・요리했어요）<br><br>「했어요（ヘッソヨ）＝しました」を覚えるだけで、「공부했어요（勉強しました）」「여행했어요（旅行しました）」など多くの表現に応用できます！"
+      },
+      "drama": {
+        "lines": [
+          "그때가 제일 행복했어요.",
+          "다시 그 시절로 돌아가고 싶어요."
+        ],
+        "reading": "クテガ チェイル ヘンボケッソヨ。／ タシ グ シジョルロ トラガゴ シポヨ。",
+        "japanese": "「あの頃が一番幸せでした。」 ／ 「またあの頃に戻りたいです。」",
+        "note": "回想シーンの定番フレーズです ✨"
+      },
+      "summary": [
+        {
+          "korean": "어렸을 때",
+          "reading": "オリョッスル テ"
+        },
+        {
+          "korean": "예전에 봤어요",
+          "reading": "イェジョネ ポァッソヨ"
+        },
+        {
+          "korean": "했어요",
+          "reading": "ヘッソヨ"
+        },
+        {
+          "korean": "갔어요",
+          "reading": "カッソヨ"
+        }
+      ]
+    }
+  ]
+}

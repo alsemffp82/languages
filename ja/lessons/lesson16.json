@@ -1,0 +1,228 @@
+{
+  "id": "lesson16",
+  "stage": 4,
+  "stageTitle": "마사지·스파에서",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "次のレッスン、<br>始めましょう！"
+      },
+      "korean": "세게 해 주세요.",
+      "reading": "セゲ ヘ ジュセヨ。",
+      "meaning": "強めにしてください。",
+      "audioKey": "세게 해 주세요",
+      "scenes": [
+        {
+          "icon": "💆",
+          "text": "韓国のマッサージ・スパは日本より安くて本格的！"
+        },
+        {
+          "icon": "💪",
+          "text": "「세게（セゲ）＝強く・強めに」を覚えれば力加減を伝えられます。"
+        },
+        {
+          "icon": "😌",
+          "text": "反対は「약하게（ヤカゲ）＝弱めに」。"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "日本語と韓国語はそっくり！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "比べてみよう！"
+      },
+      "japanese": {
+        "sentence": "少し\n弱めに。",
+        "reading": "すこし よわめに"
+      },
+      "korean": {
+        "sentence": "조금\n약하게요.",
+        "reading": "チョグム ヤカゲヨ"
+      },
+      "insight": "「약하게（ヤカゲ）＝弱く・弱めに」、「세게（セゲ）＝強く」。<br>力加減を伝える言葉は会話の中でとても実用的です。",
+      "vocab": [
+        {
+          "korean": "세게",
+          "japanese": "セゲ ＝ 強く"
+        },
+        {
+          "korean": "약하게",
+          "japanese": "ヤカゲ ＝ 弱く"
+        },
+        {
+          "korean": "아파요",
+          "japanese": "アパヨ ＝ 痛いです"
+        },
+        {
+          "korean": "시원해요",
+          "japanese": "シウォネヨ ＝ 気持ちいいです"
+        },
+        {
+          "korean": "어깨",
+          "japanese": "オッケ ＝ 肩"
+        },
+        {
+          "korean": "허리",
+          "japanese": "ホリ ＝ 腰"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "単語を選んで<br>文を作ろう！"
+      },
+      "template": {
+        "korean": "___ 해 주세요.",
+        "reading": "（単語を選んでください）",
+        "japanese": "〜にしてください",
+        "readingTemplate": "___ ヘ ジュセヨ。",
+        "japaneseTemplate": "___にしてください。"
+      },
+      "words": [
+        {
+          "korean": "세게",
+          "reading": "セゲ",
+          "japanese": "強く",
+          "audioKey": "세게 해 주세요"
+        },
+        {
+          "korean": "약하게",
+          "reading": "ヤカゲ",
+          "japanese": "弱く",
+          "audioKey": "약하게 해 주세요"
+        },
+        {
+          "korean": "어깨 쪽으로",
+          "reading": "オッケ チョグロ",
+          "japanese": "肩の方へ",
+          "audioKey": "어깨 쪽으로 해 주세요"
+        },
+        {
+          "korean": "천천히",
+          "reading": "チョンチョニ",
+          "japanese": "ゆっくり",
+          "audioKey": "천천히 해 주세요"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "💆",
+          "question": "「強めにしてください」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "약하게 해 주세요",
+              "reading": "ヤカゲ ヘ ジュセヨ",
+              "correct": false
+            },
+            {
+              "korean": "세게 해 주세요",
+              "reading": "セゲ ヘ ジュセヨ",
+              "correct": true
+            },
+            {
+              "korean": "천천히 해 주세요",
+              "reading": "チョンチョニ ヘ ジュセヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "完璧！「세게＝強く」。力加減がしっかり伝わります！",
+          "wrongMsg": "惜しい！「세게 해 주세요」。「세다＝強い」ですよ。"
+        },
+        {
+          "icon": "😌",
+          "question": "「肩の方へしてください」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "천천히 해 주세요",
+              "reading": "チョンチョニ ヘ ジュセヨ",
+              "correct": false
+            },
+            {
+              "korean": "어깨 쪽으로 해 주세요",
+              "reading": "オッケ チョグロ ヘ ジュセヨ",
+              "correct": true
+            },
+            {
+              "korean": "약하게 해 주세요",
+              "reading": "ヤカゲ ヘ ジュセヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "その通り！「어깨＝肩」「쪽으로＝〜の方へ」。これでピンポイントに伝えられます！",
+          "wrongMsg": "正解は「어깨 쪽으로 해 주세요」。「어깨＝肩」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "今日もできました！<br>すごいです！"
+      },
+      "culture": {
+        "icon": "💆",
+        "title": "韓国のマッサージ・スパ文化！",
+        "body": "韓国では<hl>찜질방（チムジルバン）</hl>が有名。サウナ・汗蒸幕・休憩室が一体化した施設です。<br><br>施術中に使えるフレーズ：<br>・<hl>「<kr>아파요.</kr>（アパヨ）」</hl>＝「痛いです」→すぐ伝えてOK！<br>・<hl>「<kr>시원해요.</kr>（シウォネヨ）」</hl>＝「気持ちいいです」→喜んでもらえます！<br>・<hl>「<kr>거기요, 더 세게요.</kr>（コギヨ、ト セゲヨ）」</hl>＝「そこ、もっと強く」"
+      },
+      "drama": {
+        "lines": [
+          "아, 시원하다!",
+          "진짜 살 것 같아요."
+        ],
+        "reading": "ア、シウォナダ！／ チンッチャ サル ゴッ カタヨ。",
+        "japanese": "「あ〜、気持ちいい！」 ／ 「本当に生き返る感じ！」",
+        "note": "마사지後に思わず出てくる言葉です ✨"
+      },
+      "summary": [
+        {
+          "korean": "세게 해 주세요",
+          "reading": "セゲ ヘ ジュセヨ"
+        },
+        {
+          "korean": "약하게 해 주세요",
+          "reading": "ヤカゲ ヘ ジュセヨ"
+        },
+        {
+          "korean": "아파요",
+          "reading": "アパヨ"
+        },
+        {
+          "korean": "시원해요",
+          "reading": "シウォネヨ"
+        }
+      ]
+    }
+  ]
+}

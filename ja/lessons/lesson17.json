@@ -1,0 +1,228 @@
+{
+  "id": "lesson17",
+  "stage": 5,
+  "stageTitle": "편의점에서",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "次のレッスン、<br>始めましょう！"
+      },
+      "korean": "데워 주세요.",
+      "reading": "テウォ ジュセヨ。",
+      "meaning": "温めてください。",
+      "audioKey": "데워 주세요",
+      "scenes": [
+        {
+          "icon": "🏪",
+          "text": "韓国のコンビニは24時間、イートインスペースも充実！"
+        },
+        {
+          "icon": "🍜",
+          "text": "カップ麺やおでんを買ったら「데워 주세요（温めてください）」！"
+        },
+        {
+          "icon": "📦",
+          "text": "コンビニ限定の韓国スナックもたくさん。お土産にも最適！"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "日本語と韓国語はそっくり！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "比べてみよう！"
+      },
+      "japanese": {
+        "sentence": "袋は\nいりますか？",
+        "reading": "ふくろ は いりますか"
+      },
+      "korean": {
+        "sentence": "봉투\n드릴까요?",
+        "reading": "ポントゥ トゥリルカヨ？"
+      },
+      "insight": "「봉투（ポントゥ）＝袋」、「드릴까요（トゥリルカヨ）＝差し上げましょうか？」<br>コンビニの店員さんがよく言うフレーズです。覚えておくと答えられます！",
+      "vocab": [
+        {
+          "korean": "편의점",
+          "japanese": "ピョニジョム ＝ コンビニ（便宜店）"
+        },
+        {
+          "korean": "봉투",
+          "japanese": "ポントゥ ＝ 袋"
+        },
+        {
+          "korean": "데우다",
+          "japanese": "テウダ ＝ 温める"
+        },
+        {
+          "korean": "영수증",
+          "japanese": "ヨンスジュン ＝ レシート（知ってるね！）"
+        },
+        {
+          "korean": "포인트",
+          "japanese": "ポイントゥ ＝ ポイント"
+        },
+        {
+          "korean": "현금",
+          "japanese": "ヒョングム ＝ 現金（現金）"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "単語を選んで<br>文を作ろう！"
+      },
+      "template": {
+        "korean": "___ 주세요.",
+        "reading": "（単語を選んでください）",
+        "japanese": "〜ください",
+        "readingTemplate": "___ ジュセヨ。",
+        "japaneseTemplate": "___ください。"
+      },
+      "words": [
+        {
+          "korean": "데워",
+          "reading": "テウォ",
+          "japanese": "温めて",
+          "audioKey": "데워 주세요"
+        },
+        {
+          "korean": "봉투",
+          "reading": "ポントゥ",
+          "japanese": "袋",
+          "audioKey": "봉투 주세요"
+        },
+        {
+          "korean": "젓가락",
+          "reading": "チョッカラク",
+          "japanese": "割り箸",
+          "audioKey": "젓가락 주세요"
+        },
+        {
+          "korean": "영수증",
+          "reading": "ヨンスジュン",
+          "japanese": "レシート",
+          "audioKey": "영수증 주세요"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "🏪",
+          "question": "コンビニで「温めてください」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "봉투 주세요",
+              "reading": "ポントゥ ジュセヨ",
+              "correct": false
+            },
+            {
+              "korean": "데워 주세요",
+              "reading": "テウォ ジュセヨ",
+              "correct": true
+            },
+            {
+              "korean": "영수증 주세요",
+              "reading": "ヨンスジュン ジュセヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "完璧！「데워 주세요」、コンビニ飯を温かく食べましょう！",
+          "wrongMsg": "惜しい！「데워 주세요（テウォ ジュセヨ）」。「데우다＝温める」ですよ。"
+        },
+        {
+          "icon": "🥢",
+          "question": "「割り箸ください」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "봉투 주세요",
+              "reading": "ポントゥ ジュセヨ",
+              "correct": false
+            },
+            {
+              "korean": "젓가락 주세요",
+              "reading": "チョッカラク ジュセヨ",
+              "correct": true
+            },
+            {
+              "korean": "영수증 주세요",
+              "reading": "ヨンスジュン ジュセヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "その通り！「젓가락＝箸」。コンビニ飯セットのフレーズが揃いました！",
+          "wrongMsg": "正解は「젓가락 주세요」。「젓가락＝箸」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "今日もできました！<br>すごいです！"
+      },
+      "culture": {
+        "icon": "🏪",
+        "title": "韓国コンビニ、何が違う？",
+        "body": "韓国のコンビニ（<hl>편의점・ピョニジョム</hl>）の特徴：<br><br>・店内に<hl>이트인 공간（イートイン）</hl>が必ずある<br>・カップ麺用の<hl>온수기（オンスギ）＝お湯機</hl>が設置<br>・<hl>즉석 조리식품（インスタント食品）</hl>の種류が豊富<br><br>韓国のコンビニは旅の強い味方。深夜の小腹にも最高です 😊"
+      },
+      "drama": {
+        "lines": [
+          "편의점 가자!",
+          "야식 먹고 싶어!"
+        ],
+        "reading": "ピョニジョム カジャ！／ ヤシク モクコ シポ！",
+        "japanese": "「コンビニ行こう！」 ／ 「夜食食べたい！」",
+        "note": "韓国ドラマの深夜シーン、この会話が必ず出てきます ✨"
+      },
+      "summary": [
+        {
+          "korean": "데워 주세요",
+          "reading": "テウォ ジュセヨ"
+        },
+        {
+          "korean": "봉투 주세요",
+          "reading": "ポントゥ ジュセヨ"
+        },
+        {
+          "korean": "젓가락 주세요",
+          "reading": "チョッカラク ジュセヨ"
+        },
+        {
+          "korean": "영수증 주세요",
+          "reading": "ヨンスジュン ジュセヨ"
+        }
+      ]
+    }
+  ]
+}

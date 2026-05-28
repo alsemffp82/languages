@@ -1,0 +1,228 @@
+{
+  "id": "lesson19",
+  "stage": 1,
+  "stageTitle": "처음 만나요",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "友達作り編、<br>始めましょう！"
+      },
+      "korean": "잘 부탁드립니다.",
+      "reading": "チャル ブタクトゥリムニダ。",
+      "meaning": "どうぞよろしくお願いします。",
+      "audioKey": "잘 부탁드립니다",
+      "scenes": [
+        {
+          "icon": "🤝",
+          "text": "初対面の挨拶の定番。日本語と発想が全く同じ！"
+        },
+        {
+          "icon": "😊",
+          "text": "「잘（チャル）＝よく」「부탁（ブタク）＝お願い」"
+        },
+        {
+          "icon": "🌸",
+          "text": "略して「잘 부탁해요」でも通じます。"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "日本語と韓国語はそっくり！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "比べてみよう！"
+      },
+      "japanese": {
+        "sentence": "はじめまして。\nよろしく。",
+        "reading": "はじめまして よろしく"
+      },
+      "korean": {
+        "sentence": "처음 뵙겠습니다.\n잘 부탁드려요.",
+        "reading": "チョウム ベプケッスムニダ チャル ブタクトゥリョヨ"
+      },
+      "insight": "「처음（チョウム）＝初めて」「뵙겠습니다（ベプケッスムニダ）＝お目にかかります」。<br>ていねいな自己紹介で好印象！",
+      "vocab": [
+        {
+          "korean": "처음",
+          "japanese": "チョウム ＝ 初めて"
+        },
+        {
+          "korean": "이름",
+          "japanese": "イルム ＝ 名前"
+        },
+        {
+          "korean": "나이",
+          "japanese": "ナイ ＝ 年齢"
+        },
+        {
+          "korean": "직업",
+          "japanese": "チゴプ ＝ 職業"
+        },
+        {
+          "korean": "출신",
+          "japanese": "チュルシン ＝ 出身"
+        },
+        {
+          "korean": "취미",
+          "japanese": "チュィミ ＝ 趣味"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": [
+          {
+            "korean": "사토",
+            "reading": "サト",
+            "japanese": "サトウ",
+            "audioKey": "저는 사토 입니다"
+          },
+          {
+            "korean": "일본 사람",
+            "reading": "イルボン サラム",
+            "japanese": "日本人",
+            "audioKey": "저는 일본 사람 입니다"
+          },
+          {
+            "korean": "주부",
+            "reading": "チュブ",
+            "japanese": "主婦",
+            "audioKey": "저는 주부 입니다"
+          },
+          {
+            "korean": "한국어 학생",
+            "reading": "ハングゴ ハクセン",
+            "japanese": "韓国語の学生",
+            "audioKey": "저는 한국어 학생 입니다"
+          }
+        ]
+      },
+      "template": {
+        "korean": "저는 ___ 입니다.",
+        "reading": "（単語を選んでください）",
+        "japanese": "チョヌン ___イムニダ。",
+        "readingTemplate": "私は〜です",
+        "japaneseTemplate": "チョヌン ___ イムニダ。"
+      },
+      "words": "私は___です。"
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "🤝",
+          "question": "「どうぞよろしくお願いします」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "감사합니다",
+              "reading": "カムサハムニダ",
+              "correct": false
+            },
+            {
+              "korean": "잘 부탁드립니다",
+              "reading": "チャル ブタクトゥリムニダ",
+              "correct": true
+            },
+            {
+              "korean": "미안합니다",
+              "reading": "ミアナムニダ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "完璧！日本語と同じ発想の大切な表現です！",
+          "wrongMsg": "惜しい！「잘 부탁드립니다（チャル ブタクトゥリムニダ）」。「부탁＝お願い」ですよ。"
+        },
+        {
+          "icon": "😊",
+          "question": "「私は主婦です」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "저는 학생 입니다",
+              "reading": "チョヌン ハクセン イムニダ",
+              "correct": false
+            },
+            {
+              "korean": "저는 주부 입니다",
+              "reading": "チョヌン チュブ イムニダ",
+              "correct": true
+            },
+            {
+              "korean": "저는 일본 사람 입니다",
+              "reading": "チョヌン イルボン サラム イムニダ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "その通り！「저는 〜입니다」で自己紹介ができます！",
+          "wrongMsg": "正解は「저는 주부 입니다」。「주부＝主婦」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "今日もできました！<br>すごいです！"
+      },
+      "culture": {
+        "icon": "🤝",
+        "title": "韓国の自己紹介文化！",
+        "body": "韓国では初対面で<hl>나이（ナイ）＝年齢</hl>を聞くことがあります。失礼ではなく、言葉遣いを決めるための大切な情報です。<br><br>使える一言：<br>・<hl>「<kr>어디서 오셨어요?</kr>（オディソ オショッソヨ？）」</hl>＝「どちらから来ましたか？」<br>・<hl>「<kr>한국어 배우고 있어요.</kr>（ハングゴ ペウゴ イッソヨ）」</hl>＝「韓国語を勉強しています」"
+      },
+      "drama": {
+        "lines": [
+          "만나서 반가워요!",
+          "앞으로 잘 부탁해요!"
+        ],
+        "reading": "マンナソ バンガウォヨ！／ アプロ チャル ブタケヨ！",
+        "japanese": "「会えて嬉しいです！」 ／ 「これからよろしく！」",
+        "note": "初対面の嬉しい挨拶です ✨"
+      },
+      "summary": [
+        {
+          "korean": "잘 부탁드립니다",
+          "reading": "チャル ブタクトゥリムニダ"
+        },
+        {
+          "korean": "저는 사토 입니다",
+          "reading": "チョヌン サト イムニダ"
+        },
+        {
+          "korean": "만나서 반가워요",
+          "reading": "マンナソ バンガウォヨ"
+        },
+        {
+          "korean": "어디서 오셨어요?",
+          "reading": "オディソ オショッソヨ？"
+        }
+      ]
+    }
+  ]
+}

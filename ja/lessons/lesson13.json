@@ -1,0 +1,228 @@
+{
+  "id": "lesson13",
+  "stage": 1,
+  "stageTitle": "올리브영에서",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "K-뷰티編、<br>始めましょう！"
+      },
+      "korean": "추천해 주세요.",
+      "reading": "チュチョンヘ ジュセヨ。",
+      "meaning": "おすすめしてください。",
+      "audioKey": "추천해 주세요",
+      "scenes": [
+        {
+          "icon": "💄",
+          "text": "オリーブヤングでスタッフにおすすめを聞くとき！"
+        },
+        {
+          "icon": "🧴",
+          "text": "韓国コスメは種類が多すぎて迷う。「추천해 주세요」で解決！"
+        },
+        {
+          "icon": "✨",
+          "text": "「추천（チュチョン）＝推薦」は日本語の漢字語そのまま！"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "コスメの言葉もそっくり！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "美容語も<br>似てますよ！"
+      },
+      "japanese": {
+        "sentence": "肌が\n乾燥しています。",
+        "reading": "はだが かんそうしています"
+      },
+      "korean": {
+        "sentence": "피부가\n건조해요.",
+        "reading": "ピブガ コンジョヘヨ"
+      },
+      "insight": "「피부（ピブ）＝皮膚」は同じ漢字語。「건조（コンジョ）＝乾燥」も同じ！<br>コスメ用語は日本語と共通のものが多く、読めなくても意味が分かることが多いです。",
+      "vocab": [
+        {
+          "korean": "피부",
+          "japanese": "ピブ ＝ 皮膚・肌（皮膚）"
+        },
+        {
+          "korean": "건조",
+          "japanese": "コンジョ ＝ 乾燥（乾燥）"
+        },
+        {
+          "korean": "지성",
+          "japanese": "チソン ＝ 脂性（脂性）"
+        },
+        {
+          "korean": "수분",
+          "japanese": "スブン ＝ 水分（水分）"
+        },
+        {
+          "korean": "미백",
+          "japanese": "ミベク ＝ 美白（美白）"
+        },
+        {
+          "korean": "선크림",
+          "japanese": "ソンクリム ＝ 日焼け止め（Sun cream）"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "コスメを<br>選んでみよう！"
+      },
+      "template": {
+        "korean": "___ 피부에 좋은 거 있어요?",
+        "reading": "（単語を選んでください）",
+        "japanese": "〜肌に良いものありますか？",
+        "readingTemplate": "___ ピブエ チョウン ゴ イッソヨ？",
+        "japaneseTemplate": "___肌に良いものありますか？"
+      },
+      "words": [
+        {
+          "korean": "건조한",
+          "reading": "コンジョハン",
+          "japanese": "乾燥",
+          "audioKey": "건조한 피부에 좋은 거 있어요?"
+        },
+        {
+          "korean": "지성",
+          "reading": "チソン",
+          "japanese": "脂性",
+          "audioKey": "지성 피부에 좋은 거 있어요?"
+        },
+        {
+          "korean": "민감한",
+          "reading": "ミンガマン",
+          "japanese": "敏感",
+          "audioKey": "민감한 피부에 좋은 거 있어요?"
+        },
+        {
+          "korean": "칙칙한",
+          "reading": "チクチカン",
+          "japanese": "くすんだ",
+          "audioKey": "칙칙한 피부에 좋은 거 있어요?"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "💄",
+          "question": "オリーブヤングで「おすすめしてください」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "이거 주세요",
+              "reading": "イゴ ジュセヨ",
+              "correct": false
+            },
+            {
+              "korean": "추천해 주세요",
+              "reading": "チュチョンヘ ジュセヨ",
+              "correct": true
+            },
+            {
+              "korean": "얼마예요?",
+              "reading": "オルマエヨ？",
+              "correct": false
+            }
+          ],
+          "correctMsg": "完璧！「추천해 주세요」、オリーブヤングで使ってみて！きっと丁寧に教えてくれますよ 💄",
+          "wrongMsg": "惜しい！「추천해 주세요（チュチョンヘ ジュセヨ）」。「추천＝推薦」ですよ。"
+        },
+        {
+          "icon": "🧴",
+          "question": "「乾燥肌に良いものありますか？」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "지성 피부에 좋은 거 있어요?",
+              "reading": "チソン ピブエ チョウン ゴ イッソヨ？",
+              "correct": false
+            },
+            {
+              "korean": "건조한 피부에 좋은 거 있어요?",
+              "reading": "コンジョハン ピブエ チョウン ゴ イッソヨ？",
+              "correct": true
+            },
+            {
+              "korean": "민감한 피부에 좋은 거 있어요?",
+              "reading": "ミンガマン ピブエ チョウン ゴ イッソヨ？",
+              "correct": false
+            }
+          ],
+          "correctMsg": "その通り！「건조한＝乾燥した」。これでコスメ選びがスムーズになります！",
+          "wrongMsg": "正解は「건조한 피부에 좋은 거 있어요?（コンジョハン ピブエ…）」。「건조한＝乾燥した」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "K-뷰티、<br>楽しみましょう！"
+      },
+      "culture": {
+        "icon": "💄",
+        "title": "올리브영（オリーブヤング）の歩き方",
+        "body": "ソウルで最も訪れるべき場所のひとつ、<hl>올리브영（オリーブヤング）</hl>。<br><br>便利なひとこと：<br>・<hl>「<kr>테스터 있어요?</kr>（テスト イッソヨ？）」</hl>＝「テスターありますか？」<br>・<hl>「<kr>이거 한국에서만 팔아요?</kr>（イゴ ハングゲソマン パラヨ？）」</hl>＝「これ韓国限定ですか？」<br><br>スタッフさんは親切で、スマホの翻訳アプリを使って説明してくれることも多いです。<br>「추천해 주세요」と言うだけで笑顔で対応してくれます 😊"
+      },
+      "drama": {
+        "lines": [
+          "피부 진짜 좋다!",
+          "비결이 뭐예요?"
+        ],
+        "reading": "ピブ チンッチャ チョッタ！／ ビギョリ ムォエヨ？",
+        "japanese": "「肌、本当にきれい！」 ／ 「秘訣は何ですか？」",
+        "note": "K-뷰티に憧れる会話の定番です ✨"
+      },
+      "summary": [
+        {
+          "korean": "추천해 주세요",
+          "reading": "チュチョンヘ ジュセヨ"
+        },
+        {
+          "korean": "건조한 피부에 좋은 거 있어요?",
+          "reading": "コンジョハン ピブエ チョウン ゴ イッソヨ？"
+        },
+        {
+          "korean": "테스터 있어요?",
+          "reading": "テスト イッソヨ？"
+        },
+        {
+          "korean": "선크림",
+          "reading": "ソンクリム"
+        }
+      ]
+    }
+  ]
+}

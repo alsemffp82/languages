@@ -1,0 +1,228 @@
+{
+  "id": "lesson25",
+  "stage": 1,
+  "stageTitle": "반말 입문",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "タメ語、<br>挑戦しよう！"
+      },
+      "korean": "잘 지냈어?",
+      "reading": "チャル チネッソ？",
+      "meaning": "元気だった？（タメ語）",
+      "audioKey": "잘 지냈어?",
+      "scenes": [
+        {
+          "icon": "😊",
+          "text": "친한 친구에게 쓰는 반말. 「잘 지냈어요?」의 타메구치 버전!"
+        },
+        {
+          "icon": "🧑‍🤝‍🧑",
+          "text": "한국 드라마에서 친구끼리 쓰는 가장 자연스러운 인사"
+        },
+        {
+          "icon": "💬",
+          "text": "「-아/어」어미가 반말의 기본. 「-요」를 빼면 반말이 됩니다"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "敬語とタメ語の違い！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "丁寧語→タメ語、<br>簡単！"
+      },
+      "japanese": {
+        "sentence": "元気\nだった？",
+        "reading": "げんきだった？"
+      },
+      "korean": {
+        "sentence": "잘\n지냈어?",
+        "reading": "チャル チネッソ？"
+      },
+      "insight": "「지냈어요?（チネッソヨ）」→「지냈어?（チネッソ）」。語尾の「요」を取るだけで反語になります。<br>日本語の「です・ます」を外す感覚に似ていますね。",
+      "vocab": [
+        {
+          "korean": "잘 지냈어?",
+          "japanese": "チャル チネッソ？ ＝ 元気だった？（タメ語）"
+        },
+        {
+          "korean": "뭐 해?",
+          "japanese": "ムォ ヘ？ ＝ 何してる？"
+        },
+        {
+          "korean": "어디 가?",
+          "japanese": "オディ ガ？ ＝ どこ行くの？"
+        },
+        {
+          "korean": "알아?",
+          "japanese": "アラ？ ＝ 知ってる？"
+        },
+        {
+          "korean": "좋아",
+          "japanese": "チョア ＝ いいよ・好き"
+        },
+        {
+          "korean": "그래?",
+          "japanese": "クレ？ ＝ そうなの？"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "タメ語で<br>話してみよう！"
+      },
+      "template": {
+        "korean": "___ 해?",
+        "reading": "（単語を選んでください）",
+        "japanese": "〜する？/ 〜してる？",
+        "readingTemplate": "___ ヘ？",
+        "japaneseTemplate": "___する？"
+      },
+      "words": [
+        {
+          "korean": "뭐",
+          "reading": "ムォ",
+          "japanese": "何",
+          "audioKey": "뭐 해?"
+        },
+        {
+          "korean": "같이",
+          "reading": "カッチ",
+          "japanese": "一緒に",
+          "audioKey": "같이 해?"
+        },
+        {
+          "korean": "언제",
+          "reading": "オンジェ",
+          "japanese": "いつ",
+          "audioKey": "언제 해?"
+        },
+        {
+          "korean": "어떻게",
+          "reading": "オットケ",
+          "japanese": "どうやって",
+          "audioKey": "어떻게 해?"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "😊",
+          "question": "友達に「元気だった？」とタメ語で聞くと？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "잘 지냈어요?",
+              "reading": "チャル チネッソヨ？",
+              "correct": false
+            },
+            {
+              "korean": "잘 지냈어?",
+              "reading": "チャル チネッソ？",
+              "correct": true
+            },
+            {
+              "korean": "잘 지내세요?",
+              "reading": "チャル チネセヨ？",
+              "correct": false
+            }
+          ],
+          "correctMsg": "완벽해요！「잘 지냈어?」友達との再会シーンで使ってみて！",
+          "wrongMsg": "아쉬워요！「잘 지냈어?（チャル チネッソ？）」。語尾「요」なしがタメ語ですよ。"
+        },
+        {
+          "icon": "🧑‍🤝‍🧑",
+          "question": "「何してる？」をタメ語で言うと？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "어디 가?",
+              "reading": "オディ ガ？",
+              "correct": false
+            },
+            {
+              "korean": "뭐 해?",
+              "reading": "ムォ ヘ？",
+              "correct": true
+            },
+            {
+              "korean": "같이 해?",
+              "reading": "カッチ ヘ？",
+              "correct": false
+            }
+          ],
+          "correctMsg": "맞아요！「뭐 해?」、ドラマで毎話聞こえますよ！",
+          "wrongMsg": "정답은 「뭐 해?（ムォ ヘ？）」。「뭐＝何」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "反語、<br>使えますよ！"
+      },
+      "culture": {
+        "icon": "🗣️",
+        "title": "韓国語の敬語とタメ語",
+        "body": "韓国語は日本語以上に、相手との関係で言葉が変わります。<br><br>基本ルール：<br><hl>「-요」をつける</hl>→丁寧語（合쇼体）<br><hl>「-요」を外す</hl>→タメ語（반말）<br><br>例：<br>・가요（カヨ）→ 가（カ）＝行く<br>・먹어요（モゴヨ）→ 먹어（モゴ）＝食べる<br><br>旅行中は「-요」をつければ安心。<hl>친한 친구（チナン チング）</hl>ができたら反語にチャレンジ！"
+      },
+      "drama": {
+        "lines": [
+          "야, 뭐 해?",
+          "나? 그냥 있어."
+        ],
+        "reading": "ヤ、ムォ ヘ？／ ナ？ クニャン イッソ。",
+        "japanese": "「おい、何してる？」 ／ 「俺？ただいるだけ。」",
+        "note": "친구들 사이의 自然な会話です ✨"
+      },
+      "summary": [
+        {
+          "korean": "잘 지냈어?",
+          "reading": "チャル チネッソ？"
+        },
+        {
+          "korean": "뭐 해?",
+          "reading": "ムォ ヘ？"
+        },
+        {
+          "korean": "어디 가?",
+          "reading": "オディ ガ？"
+        },
+        {
+          "korean": "그래?",
+          "reading": "クレ？"
+        }
+      ]
+    }
+  ]
+}

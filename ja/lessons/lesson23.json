@@ -1,0 +1,228 @@
+{
+  "id": "lesson23",
+  "stage": 5,
+  "stageTitle": "연락하기",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "次のレッスン、<br>始めましょう！"
+      },
+      "korean": "카톡 해요.",
+      "reading": "カトク ヘヨ。",
+      "meaning": "カカオトークしましょう。",
+      "audioKey": "카톡 해요",
+      "scenes": [
+        {
+          "icon": "📱",
+          "text": "韓国人はほぼ全員「카카오톡」を使っています。"
+        },
+        {
+          "icon": "💬",
+          "text": "「카톡」は略称。友達登録の一言目！"
+        },
+        {
+          "icon": "📲",
+          "text": "「카톡 아이디 뭐예요?」でIDを聞きましょう！"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "日本語と韓国語はそっくり！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "比べてみよう！"
+      },
+      "japanese": {
+        "sentence": "連絡\nしますね。",
+        "reading": "れんらく しますね"
+      },
+      "korean": {
+        "sentence": "연락\n할게요.",
+        "reading": "ヨルラク ハルケヨ"
+      },
+      "insight": "「연락（ヨルラク）＝連絡」は漢字語そのまま！「할게요（ハルケヨ）＝しますね」は意志・約束の表現。",
+      "vocab": [
+        {
+          "korean": "연락",
+          "japanese": "ヨルラク ＝ 連絡"
+        },
+        {
+          "korean": "전화",
+          "japanese": "チョナ ＝ 電話"
+        },
+        {
+          "korean": "문자",
+          "japanese": "ムンジャ ＝ テキスト"
+        },
+        {
+          "korean": "카카오톡",
+          "japanese": "カカオトク ＝ カカオトーク"
+        },
+        {
+          "korean": "아이디",
+          "japanese": "アイディ ＝ ID"
+        },
+        {
+          "korean": "번호",
+          "japanese": "ポノ ＝ 番号"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "連絡先を<br>交換しよう！"
+      },
+      "template": {
+        "korean": "___ 알려 주세요.",
+        "reading": "（単語を選んでください）",
+        "japanese": "〜教えてください",
+        "readingTemplate": "___ アルリョ ジュセヨ。",
+        "japaneseTemplate": "___教えてください。"
+      },
+      "words": [
+        {
+          "korean": "전화번호",
+          "reading": "チョナボノ",
+          "japanese": "電話番号",
+          "audioKey": "전화번호 알려 주세요"
+        },
+        {
+          "korean": "카톡 아이디",
+          "reading": "カトク アイディ",
+          "japanese": "カカオトークID",
+          "audioKey": "카톡 아이디 알려 주세요"
+        },
+        {
+          "korean": "인스타",
+          "reading": "インスタ",
+          "japanese": "インスタ",
+          "audioKey": "인스타 알려 주세요"
+        },
+        {
+          "korean": "주소",
+          "reading": "チュソ",
+          "japanese": "住所",
+          "audioKey": "주소 알려 주세요"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "📱",
+          "question": "「カカオトークしましょう」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "문자 해요",
+              "reading": "ムンジャ ヘヨ",
+              "correct": false
+            },
+            {
+              "korean": "카톡 해요",
+              "reading": "カトク ヘヨ",
+              "correct": true
+            },
+            {
+              "korean": "전화 해요",
+              "reading": "チョナ ヘヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "完璧！「카톡 해요」は友達になったときの第一声！",
+          "wrongMsg": "惜しい！「카톡 해요（カトク ヘヨ）」。「카톡＝カカオトーク」ですよ。"
+        },
+        {
+          "icon": "📲",
+          "question": "「電話番号教えてください」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "카톡 아이디 알려 주세요",
+              "reading": "カトク アイディ アルリョ ジュセヨ",
+              "correct": false
+            },
+            {
+              "korean": "전화번호 알려 주세요",
+              "reading": "チョナボノ アルリョ ジュセヨ",
+              "correct": true
+            },
+            {
+              "korean": "인스타 알려 주세요",
+              "reading": "インスタ アルリョ ジュセヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "その通り！「알려 주세요＝教えてください」は様々な場面で使えます！",
+          "wrongMsg": "正解は「전화번호 알려 주세요」。「전화번호＝電話番号」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "今日もできました！<br>すごいです！"
+      },
+      "culture": {
+        "icon": "📱",
+        "title": "カカオトークって？",
+        "body": "韓国人の<hl>99%</hl>が使うアプリ「<hl>카카오톡</hl>」。日本のLINEと同じ感覚！<br><br>友達になったら：<br>・<hl>「<kr>오늘 즐거웠어요!</kr>」</hl>＝「今日は楽しかったです！」<br>・<hl>「<kr>또 만나요!</kr>」</hl>＝「また会いましょう！」"
+      },
+      "drama": {
+        "lines": [
+          "나중에 카톡 해요!",
+          "잊지 말고 연락해요!"
+        ],
+        "reading": "ナジュンエ カトク ヘヨ！／ イッジ マルゴ ヨルラケヨ！",
+        "japanese": "「後でカカオトークしてね！」 ／ 「忘れずに連絡してね！」",
+        "note": "別れ際のあたたかい一言です ✨"
+      },
+      "summary": [
+        {
+          "korean": "카톡 해요",
+          "reading": "カトク ヘヨ"
+        },
+        {
+          "korean": "전화번호 알려 주세요",
+          "reading": "チョナボノ アルリョ ジュセヨ"
+        },
+        {
+          "korean": "연락 할게요",
+          "reading": "ヨルラク ハルケヨ"
+        },
+        {
+          "korean": "또 만나요!",
+          "reading": "ト マンナヨ！"
+        }
+      ]
+    }
+  ]
+}

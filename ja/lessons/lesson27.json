@@ -1,0 +1,228 @@
+{
+  "id": "lesson27",
+  "stage": 3,
+  "stageTitle": "가능·불가능",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "できる・できない、<br>覚えましょう！"
+      },
+      "korean": "할 수 있어요.",
+      "reading": "ハル ス イッソヨ。",
+      "meaning": "できます。",
+      "audioKey": "할 수 있어요",
+      "scenes": [
+        {
+          "icon": "💪",
+          "text": "「할（ハル）＝する」＋「수 있다（ス イッタ）＝できる」。能力表現の基本！"
+        },
+        {
+          "icon": "🚫",
+          "text": "「할 수 없어요（ハル ス オプソヨ）」で「できません」。ス+없다で不可能"
+        },
+        {
+          "icon": "🎯",
+          "text": "「V + -(으)ㄹ 수 있어요」はどんな動詞にも使える万能パターン"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "可能・不可能の表現！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "できる・できない、<br>韓国語で！"
+      },
+      "japanese": {
+        "sentence": "日本語が\n話せます。",
+        "reading": "にほんごがはなせます"
+      },
+      "korean": {
+        "sentence": "일본어를\n할 수 있어요.",
+        "reading": "イルボノルル ハル ス イッソヨ"
+      },
+      "insight": "「할 수 있어요（ハル ス イッソヨ）」は「할（する）＋수 있어요（できます）」の組み合わせ。<br>日本語の「〜できます」に相当する表現で、動詞を変えるだけで応用できます。",
+      "vocab": [
+        {
+          "korean": "할 수 있어요",
+          "japanese": "ハル ス イッソヨ ＝ できます"
+        },
+        {
+          "korean": "할 수 없어요",
+          "japanese": "ハル ス オプソヨ ＝ できません"
+        },
+        {
+          "korean": "말할 수 있어요",
+          "japanese": "マラル ス イッソヨ ＝ 話せます"
+        },
+        {
+          "korean": "먹을 수 있어요",
+          "japanese": "モグル ス イッソヨ ＝ 食べられます"
+        },
+        {
+          "korean": "괜찮아요",
+          "japanese": "クェンチャナヨ ＝ 大丈夫です"
+        },
+        {
+          "korean": "어렵네요",
+          "japanese": "オリョムネヨ ＝ 難しいですね"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "できることを<br>言ってみよう！"
+      },
+      "template": {
+        "korean": "___ 수 있어요?",
+        "reading": "（単語を選んでください）",
+        "japanese": "〜できますか？",
+        "readingTemplate": "___ ス イッソヨ？",
+        "japaneseTemplate": "___できますか？"
+      },
+      "words": [
+        {
+          "korean": "먹을",
+          "reading": "モグル",
+          "japanese": "食べ",
+          "audioKey": "먹을 수 있어요?"
+        },
+        {
+          "korean": "말할",
+          "reading": "マラル",
+          "japanese": "話し",
+          "audioKey": "말할 수 있어요?"
+        },
+        {
+          "korean": "볼",
+          "reading": "ボル",
+          "japanese": "見",
+          "audioKey": "볼 수 있어요?"
+        },
+        {
+          "korean": "들어갈",
+          "reading": "トゥロガル",
+          "japanese": "入れ",
+          "audioKey": "들어갈 수 있어요?"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "💪",
+          "question": "「できます」は韓国語で？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "해야 해요",
+              "reading": "ヘヤ ヘヨ",
+              "correct": false
+            },
+            {
+              "korean": "할 수 있어요",
+              "reading": "ハル ス イッソヨ",
+              "correct": true
+            },
+            {
+              "korean": "하면 돼요",
+              "reading": "ハミョン テヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "완벽해요！「할 수 있어요」、色々な動詞と組み合わせて使ってみて！",
+          "wrongMsg": "아쉬워요！「할 수 있어요（ハル ス イッソヨ）」。「수 있다＝できる」ですよ。"
+        },
+        {
+          "icon": "🍽️",
+          "question": "「食べられますか？」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "볼 수 있어요?",
+              "reading": "ボル ス イッソヨ？",
+              "correct": false
+            },
+            {
+              "korean": "먹을 수 있어요?",
+              "reading": "モグル ス イッソヨ？",
+              "correct": true
+            },
+            {
+              "korean": "말할 수 있어요?",
+              "reading": "マラル ス イッソヨ？",
+              "correct": false
+            }
+          ],
+          "correctMsg": "맞아요！「먹을 수 있어요?」アレルギー確認にも使えますよ！",
+          "wrongMsg": "정답은 「먹을 수 있어요?（モグル ス イッソヨ？）」。「먹다＝食べる」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "可能表現、<br>バッチリ！"
+      },
+      "culture": {
+        "icon": "💪",
+        "title": "韓国語で「できる・できない」の使い分け",
+        "body": "旅行で役立つ可能・不可能表現：<br><br><hl>영어 할 수 있어요?（ヨンゴ ハル ス イッソヨ？）</hl><br>＝「英語できますか？」（お店で聞く）<br><br><hl>카드 쓸 수 있어요?（カドゥ スル ス イッソヨ？）</hl><br>＝「カード使えますか？」<br><br><hl>배달 돼요?（ペダル テヨ？）</hl><br>＝「配達できますか？」（デリバリー注文時）<br><br><hl>조금 깎아 주실 수 있어요?（チョグム カッカ ジュシル ス イッソヨ？）</hl><br>＝「少し値引きしていただけますか？」"
+      },
+      "drama": {
+        "lines": [
+          "저 할 수 있어요!",
+          "믿어줘, 꼭 해낼게."
+        ],
+        "reading": "チョ ハル ス イッソヨ！／ ミドジョ、コク ヘネルケ。",
+        "japanese": "「私にはできます！」 ／ 「信じて、必ずやり遂げるから。」",
+        "note": "ドラマでよく聞く自信あふれるセリフです ✨"
+      },
+      "summary": [
+        {
+          "korean": "할 수 있어요",
+          "reading": "ハル ス イッソヨ"
+        },
+        {
+          "korean": "할 수 없어요",
+          "reading": "ハル ス オプソヨ"
+        },
+        {
+          "korean": "먹을 수 있어요?",
+          "reading": "モグル ス イッソヨ？"
+        },
+        {
+          "korean": "카드 쓸 수 있어요?",
+          "reading": "カドゥ スル ス イッソヨ？"
+        }
+      ]
+    }
+  ]
+}

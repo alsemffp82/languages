@@ -1,0 +1,115 @@
+{
+  "id": "lesson3",
+  "stage": 3,
+  "stageTitle": "ホテルで",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong":   "images/3.png",
+    "cheer":   "images/4.png",
+    "complete":"images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": { "img": "images/1.png", "msg": "サトウさん、<br>ホテルへようこそ！" },
+      "korean": "체크인 하려고요.",
+      "reading": "チェックイン ハリョゴヨ。",
+      "meaning": "チェックインしたいのですが。",
+      "audioKey": "체크인 하려고요",
+      "scenes": [
+        { "icon": "🏨", "text": "ホテルのフロントでチェックイン！これだけで通じます。" },
+        { "icon": "🗝️", "text": "「하려고요」は「〜したいのですが」のていねい表現。" },
+        { "icon": "🛏️", "text": "予約番号を見せながら言えば完璧です。" }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "ホテルの言葉もそっくり！",
+      "character": { "img": "images/1.png", "msg": "ホテル用語も<br>簡単ですよ！" },
+      "japanese": { "sentence": "タオルが\nありますか？", "reading": "タオル が ありますか" },
+      "korean":   { "sentence": "수건이\n있어요?", "reading": "スゴニ イッソヨ？" },
+      "insight": "「が」＝「이/가（イ／ガ）」、「ありますか」＝「있어요?（イッソヨ）」。<br>「있어요?」を知れば何でも「〜ありますか？」と聞けます！",
+      "vocab": [
+        { "korean": "체크인", "japanese": "チェックイン ＝ チェックイン" },
+        { "korean": "체크아웃", "japanese": "チェックアウッ ＝ チェックアウト" },
+        { "korean": "방", "japanese": "パン ＝ 部屋" },
+        { "korean": "수건", "japanese": "スゴン ＝ タオル" },
+        { "korean": "비밀번호", "japanese": "ビミルボノ ＝ 暗証番号" },
+        { "korean": "와이파이", "japanese": "ワイパイ ＝ Wi-Fi" }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": { "img": "images/4.png", "msg": "必要なものを<br>頼んでみよう！" },
+      "template": { "korean": "___ 있어요?", "reading": "（単語を選んでください）", "japanese": "〜はありますか？", "readingTemplate": "___ イッソヨ？", "japaneseTemplate": "___はありますか？" },
+      "words": [
+        { "korean": "수건",     "reading": "スゴン",      "japanese": "タオル",        "audioKey": "수건 있어요" },
+        { "korean": "와이파이", "reading": "ワイパイ",    "japanese": "Wi-Fi",         "audioKey": "와이파이 있어요" },
+        { "korean": "칫솔",    "reading": "チッソル",    "japanese": "歯ブラシ",       "audioKey": "칫솔 있어요" },
+        { "korean": "짐 보관",  "reading": "チム ボグァン","japanese": "荷物預かり",     "audioKey": "짐 보관 있어요" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": { "img": "images/1.png", "msg": "さあ、クイズ！<br>大丈夫ですよ 😊" },
+      "questions": [
+        {
+          "icon": "🏨",
+          "question": "フロントで「チェックインしたいのですが」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            { "korean": "체크아웃 하려고요",  "reading": "チェックアウッ ハリョゴヨ", "correct": false },
+            { "korean": "체크인 하려고요",    "reading": "チェックイン ハリョゴヨ",  "correct": true  },
+            { "korean": "체크인 했어요",      "reading": "チェックイン ヘッソヨ",    "correct": false }
+          ],
+          "correctMsg": "完璧！「하려고요」は「〜したいのですが」。フロントで通じます！",
+          "wrongMsg":   "惜しい！「체크인 하려고요（チェックイン ハリョゴヨ）」。チェックアウトは「체크아웃」ですよ。"
+        },
+        {
+          "icon": "🛁",
+          "question": "「タオルはありますか？」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            { "korean": "수건 주세요",   "reading": "スゴン ジュセヨ",   "correct": false },
+            { "korean": "수건 있어요?",  "reading": "スゴン イッソヨ？", "correct": true  },
+            { "korean": "수건 어디요?",  "reading": "スゴン オディヨ？", "correct": false }
+          ],
+          "correctMsg": "その通り！「있어요?」で「〜はありますか？」になります。万能フレーズ！",
+          "wrongMsg":   "正解は「수건 있어요?（スゴン イッソヨ？）」。「있어요?＝ありますか？」ですね。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": { "img": "images/6.png", "msg": "ホテル満喫<br>できますよ！" },
+      "culture": {
+        "icon": "🏨",
+        "title": "韓国のホテル、実は便利！",
+        "body": "韓国のホテルは<hl>チムジルバン（찜질방）</hl>という汗蒸幕が併設されていることも。<br><br>エレベーターには<hl>층（チュン）＝階</hl>ボタンがあります。ロビーは<hl>1층（イル チュン）＝1階</hl>です。<br><br>Wi-Fiパスワードを聞きたい時：<br><hl>「<kr>와이파이 비밀번호가 뭐예요?</kr>」</hl><br>（ワイパイ ビミルボノガ ムォエヨ？）<br>＝「Wi-Fiのパスワードは何ですか？」"
+      },
+      "drama": {
+        "lines": ["잘 쉬었어요?", "좋은 하루 되세요!"],
+        "reading": "チャル スィオッソヨ？／ チョウン ハル テセヨ！",
+        "japanese": "「よく休めましたか？」 ／ 「良い一日を！」",
+        "note": "ドラマでホテルシーンによく出てくる言葉です ✨"
+      },
+      "summary": [
+        { "korean": "체크인 하려고요",   "reading": "チェックイン ハリョゴヨ" },
+        { "korean": "수건 있어요?",      "reading": "スゴン イッソヨ？" },
+        { "korean": "와이파이 있어요?",  "reading": "ワイパイ イッソヨ？" },
+        { "korean": "감사합니다",        "reading": "カムサハムニダ" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "id": "lesson6",
+  "stage": 6,
+  "stageTitle": "ドラマ撮影地で",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong":   "images/3.png",
+    "cheer":   "images/4.png",
+    "complete":"images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": { "img": "images/1.png", "msg": "サトウさん、<br>最終回ですよ！" },
+      "korean": "진짜 대박이에요!",
+      "reading": "チンッチャ テバギエヨ！",
+      "meaning": "本当にすごいです！ / 最高です！",
+      "audioKey": "진짜 대박이에요",
+      "scenes": [
+        { "icon": "🎬", "text": "撮影地を訪れて感動したとき、そのまま使えます！" },
+        { "icon": "🌟", "text": "「진짜」は「本当に・マジで」、「대박」は「すごい・最高」。" },
+        { "icon": "📸", "text": "写真を見て、食べ物を食べて、景色を見て…あらゆる感動の場面で！" }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "気持ちの言葉もそっくり！",
+      "character": { "img": "images/1.png", "msg": "感情表現も<br>自然に出てくる！" },
+      "japanese": { "sentence": "本当に\n素晴らしいです。", "reading": "ほんとうに すばらしいです" },
+      "korean":   { "sentence": "정말\n멋있어요.", "reading": "チョンマル モシッソヨ" },
+      "insight": "「本当に」＝「정말（チョンマル）」または「진짜（チンッチャ）」、<br>「素晴らしい」＝「멋있다（モシッタ）」。日本語と同じく感情を重ねて強調できます！",
+      "vocab": [
+        { "korean": "진짜", "japanese": "チンッチャ ＝ 本当に・マジで" },
+        { "korean": "대박", "japanese": "テバク ＝ すごい・最高" },
+        { "korean": "멋있다", "japanese": "モシッタ ＝ かっこいい・素敵" },
+        { "korean": "예쁘다", "japanese": "イェップダ ＝ きれい・かわいい" },
+        { "korean": "맛있다", "japanese": "マシッタ ＝ おいしい" },
+        { "korean": "너무 좋아요", "japanese": "ノム チョアヨ ＝ とても好きです" }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": { "img": "images/4.png", "msg": "感動を<br>伝えよう！" },
+      "template": { "korean": "진짜 ___!", "reading": "（単語を選んでください）", "japanese": "本当に〜！", "readingTemplate": "チンッチャ ___！", "japaneseTemplate": "本当に___！" },
+      "words": [
+        { "korean": "대박",    "reading": "テバク",       "japanese": "すごい",    "audioKey": "진짜 대박" },
+        { "korean": "맛있어",  "reading": "マシッソ",     "japanese": "おいしい",  "audioKey": "진짜 맛있어" },
+        { "korean": "예쁘다",  "reading": "イェップダ",   "japanese": "きれい",    "audioKey": "진짜 예쁘다" },
+        { "korean": "좋다",    "reading": "チョッタ",     "japanese": "いい",      "audioKey": "진짜 좋다" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "6課のまとめクイズ！",
+      "character": { "img": "images/1.png", "msg": "最後のクイズ！<br>全部思い出して 😊" },
+      "questions": [
+        {
+          "icon": "🎬",
+          "question": "感動したときの万能フレーズは？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            { "korean": "진짜 미안해요",   "reading": "チンッチャ ミアネヨ",    "correct": false },
+            { "korean": "진짜 대박이에요", "reading": "チンッチャ テバギエヨ",  "correct": true  },
+            { "korean": "진짜 몰라요",     "reading": "チンッチャ モルラヨ",    "correct": false }
+          ],
+          "correctMsg": "完璧！「진짜 대박이에요」、ソウルで何度でも使ってください 🎉",
+          "wrongMsg":   "惜しい！「진짜 대박이에요（チンッチャ テバギエヨ）」。「대박＝すごい」ですよ！"
+        },
+        {
+          "icon": "🌟",
+          "question": "「とても好きです」は？",
+          "sub": "感情表現を思い出して！",
+          "options": [
+            { "korean": "너무 싫어요",    "reading": "ノム シロヨ",   "correct": false },
+            { "korean": "너무 좋아요",    "reading": "ノム チョアヨ", "correct": true  },
+            { "korean": "너무 몰라요",    "reading": "ノム モルラヨ", "correct": false }
+          ],
+          "correctMsg": "その通り！「너무 좋아요」、推しのドラマに向けて使いましょう 💕",
+          "wrongMsg":   "正解は「너무 좋아요（ノム チョアヨ）」。「좋아요＝好きです・いいです」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "6課完走、おめでとうございます！",
+      "character": { "img": "images/6.png", "msg": "全レッスン<br>完了です！🎉" },
+      "culture": {
+        "icon": "🎬",
+        "title": "ソウルはドラマの舞台そのもの！",
+        "body": "<hl>경복궁（景福宮）</hl>は「ミスター・サンシャイン」「雲が描いた月明かり」の舞台。<br><hl>북촌한옥마을（北村韓屋村）</hl>は時代劇から現代ドラマまで数多く登場。<br><br>撮影地を訪れたら現地の人に：<br><hl>「<kr>여기서 드라마 찍었어요?</kr>（ヨギソ ドゥラマ チゴッソヨ？）」</hl><br>＝「ここでドラマを撮りましたか？」<br><br>きっと嬉しそうに話してくれますよ 😊"
+      },
+      "drama": {
+        "lines": ["보고 싶었어.", "사랑해요."],
+        "reading": "ポゴ シポッソ。／ サランヘヨ。",
+        "japanese": "「会いたかった。」 ／ 「愛しています。」",
+        "note": "韓国ドラマの名台詞。声に出して言ってみてください ✨"
+      },
+      "summary": [
+        { "korean": "진짜 대박이에요",  "reading": "チンッチャ テバギエヨ" },
+        { "korean": "너무 좋아요",      "reading": "ノム チョアヨ" },
+        { "korean": "보고 싶었어",      "reading": "ポゴ シポッソ" },
+        { "korean": "사랑해요",         "reading": "サランヘヨ" }
+      ]
+    }
+  ]
+}

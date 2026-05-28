@@ -1,0 +1,115 @@
+{
+  "id": "lesson2",
+  "stage": 2,
+  "stageTitle": "カフェで",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong":   "images/3.png",
+    "cheer":   "images/4.png",
+    "complete":"images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": { "img": "images/1.png", "msg": "サトウさん、<br>カフェへ行こう！" },
+      "korean": "아메리카노 하나 주세요.",
+      "reading": "アメリカノ ハナ ジュセヨ。",
+      "meaning": "アメリカーノ、ひとつください。",
+      "audioKey": "아메리카노 하나 주세요",
+      "scenes": [
+        { "icon": "☕", "text": "ソウルのカフェでコーヒーを注文したい！" },
+        { "icon": "🧊", "text": "「하나」は「ひとつ」。数字さえ知れば何でも注文できます。" },
+        { "icon": "🏙️", "text": "韓国はカフェ大国！街中に素敵なカフェがあります。" }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "注文の言い方、そっくり！",
+      "character": { "img": "images/1.png", "msg": "数字も<br>似てますよ！" },
+      "japanese": { "sentence": "アイスで\nお願いします。", "reading": "アイス で おねがいします" },
+      "korean":   { "sentence": "아이스로\n주세요.", "reading": "アイスロ ジュセヨ" },
+      "insight": "「で」＝「로（ロ）」、「お願いします／ください」＝「주세요（ジュセヨ）」。<br>「주세요」はもう知っています！",
+      "vocab": [
+        { "korean": "아이스", "japanese": "アイス ＝ 氷・アイス" },
+        { "korean": "따뜻하게", "japanese": "タットゥタケ ＝ 温かく" },
+        { "korean": "하나", "japanese": "ハナ ＝ 1つ" },
+        { "korean": "둘", "japanese": "トゥル ＝ 2つ" },
+        { "korean": "테이크아웃", "japanese": "テイクアウッ ＝ テイクアウト" },
+        { "korean": "영수증", "japanese": "ヨンスジュン ＝ レシート" }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": { "img": "images/4.png", "msg": "単語を選んで<br>注文しよう！" },
+      "template": { "korean": "___ 주세요.", "reading": "（単語を選んでください）", "japanese": "〜をください", "readingTemplate": "___ ジュセヨ。", "japaneseTemplate": "___をください。" },
+      "words": [
+        { "korean": "아이스",     "reading": "アイス",       "japanese": "アイス",       "audioKey": "아이스 주세요" },
+        { "korean": "따뜻하게",   "reading": "タットゥタケ",  "japanese": "温かく",       "audioKey": "따뜻하게 주세요" },
+        { "korean": "큰 걸로",    "reading": "クンゴルロ",   "japanese": "大きいサイズで","audioKey": "큰 걸로 주세요" },
+        { "korean": "영수증",     "reading": "ヨンスジュン",  "japanese": "レシート",     "audioKey": "영수증 주세요" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": { "img": "images/1.png", "msg": "さあ、クイズ！<br>大丈夫ですよ 😊" },
+      "questions": [
+        {
+          "icon": "☕",
+          "question": "「アメリカーノひとつください」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            { "korean": "아메리카노 둘 주세요", "reading": "アメリカノ トゥル ジュセヨ", "correct": false },
+            { "korean": "아메리카노 하나 주세요", "reading": "アメリカノ ハナ ジュセヨ", "correct": true },
+            { "korean": "아메리카노 괜찮아요",  "reading": "アメリカノ クェンチャナヨ", "correct": false }
+          ],
+          "correctMsg": "完璧！「하나」は「ひとつ」。ソウルのカフェで今日から使えます！",
+          "wrongMsg":   "惜しい！「하나（ハナ）」は「ひとつ」。아메리카노 하나 주세요 と覚えましょう。"
+        },
+        {
+          "icon": "🧊",
+          "question": "「アイスでください」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            { "korean": "아이스 있어요",  "reading": "アイス イッソヨ",   "correct": false },
+            { "korean": "아이스 주세요",  "reading": "アイス ジュセヨ",   "correct": true  },
+            { "korean": "아이스 먹어요",  "reading": "アイス モゴヨ",    "correct": false }
+          ],
+          "correctMsg": "その調子！「주세요」で何でも注文できますね。",
+          "wrongMsg":   "正解は「아이스 주세요（アイス ジュセヨ）」。「주세요＝ください」ですね！"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": { "img": "images/6.png", "msg": "カフェ、<br>楽しみましょう！" },
+      "culture": {
+        "icon": "☕",
+        "title": "韓国はカフェ大国！",
+        "body": "ソウルには世界一カフェが多い、とも言われています。<hl>テーマカフェ</hl>（お花屋さんカフェ、犬カフェ、漫画カフェ…）も豊富！<br><br>注文はレジで行うのが基本。番号札をもらってテーブルで待ちます。<br><br>おすすめフレーズ：<br><hl>「<kr>일 번이요.</kr>（イル ボニヨ）」</hl>＝「1番です」（番号を呼ばれた時）<br><hl>「<kr>여기 앉아도 돼요?</kr>（ヨギ アンジャド テヨ？）」</hl>＝「ここ座っていいですか？」"
+      },
+      "drama": {
+        "lines": ["완전 맛있어!", "또 와야 해！"],
+        "reading": "ワンジョン マシッソ！／ ト ワヤ ヘ！",
+        "japanese": "「めちゃくちゃおいしい！」 ／ 「また来なきゃ！」",
+        "note": "ドラマのカフェシーンでよく聞く表現です ✨"
+      },
+      "summary": [
+        { "korean": "아메리카노 하나 주세요", "reading": "アメリカノ ハナ ジュセヨ" },
+        { "korean": "아이스 주세요",         "reading": "アイス ジュセヨ" },
+        { "korean": "따뜻하게 주세요",       "reading": "タットゥタケ ジュセヨ" },
+        { "korean": "영수증 주세요",         "reading": "ヨンスジュン ジュセヨ" }
+      ]
+    }
+  ]
+}

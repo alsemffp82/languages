@@ -1,0 +1,228 @@
+{
+  "id": "lesson32",
+  "stage": 2,
+  "stageTitle": "노래방에서",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "ノレバン必須！<br>覚えましょう！"
+      },
+      "korean": "이 노래 신청할 수 있어요?",
+      "reading": "イ ノレ シンチョンハル ス イッソヨ？",
+      "meaning": "この曲、リクエストできますか？",
+      "audioKey": "이 노래 신청할 수 있어요?",
+      "scenes": [
+        {
+          "icon": "🎤",
+          "text": "ノレバン（カラオケ）は韓国旅行の定番体験。「신청하다（シンチョンハダ）＝リクエストする」"
+        },
+        {
+          "icon": "🎵",
+          "text": "「이 노래（イ ノレ）＝この曲」。스마트폰으로 곡을 검색해서 보여줄 수도 있어요！"
+        },
+        {
+          "icon": "🌟",
+          "text": "「화면에 뜨나요?（ファミョネ トゥナヨ？）＝画面に出ますか？」も使えます"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "ノレバンの言葉を比べよう！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "ノレバンも<br>韓国語で！"
+      },
+      "japanese": {
+        "sentence": "マイクの\n音量を\n上げてください。",
+        "reading": "マイクのおんりょうをあげてください"
+      },
+      "korean": {
+        "sentence": "마이크 소리\n키워 주세요.",
+        "reading": "マイク ソリ キウォ ジュセヨ"
+      },
+      "insight": "「소리（ソリ）＝音・音量」「키우다（キウダ）＝大きくする」。<br>「작게（チャクゲ）＝小さく」「크게（クゲ）＝大きく」も覚えると便利です。",
+      "vocab": [
+        {
+          "korean": "노래방",
+          "japanese": "ノレバン ＝ カラオケルーム"
+        },
+        {
+          "korean": "신청하다",
+          "japanese": "シンチョンハダ ＝ リクエストする（申請）"
+        },
+        {
+          "korean": "마이크",
+          "japanese": "マイク ＝ マイク"
+        },
+        {
+          "korean": "소리 키워요",
+          "japanese": "ソリ キウォヨ ＝ 音を大きくします"
+        },
+        {
+          "korean": "탬버린",
+          "japanese": "テムボリン ＝ タンバリン"
+        },
+        {
+          "korean": "한 시간",
+          "japanese": "ハン シガン ＝ 1時間"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "ノレバンで<br>使ってみよう！"
+      },
+      "template": {
+        "korean": "___ 한 곡만 더요!",
+        "reading": "（単語を選んでください）",
+        "japanese": "〜、もう一曲だけ！",
+        "readingTemplate": "___ ハン ゴクマン トヨ！",
+        "japaneseTemplate": "___、もう一曲だけ！"
+      },
+      "words": [
+        {
+          "korean": "이 노래",
+          "reading": "イ ノレ",
+          "japanese": "この曲",
+          "audioKey": "이 노래 한 곡만 더요!"
+        },
+        {
+          "korean": "BTS 노래",
+          "reading": "ピティエス ノレ",
+          "japanese": "BTS曲",
+          "audioKey": "BTS 노래 한 곡만 더요!"
+        },
+        {
+          "korean": "발라드",
+          "reading": "パルラドゥ",
+          "japanese": "バラード",
+          "audioKey": "발라드 한 곡만 더요!"
+        },
+        {
+          "korean": "이거",
+          "reading": "イゴ",
+          "japanese": "これ",
+          "audioKey": "이거 한 곡만 더요!"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "🎤",
+          "question": "「この曲リクエストできますか？」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "이 노래 알아요?",
+              "reading": "イ ノレ アラヨ？",
+              "correct": false
+            },
+            {
+              "korean": "이 노래 신청할 수 있어요?",
+              "reading": "イ ノレ シンチョンハル ス イッソヨ？",
+              "correct": true
+            },
+            {
+              "korean": "이 노래 좋아요?",
+              "reading": "イ ノレ チョアヨ？",
+              "correct": false
+            }
+          ],
+          "correctMsg": "완벽해요！「이 노래 신청할 수 있어요?」ノレバンで使ってみて！",
+          "wrongMsg": "아쉬워요！「이 노래 신청할 수 있어요?（イ ノレ シンチョンハル ス イッソヨ？）」。「신청＝リクエスト」ですよ。"
+        },
+        {
+          "icon": "🎵",
+          "question": "「この曲、もう一曲だけ！」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "발라드 한 곡만 더요!",
+              "reading": "パルラドゥ ハン ゴクマン トヨ！",
+              "correct": false
+            },
+            {
+              "korean": "이 노래 한 곡만 더요!",
+              "reading": "イ ノレ ハン ゴクマン トヨ！",
+              "correct": true
+            },
+            {
+              "korean": "BTS 노래 한 곡만 더요!",
+              "reading": "ピティエス ノレ ハン ゴクマン トヨ！",
+              "correct": false
+            }
+          ],
+          "correctMsg": "맞아요！「이 노래 한 곡만 더요!」노래방でテンション最高！",
+          "wrongMsg": "정답은 「이 노래 한 곡만 더요!（イ ノレ ハン ゴクマン トヨ！）」。「한 곡만 더＝もう一曲だけ」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "ノレバン、<br>楽しみましょう！"
+      },
+      "culture": {
+        "icon": "🎤",
+        "title": "韓国の노래방（ノレバン）文化",
+        "body": "韓国のカラオケ文化は日本とは少し違います：<br><br>特徴：<br><hl>룸 단위（ルム タンウィ）</hl>＝部屋単位で借りる（日本と同じ）<br><hl>탬버린（テムボリン）</hl>＝必ず置いてある打楽器<br><hl>과자·음료 반입 가능（コジャ ウムニョ パニプ カヌン）</hl>＝お菓子・飲み物持込OK<br><br>便利フレーズ：<br><hl>「방 하나 주세요（パン ハナ ジュセヨ）」</hl>＝「部屋一つください」<br><hl>「30분 延長（サムシップン ヨンジャン）」</hl>＝「30分延長」<br><hl>「점수 좀 잘 나오게 해주세요（チョムス チョム チャル ナオゲ ヘジュセヨ）」</hl>＝「高得点出るようにしてください（冗談で）」"
+      },
+      "drama": {
+        "lines": [
+          "노래방 가자! 스트레스 풀어야겠어.",
+          "내가 1등 할게, 두고 봐!"
+        ],
+        "reading": "ノレバン カジャ！ ストゥレス プロヤゲッソ。／ ネガ イルトゥン ハルケ、トゥゴ ポ！",
+        "japanese": "「ノレバン行こう！ストレス発散しなきゃ。」 ／ 「私が1位取るから、見てて！」",
+        "note": "韓国ドラマのノレバンシーンの定番セリフです ✨"
+      },
+      "summary": [
+        {
+          "korean": "이 노래 신청할 수 있어요?",
+          "reading": "イ ノレ シンチョンハル ス イッソヨ？"
+        },
+        {
+          "korean": "이 노래 한 곡만 더요!",
+          "reading": "イ ノレ ハン ゴクマン トヨ！"
+        },
+        {
+          "korean": "마이크 소리 키워 주세요",
+          "reading": "マイク ソリ キウォ ジュセヨ"
+        },
+        {
+          "korean": "방 하나 주세요",
+          "reading": "パン ハナ ジュセヨ"
+        }
+      ]
+    }
+  ]
+}

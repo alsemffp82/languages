@@ -1,0 +1,228 @@
+{
+  "id": "lesson10",
+  "stage": 4,
+  "stageTitle": "놀람·감탄",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/2.png",
+        "msg": "驚きの言葉、<br>覚えましょう！"
+      },
+      "korean": "말도 안 돼!",
+      "reading": "マルド アン テ！",
+      "meaning": "ありえない！/ まさか！",
+      "audioKey": "말도 안 돼!",
+      "scenes": [
+        {
+          "icon": "😱",
+          "text": "驚いたとき、信じられないとき。ドラマで毎話のように出てくる！"
+        },
+        {
+          "icon": "🤯",
+          "text": "「말（マル）＝言葉」「안 되다（アン テダ）＝ダメだ・あり得ない」。"
+        },
+        {
+          "icon": "💬",
+          "text": "日本語の「まじで！？」「ありえない！」に近いニュアンスです。"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "驚きの表現もそっくり！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "驚きも<br>韓国語で！"
+      },
+      "japanese": {
+        "sentence": "本当\nですか？",
+        "reading": "ほんとう ですか"
+      },
+      "korean": {
+        "sentence": "정말\n이에요?",
+        "reading": "チョンマル イエヨ？"
+      },
+      "insight": "「정말（チョンマル）＝本当に」は日常でよく使う副詞。<br>「진짜（チンッチャ）」と同じ意味ですが、「정말」の方がやや丁寧な印象です。",
+      "vocab": [
+        {
+          "korean": "어머",
+          "japanese": "オモ ＝ あら・まあ（女性がよく使う）"
+        },
+        {
+          "korean": "세상에",
+          "japanese": "セサンエ ＝ 世の中に・なんてこと"
+        },
+        {
+          "korean": "헐",
+          "japanese": "ホル ＝ えっ（若者言葉・驚き）"
+        },
+        {
+          "korean": "대박",
+          "japanese": "テバク ＝ すごい・最高（知ってるね！）"
+        },
+        {
+          "korean": "미쳤어",
+          "japanese": "ミチョッソ ＝ 信じられない（友達同士で）"
+        },
+        {
+          "korean": "설마",
+          "japanese": "ソルマ ＝ まさか"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "驚きを<br>表現しよう！"
+      },
+      "template": {
+        "korean": "정말 ___?",
+        "reading": "（単語を選んでください）",
+        "japanese": "本当に〜？",
+        "readingTemplate": "チョンマル ___？",
+        "japaneseTemplate": "本当に___？"
+      },
+      "words": [
+        {
+          "korean": "이에요",
+          "reading": "イエヨ",
+          "japanese": "そうですか",
+          "audioKey": "정말 이에요?"
+        },
+        {
+          "korean": "몰랐어요",
+          "reading": "モルラッソヨ",
+          "japanese": "知らなかった",
+          "audioKey": "정말 몰랐어요?"
+        },
+        {
+          "korean": "괜찮아요",
+          "reading": "クェンチャナヨ",
+          "japanese": "大丈夫ですか",
+          "audioKey": "정말 괜찮아요?"
+        },
+        {
+          "korean": "대박이에요",
+          "reading": "テバギエヨ",
+          "japanese": "すごいですね",
+          "audioKey": "정말 대박이에요?"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "😱",
+          "question": "「ありえない！まさか！」を韓国語では？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "어떡해요!",
+              "reading": "オットケヨ！",
+              "correct": false
+            },
+            {
+              "korean": "말도 안 돼!",
+              "reading": "マルド アン テ！",
+              "correct": true
+            },
+            {
+              "korean": "왜 그래요?",
+              "reading": "ウェ グレヨ？",
+              "correct": false
+            }
+          ],
+          "correctMsg": "完璧！「말도 안 돼！」はドラマで毎話聞こえる定番フレーズです！",
+          "wrongMsg": "惜しい！「말도 안 돼!（マルド アン テ！）」。「말＝言葉、안 되다＝あり得ない」ですよ。"
+        },
+        {
+          "icon": "🤯",
+          "question": "「本当に知らなかった」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "정말 괜찮아요",
+              "reading": "チョンマル クェンチャナヨ",
+              "correct": false
+            },
+            {
+              "korean": "정말 몰랐어요",
+              "reading": "チョンマル モルラッソヨ",
+              "correct": true
+            },
+            {
+              "korean": "정말 이에요",
+              "reading": "チョンマル イエヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "その通り！「몰랐어요」は「知らなかった」。過去形も自然に使えましたね！",
+          "wrongMsg": "正解は「정말 몰랐어요（チョンマル モルラッソヨ）」。「모르다＝知らない」の過去形ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "驚き表現、<br>バッチリです！"
+      },
+      "culture": {
+        "icon": "😱",
+        "title": "韓国ドラマの「驚きの演技」！",
+        "body": "韓国ドラマでは感情表現が豊か。驚きのシーンでよく出る言葉：<br><br><hl>어머（オモ）</hl>＝あら・まあ（中高年女性がよく使う、親しみやすい表現）<br><hl>세상에（セサンエ）</hl>＝なんてこと！（「世の中に！」という意味）<br><hl>헐（ホル）</hl>＝えっ・マジ（若者言葉）<br><br>年代によって使う言葉が違うのも面白いポイントです。<br>サトウさんには<hl>「어머, 세상에!」</hl>が自然に聞こえるはず 😊"
+      },
+      "drama": {
+        "lines": [
+          "어머, 이게 무슨 일이에요?",
+          "말도 안 돼, 진짜로?"
+        ],
+        "reading": "オモ、イゲ ムスン イリエヨ？／ マルド アン テ、チンッチャロ？",
+        "japanese": "「あら、これはどういうことですか？」 ／ 「ありえない、本当に？」",
+        "note": "驚きのシーン、この2フレーズを聞き取ってみて！ ✨"
+      },
+      "summary": [
+        {
+          "korean": "말도 안 돼!",
+          "reading": "マルド アン テ！"
+        },
+        {
+          "korean": "정말이에요?",
+          "reading": "チョンマリエヨ？"
+        },
+        {
+          "korean": "어머, 세상에!",
+          "reading": "オモ、セサンエ！"
+        },
+        {
+          "korean": "설마요?",
+          "reading": "ソルマヨ？"
+        }
+      ]
+    }
+  ]
+}

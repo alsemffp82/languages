@@ -1,0 +1,228 @@
+{
+  "id": "lesson24",
+  "stage": 6,
+  "stageTitle": "칭찬하기",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong": "images/3.png",
+    "cheer": "images/4.png",
+    "complete": "images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "次のレッスン、<br>始めましょう！"
+      },
+      "korean": "너무 잘 어울려요!",
+      "reading": "ノム チャル オウルリョヨ！",
+      "meaning": "すごく似合ってます！",
+      "audioKey": "너무 잘 어울려요!",
+      "scenes": [
+        {
+          "icon": "✨",
+          "text": "相手をほめるときの定番フレーズ！"
+        },
+        {
+          "icon": "👗",
+          "text": "「어울리다（オウルリダ）＝似合う」は使用頻度抜群！"
+        },
+        {
+          "icon": "😊",
+          "text": "服・アクセサリー・髪型、何にでも使えます！"
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "日本語と韓国語はそっくり！",
+      "character": {
+        "img": "images/1.png",
+        "msg": "比べてみよう！"
+      },
+      "japanese": {
+        "sentence": "とても\nきれいです。",
+        "reading": "とても きれいです"
+      },
+      "korean": {
+        "sentence": "정말\n예뻐요.",
+        "reading": "チョンマル イェッポヨ"
+      },
+      "insight": "「예쁘다（イェップダ）＝かわいい・きれい」の丁寧形が「예뻐요」。<br>男性には「멋있어요（モシッソヨ）＝かっこいい」を！",
+      "vocab": [
+        {
+          "korean": "예쁘다",
+          "japanese": "イェップダ ＝ かわいい・きれい"
+        },
+        {
+          "korean": "멋있다",
+          "japanese": "モシッタ ＝ かっこいい"
+        },
+        {
+          "korean": "귀엽다",
+          "japanese": "クィヨプタ ＝ かわいい"
+        },
+        {
+          "korean": "어울리다",
+          "japanese": "オウルリダ ＝ 似合う"
+        },
+        {
+          "korean": "피부",
+          "japanese": "ピブ ＝ 肌"
+        },
+        {
+          "korean": "스타일",
+          "japanese": "スタイル ＝ スタイル"
+        }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": {
+        "img": "images/4.png",
+        "msg": "褒め言葉を<br>伝えよう！"
+      },
+      "template": {
+        "korean": "___ 정말 예뻐요!",
+        "reading": "（単語を選んでください）",
+        "japanese": "〜、本当にきれい！",
+        "readingTemplate": "___ チョンマル イェッポヨ！",
+        "japaneseTemplate": "___、本当にきれい！"
+      },
+      "words": [
+        {
+          "korean": "머리",
+          "reading": "モリ",
+          "japanese": "髪",
+          "audioKey": "머리 정말 예뻐요!"
+        },
+        {
+          "korean": "옷",
+          "reading": "オッ",
+          "japanese": "服",
+          "audioKey": "옷 정말 예뻐요!"
+        },
+        {
+          "korean": "피부",
+          "reading": "ピブ",
+          "japanese": "肌",
+          "audioKey": "피부 정말 예뻐요!"
+        },
+        {
+          "korean": "눈",
+          "reading": "ヌン",
+          "japanese": "目",
+          "audioKey": "눈 정말 예뻐요!"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": {
+        "img": "images/1.png",
+        "msg": "さあ、クイズ！<br>大丈夫ですよ 😊"
+      },
+      "questions": [
+        {
+          "icon": "✨",
+          "question": "「すごく似合ってます！」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            {
+              "korean": "너무 좋아해요!",
+              "reading": "ノム チョアヘヨ！",
+              "correct": false
+            },
+            {
+              "korean": "너무 잘 어울려요!",
+              "reading": "ノム チャル オウルリョヨ！",
+              "correct": true
+            },
+            {
+              "korean": "너무 달라요!",
+              "reading": "ノム タルラヨ！",
+              "correct": false
+            }
+          ],
+          "correctMsg": "完璧！韓国人の友達をたくさん褒めてあげて！",
+          "wrongMsg": "惜しい！「너무 잘 어울려요!」。「어울리다＝似合う」ですよ。"
+        },
+        {
+          "icon": "💇",
+          "question": "「髪、本当にきれい！」は？",
+          "sub": "パターン練習を思い出して！",
+          "options": [
+            {
+              "korean": "옷 정말 예뻐요",
+              "reading": "オッ チョンマル イェッポヨ",
+              "correct": false
+            },
+            {
+              "korean": "머리 정말 예뻐요",
+              "reading": "モリ チョンマル イェッポヨ",
+              "correct": true
+            },
+            {
+              "korean": "피부 정말 예뻐요",
+              "reading": "ピブ チョンマル イェッポヨ",
+              "correct": false
+            }
+          ],
+          "correctMsg": "その通り！「머리＝髪・頭」。新しいヘアスタイルへの一言です！",
+          "wrongMsg": "正解は「머리 정말 예뻐요」。「머리＝髪・頭」ですよ。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": {
+        "img": "images/6.png",
+        "msg": "친구 만들기 편<br>完走おめでとう！"
+      },
+      "culture": {
+        "icon": "✨",
+        "title": "韓国の褒め文화！",
+        "body": "韓国では<hl>칭찬（チンチャン）＝褒め</hl>をストレートに伝えるのが文化。<br><br>褒められたときの返し方：<br>・<hl>「<kr>부끄러워요.</kr>（プクロウォヨ）」</hl>＝「恥ずかしいです」<br>・<hl>「<kr>과찬이에요~</kr>（クァチャニエヨ〜）」</hl>＝「お褒めにあずかり光栄です〜」"
+      },
+      "drama": {
+        "lines": [
+          "오늘 너무 예쁘다!",
+          "그 옷 어디서 샀어요?"
+        ],
+        "reading": "オヌル ノム イェップダ！／ クオッ オディソ サッソヨ？",
+        "japanese": "「今日すごくかわいい！」 ／ 「その服どこで買ったんですか？」",
+        "note": "友達との会話が弾む褒め合いです ✨"
+      },
+      "summary": [
+        {
+          "korean": "너무 잘 어울려요",
+          "reading": "ノム チャル オウルリョヨ"
+        },
+        {
+          "korean": "머리 정말 예뻐요",
+          "reading": "モリ チョンマル イェッポヨ"
+        },
+        {
+          "korean": "감사합니다",
+          "reading": "カムサハムニダ"
+        },
+        {
+          "korean": "부끄러워요",
+          "reading": "プクロウォヨ"
+        }
+      ]
+    }
+  ]
+}

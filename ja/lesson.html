@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>韓国語レッスン</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+KR:wght@400;700&display=swap');
+    :root {
+      --cream:#FDF6EE; --warm-pink:#E8827A; --soft-rose:#EDD5D0; --blush:#FAF0EC;
+      --brown:#7B5B4C; --dark-brown:#4A3328; --sage:#7FB5A0; --soft-sage:#D8EDE6;
+      --gold:#C9973A; --light-gold:#FFF5DC; --text:#2E1F18; --muted:#9E7E72;
+      --kr-bg:#FFF8F0; --kr-border:#E8A090;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Noto Sans JP',sans-serif;background:var(--cream);color:var(--text);min-height:100vh;font-size:15px;line-height:1.7;}
+    header{background:linear-gradient(135deg,#C9604A 0%,#A84A60 100%);color:white;padding:30px 24px 24px;text-align:center;position:relative;overflow:hidden;}
+    header::after{content:'✈️';position:absolute;font-size:90px;opacity:.1;right:-12px;bottom:-16px;}
+    header .badge{display:inline-block;background:rgba(255,255,255,.2);border-radius:20px;padding:4px 14px;font-size:11px;letter-spacing:1.5px;margin-bottom:12px;}
+    header h1{font-size:22px;font-weight:700;line-height:1.4;}
+    header .sub{font-size:13px;opacity:.8;margin-top:6px;}
+    .progress-wrap{background:white;border-bottom:1px solid #EDE0D8;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;}
+    .progress-label{font-size:12px;color:var(--muted);}
+    .dots{display:flex;gap:7px;}
+    .dot{width:9px;height:9px;border-radius:50%;background:#E0D4CC;transition:all .3s;}
+    .dot.active{background:var(--warm-pink);transform:scale(1.3);}
+    .dot.done{background:var(--sage);}
+    .section{display:none;padding:28px 20px 100px;width:100%;animation:fadeIn .35s ease;}
+    .section.visible{display:block;}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    @media(min-width:769px){
+      .section{max-width:600px;margin:0 auto;}
+      .nav{width:calc(600px - 40px);transform:translateX(-50%);left:50% !important;}
+      .char-wrap{right:calc(50% - 320px);}
+    }
+    .step-label{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:700;color:var(--warm-pink);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;}
+    .step-label::after{content:'';flex:1;height:1px;background:var(--soft-rose);}
+    .step-title{font-size:19px;font-weight:700;color:var(--dark-brown);margin-bottom:20px;}
+    .card{background:white;border-radius:18px;padding:24px 20px;margin-bottom:14px;box-shadow:0 2px 12px rgba(0,0,0,.05);}
+    .kr-block{background:var(--kr-bg);border:2px solid var(--kr-border);border-radius:16px;padding:24px 20px;text-align:center;margin-bottom:16px;}
+    .kr-block .label{font-size:11px;color:var(--warm-pink);font-weight:700;letter-spacing:1px;margin-bottom:10px;}
+    .kr-text{font-family:'Noto Sans KR',sans-serif;font-size:52px;font-weight:700;color:var(--dark-brown);line-height:1.1;}
+    .reading{font-size:20px;color:var(--warm-pink);margin-top:8px;font-weight:500;letter-spacing:1px;}
+    .meaning{font-size:15px;color:var(--muted);margin-top:6px;}
+    .listen-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:16px;padding:13px;background:var(--warm-pink);color:white;border:none;border-radius:12px;font-size:14px;font-family:inherit;font-weight:600;cursor:pointer;transition:opacity .15s,transform .1s;}
+    .listen-btn:active{opacity:.85;transform:scale(.98);}
+    .scene-list{display:flex;flex-direction:column;gap:10px;margin-top:4px;}
+    .scene-item{display:flex;align-items:flex-start;gap:12px;padding:13px 14px;background:var(--blush);border-radius:12px;}
+    .scene-item .icon{font-size:20px;flex-shrink:0;margin-top:1px;}
+    .scene-item .text{font-size:14px;color:var(--text);line-height:1.6;}
+    .compare-box{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1.5px solid var(--soft-rose);border-radius:14px;overflow:hidden;margin-bottom:14px;}
+    .compare-col{padding:16px;}
+    .compare-col.jp-col{background:white;border-right:1px solid var(--soft-rose);}
+    .compare-col.kr-col{background:var(--kr-bg);}
+    .compare-col .col-label{font-size:10px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:8px;}
+    .compare-col .sentence{font-size:15px;font-weight:600;color:var(--dark-brown);line-height:1.6;white-space:pre-line;}
+    .compare-col.kr-col .sentence{font-family:'Noto Sans KR',sans-serif;}
+    .compare-col .ruby-text{font-size:13px;color:var(--warm-pink);margin-top:4px;}
+    .arrow-row{text-align:center;font-size:13px;color:var(--muted);margin:8px 0 14px;}
+    .insight{background:var(--light-gold);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:13px 15px;font-size:13px;color:var(--dark-brown);line-height:1.75;}
+    .insight strong{color:var(--gold);}
+    .vocab-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+    .vocab-pill{background:var(--blush);border-radius:10px;padding:8px 13px;font-size:13px;line-height:1.4;}
+    .vocab-pill .kr{font-family:'Noto Sans KR',sans-serif;font-weight:700;color:var(--dark-brown);}
+    .vocab-pill .jp{color:var(--muted);font-size:12px;}
+    .pattern-frame{background:var(--kr-bg);border:2px solid var(--kr-border);border-radius:14px;padding:20px;text-align:center;margin-bottom:18px;}
+    .pattern-frame .instruction{font-size:12px;color:var(--muted);margin-bottom:10px;}
+    .pattern-frame .kr-big{font-family:'Noto Sans KR',sans-serif;font-size:30px;font-weight:700;color:var(--dark-brown);}
+    .pattern-frame .p-reading{font-size:15px;color:var(--warm-pink);margin-top:5px;}
+    .pattern-frame .p-jp{font-size:13px;color:var(--muted);margin-top:4px;}
+    .word-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+    .word-btn{background:white;border:2px solid var(--soft-rose);border-radius:13px;padding:14px 12px;text-align:center;cursor:pointer;transition:all .18s;font-family:inherit;}
+    .word-btn:hover{border-color:var(--warm-pink);transform:translateY(-1px);}
+    .word-btn.selected{border-color:var(--warm-pink);background:var(--blush);}
+    .word-btn .kr{font-family:'Noto Sans KR',sans-serif;font-size:20px;font-weight:700;color:var(--dark-brown);}
+    .word-btn .read{font-size:12px;color:var(--warm-pink);margin-top:3px;}
+    .word-btn .jp{font-size:12px;color:var(--muted);}
+    .result-box{display:none;margin-top:16px;background:var(--soft-sage);border-radius:14px;padding:18px;text-align:center;animation:fadeIn .3s ease;}
+    .result-box.show{display:block;}
+    .result-box .kr{font-family:'Noto Sans KR',sans-serif;font-size:28px;font-weight:700;color:var(--dark-brown);}
+    .result-box .read{font-size:14px;color:var(--sage);margin-top:5px;}
+    .result-box .jp{font-size:13px;color:var(--muted);margin-top:5px;}
+    .result-box .cheer{font-size:13px;color:var(--sage);font-weight:700;margin-top:10px;}
+    .quiz-header{text-align:center;margin-bottom:20px;}
+    .quiz-header .quiz-icon{font-size:36px;margin-bottom:10px;}
+    .quiz-header .q-text{font-size:16px;font-weight:600;color:var(--dark-brown);margin-bottom:4px;}
+    .quiz-header .q-sub{font-size:13px;color:var(--muted);}
+    .option-list{display:flex;flex-direction:column;gap:10px;}
+    .option-btn{display:flex;align-items:center;gap:12px;background:white;border:2px solid #E8DDD5;border-radius:13px;padding:14px 16px;cursor:pointer;transition:all .18s;font-family:inherit;text-align:left;}
+    .option-btn:hover:not(.disabled){border-color:var(--warm-pink);}
+    .option-btn .num{width:26px;height:26px;background:var(--blush);color:var(--brown);border-radius:50%;font-size:12px;font-weight:700;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+    .option-btn .kr-opt{font-family:'Noto Sans KR',sans-serif;font-size:17px;font-weight:700;color:var(--dark-brown);}
+    .option-btn .read-opt{font-size:12px;color:var(--muted);margin-top:1px;}
+    .option-btn.correct{border-color:var(--sage);background:var(--soft-sage);}
+    .option-btn.wrong{border-color:#F0AAAA;background:#FFF3F3;}
+    .q-result{display:none;margin-top:14px;border-radius:13px;padding:14px 16px;font-size:14px;line-height:1.7;animation:fadeIn .3s ease;}
+    .q-result.show{display:block;}
+    .q-result.ok{background:var(--soft-sage);color:#2E6B54;}
+    .q-result.ng{background:#FFF3F3;color:#9B4040;}
+    .q-result .big{font-size:24px;margin-bottom:6px;}
+    .culture-card{border:1px solid var(--soft-rose);}
+    .culture-icon{font-size:32px;margin-bottom:10px;}
+    .culture-title{font-size:16px;font-weight:700;color:var(--dark-brown);margin-bottom:10px;}
+    .culture-body{font-size:14px;color:var(--text);line-height:1.85;}
+    .culture-body .hl{color:var(--warm-pink);font-weight:700;}
+    .culture-body .kr-inline{font-family:'Noto Sans KR',sans-serif;font-weight:700;}
+    .drama-box{background:#18182E;color:white;border-radius:14px;padding:20px 18px;margin-top:14px;}
+    .drama-box .d-label{font-size:10px;letter-spacing:2px;color:#8888AA;margin-bottom:10px;}
+    .drama-box .d-kr{font-family:'Noto Sans KR',sans-serif;font-size:28px;font-weight:700;line-height:1.4;}
+    .drama-box .d-read{font-size:15px;color:#E89090;margin-top:6px;}
+    .drama-box .d-jp{font-size:14px;color:#AAAABB;margin-top:6px;}
+    .drama-box .d-note{font-size:12px;color:#77778A;margin-top:10px;}
+    .complete{text-align:center;padding:32px 16px 16px;}
+    .complete .big{font-size:56px;margin-bottom:16px;}
+    .complete h2{font-size:22px;font-weight:700;color:var(--dark-brown);margin-bottom:10px;}
+    .complete p{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:22px;}
+    .summary-list{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-bottom:24px;}
+    .s-pill{background:white;border:1.5px solid var(--soft-rose);border-radius:20px;padding:8px 15px;font-size:13px;}
+    .s-pill .kr{font-family:'Noto Sans KR',sans-serif;font-weight:700;color:var(--dark-brown);}
+    .s-pill .read{color:var(--warm-pink);}
+    .char-wrap{position:fixed;bottom:74px;right:20px;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:6px;pointer-events:none;}
+    .char-bubble{background:white;border:1.5px solid var(--soft-rose);border-radius:14px 14px 4px 14px;padding:8px 12px;font-size:12px;color:var(--dark-brown);max-width:130px;text-align:center;line-height:1.5;box-shadow:0 2px 8px rgba(0,0,0,.10);display:none;}
+    .char-bubble.show{display:block;animation:bubblePop .3s ease;}
+    .char-img{width:80px;height:80px;object-fit:contain;filter:drop-shadow(0 4px 10px rgba(0,0,0,.18));animation:charBounce .4s ease;display:block;}
+    @keyframes charBounce{0%{transform:translateY(14px);opacity:0}60%{transform:translateY(-5px);opacity:1}100%{transform:translateY(0);opacity:1}}
+    @keyframes bubblePop{0%{transform:scale(.8) translateY(4px);opacity:0}100%{transform:scale(1) translateY(0);opacity:1}}
+    .nav{position:fixed;bottom:0;left:0;right:0;background:white;border-top:1px solid #EDE0D8;padding:14px 20px;display:flex;gap:10px;}
+    .btn-back{flex:0 0 52px;height:50px;background:var(--blush);color:var(--brown);border:none;border-radius:13px;font-size:18px;cursor:pointer;}
+    .btn-next{flex:1;height:50px;background:linear-gradient(135deg,var(--warm-pink),#A84A60);color:white;border:none;border-radius:13px;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;transition:opacity .2s;}
+    .btn-next:disabled{opacity:.45;cursor:default;}
+    /* ── 오답노트 ── */
+    .review-card{margin-top:20px;background:#FFF0E8;border:2px solid var(--warm-pink);border-radius:18px;padding:20px;}
+    .review-card .rc-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+    .review-card .rc-icon{font-size:28px;}
+    .review-card .rc-title{font-size:17px;font-weight:700;color:var(--dark-brown);}
+    .review-card .rc-sub{font-size:13px;color:var(--muted);margin-top:2px;}
+    .review-card .rc-empty{text-align:center;padding:20px 0;font-size:14px;color:var(--sage);line-height:1.8;}
+    .wi{background:white;border-radius:13px;padding:14px 16px;margin-bottom:10px;border:1.5px solid var(--soft-rose);transition:opacity .3s;}
+    .wi .wi-lesson{font-size:11px;color:var(--warm-pink);font-weight:700;letter-spacing:.5px;margin-bottom:4px;}
+    .wi .wi-q{font-size:13px;color:var(--muted);margin-bottom:7px;line-height:1.5;}
+    .wi .wi-answer{font-family:'Noto Sans KR',sans-serif;font-size:20px;font-weight:700;color:var(--dark-brown);}
+    .wi .wi-reading{font-size:13px;color:var(--warm-pink);margin-top:2px;}
+    .wi .wi-msg{font-size:13px;color:var(--text);margin-top:8px;line-height:1.65;border-top:1px solid var(--soft-rose);padding-top:8px;}
+    .wi-btn{display:inline-flex;align-items:center;gap:5px;margin-top:10px;background:none;border:1.5px solid var(--soft-rose);border-radius:10px;padding:6px 14px;font-size:12px;color:var(--muted);cursor:pointer;font-family:inherit;transition:all .15s;}
+    .wi-btn:hover{border-color:var(--sage);color:var(--sage);}
+    .wi.wi-cleared{opacity:.35;pointer-events:none;}
+  </style>
+</head>
+<body>
+
+<header id="appHeader">
+  <a href="index.html" style="position:absolute;top:14px;left:16px;background:rgba(255,255,255,.2);color:white;border:none;border-radius:10px;padding:6px 12px;font-size:12px;font-family:inherit;cursor:pointer;text-decoration:none;">← ホーム</a>
+  <div class="badge" id="headerBadge">読み込み中...</div>
+  <h1 id="headerTitle">韓国語レッスン</h1>
+  <div class="sub" id="headerSub">サトウさん、はじめましょう！</div>
+</header>
+
+<div class="progress-wrap">
+  <span class="progress-label" id="stepLabel">ステップ 1 / 5</span>
+  <div class="dots" id="dots"></div>
+</div>
+
+<div id="sections"></div>
+
+<div class="char-wrap" id="charWrap">
+  <div class="char-bubble" id="charBubble"></div>
+  <img class="char-img" id="charImg" src="" alt="キャラクター">
+</div>
+
+<div class="nav" id="navBar">
+  <button class="btn-back" id="backBtn" onclick="prev()" style="display:none">◀</button>
+  <button class="btn-next" id="nextBtn" onclick="next()">次へ →</button>
+</div>
+
+<script>
+// ── URL에서 레슨 ID 읽기 ──
+const params = new URLSearchParams(location.search);
+const lessonId = params.get('id') || 'lesson1';
+
+let lesson = null;
+let cur = 0;
+let quizDone = [];
+let picked = false;
+
+// ── 오디오 ──
+const _audio = new Audio();
+function speak(key) {
+  if (!key) return;
+  const map = {
+    // lesson1
+    '저기요':             'audio/jogiyo.wav',
+    '이거 주세요':        'audio/igeo_juseyo.wav',
+    '저거 주세요':        'audio/jogeo_juseyo.wav',
+    '영수증 주세요':      'audio/yeongsujeung_juseyo.wav',
+    '사진 주세요':        'audio/sajin_juseyo.wav',
+    '감사합니다':         'audio/gamsahamnida.wav',
+    '미안합니다':         'audio/mianhamnida.wav',
+    '진짜':               'audio/jinjja.wav',
+    '대박':               'audio/daebak.wav',
+    // lesson2
+    '아메리카노 하나 주세요': 'audio/americano_hana_juseyo.wav',
+    '아이스 주세요':          'audio/aiseu_juseyo.wav',
+    '따뜻하게 주세요':        'audio/ttatteutage_juseyo.wav',
+    '큰 걸로 주세요':         'audio/keun_georlo_juseyo.wav',
+    // lesson3
+    '체크인 하려고요':    'audio/checkin_haryeogoyo.wav',
+    '수건 있어요':        'audio/sugeon_isseoyo.wav',
+    '와이파이 있어요':    'audio/waipai_isseoyo.wav',
+    '칫솔 있어요':        'audio/chitsol_isseoyo.wav',
+    '짐 보관 있어요':     'audio/jim_bogwan_isseoyo.wav',
+    // lesson4
+    '어디서 갈아타요':         'audio/eodiseo_garatayo.wav',
+    '명동에 가고 싶어요':      'audio/myeongdong_gago_sipeoyo.wav',
+    '홍대에 가고 싶어요':      'audio/hongdae_gago_sipeoyo.wav',
+    '경복궁에 가고 싶어요':    'audio/gyeongbokgung_gago_sipeoyo.wav',
+    '인사동에 가고 싶어요':    'audio/insadong_gago_sipeoyo.wav',
+    // lesson5
+    '얼마예요':               'audio/eolmayeyo.wav',
+    '조금 깎아 주세요':       'audio/jogeum_kkakka_juseyo.wav',
+    '이거 다른 색 있어요':      'audio/igeo_dareun_saek_isseoyo.wav',
+    '이거 더 큰 거 있어요':     'audio/igeo_deo_keun_geo_isseoyo.wav',
+    '이거 더 작은 거 있어요':   'audio/igeo_deo_jageun_geo_isseoyo.wav',
+    '이거 다른 디자인 있어요':  'audio/igeo_dareun_dijain_isseoyo.wav',
+    // lesson6
+    '진짜 대박이에요':  'audio/jinjja_daebagieyo.wav',
+    '진짜 대박':        'audio/jinjja_daebak.wav',
+    '진짜 맛있어':      'audio/jinjja_massisseo.wav',
+    '진짜 예쁘다':      'audio/jinjja_yeppeuda.wav',
+    '진짜 좋다':        'audio/jinjja_jota.wav',
+    // lesson7-12 (시즌2 드라마편)
+    '설레요': 'audio/설레요.wav',
+    '너무 기뻐요': 'audio/너무_기뻐요.wav',
+    '너무 슬퍼요': 'audio/너무_슬퍼요.wav',
+    '너무 행복해요': 'audio/너무_행복해요.wav',
+    '너무 설레요': 'audio/너무_설레요.wav',
+    '좋아해요': 'audio/좋아해요.wav',
+    '오빠 보고 싶어요': 'audio/오빠_보고_싶어요.wav',
+    '언니 보고 싶어요': 'audio/언니_보고_싶어요.wav',
+    '너무 보고 싶어요': 'audio/너무_보고_싶어요.wav',
+    '많이 보고 싶어요': 'audio/많이_보고_싶어요.wav',
+    '괜찮아요?': 'audio/괜찮아요.wav',
+    '걱정 마요': 'audio/걱정_마요.wav',
+    '포기하지 마요': 'audio/포기하지_마요.wav',
+    '울지 마요': 'audio/울지_마요.wav',
+    '무리하지 마요': 'audio/무리하지_마요.wav',
+    '말도 안 돼!': 'audio/말도_안_돼.wav',
+    '정말 이에요?': 'audio/정말_이에요.wav',
+    '정말 몰랐어요?': 'audio/정말_몰랐어요.wav',
+    '정말 괜찮아요?': 'audio/정말_괜찮아요.wav',
+    '정말 대박이에요?': 'audio/정말_대박이에요.wav',
+    '잠깐만요!': 'audio/잠깐만요.wav',
+    '가지 마요!': 'audio/가지_마요.wav',
+    '떠나지 마요!': 'audio/떠나지_마요.wav',
+    '잊지 마요!': 'audio/잊지_마요.wav',
+    '오해하지 마요!': 'audio/오해하지_마요.wav',
+    '그리워요': 'audio/그리워요.wav',
+    '항상 기억해요': 'audio/항상_기억해요.wav',
+    '아직도 기억해요': 'audio/아직도_기억해요.wav',
+    '영원히 기억해요': 'audio/영원히_기억해요.wav',
+    '당신을 기억해요': 'audio/당신을_기억해요.wav',
+    // lesson13-18 (시즌3 K-뷰티편)
+    '추천해 주세요': 'audio/추천해_주세요.wav',
+    '건조한 피부에 좋은 거 있어요?': 'audio/건조한_피부에_좋은_거_있어요.wav',
+    '지성 피부에 좋은 거 있어요?': 'audio/지성_피부에_좋은_거_있어요.wav',
+    '민감한 피부에 좋은 거 있어요?': 'audio/민감한_피부에_좋은_거_있어요.wav',
+    '칙칙한 피부에 좋은 거 있어요?': 'audio/칙칙한_피부에_좋은_거_있어요.wav',
+    '조금만 잘라 주세요': 'audio/조금만_잘라_주세요.wav',
+    '자연스럽게 해 주세요': 'audio/자연스럽게_해_주세요.wav',
+    '앞머리만 정리해 주세요': 'audio/앞머리만_정리해_주세요.wav',
+    '끝만 조금 해 주세요': 'audio/끝만_조금_해_주세요.wav',
+    '드라이도 해 주세요': 'audio/드라이도_해_주세요.wav',
+    '예쁘게 해 주세요': 'audio/예쁘게_해_주세요.wav',
+    '이 색으로 해 주세요': 'audio/이_색으로_해_주세요.wav',
+    '핑크 색으로 해 주세요': 'audio/핑크_색으로_해_주세요.wav',
+    '베이지 색으로 해 주세요': 'audio/베이지_색으로_해_주세요.wav',
+    '빨간 색으로 해 주세요': 'audio/빨간_색으로_해_주세요.wav',
+    '세게 해 주세요': 'audio/세게_해_주세요.wav',
+    '약하게 해 주세요': 'audio/약하게_해_주세요.wav',
+    '어깨 쪽으로 해 주세요': 'audio/어깨_쪽으로_해_주세요.wav',
+    '천천히 해 주세요': 'audio/천천히_해_주세요.wav',
+    '데워 주세요': 'audio/데워_주세요.wav',
+    '봉투 주세요': 'audio/봉투_주세요.wav',
+    '젓가락 주세요': 'audio/젓가락_주세요.wav',
+    '배달 돼요?': 'audio/배달_돼요.wav',
+    '포장 돼요?': 'audio/포장_돼요.wav',
+    '카드 돼요?': 'audio/카드_돼요.wav',
+    '예약 돼요?': 'audio/예약_돼요.wav',
+    // lesson19-24 (시즌4 친구 만들기편)
+    '잘 부탁드립니다': 'audio/잘_부탁드립니다.wav',
+    '몇 살이에요?': 'audio/몇_살이에요.wav',
+    '저도요!': 'audio/저도요.wav',
+    '저도 드라마 좋아해요!': 'audio/저도_드라마_좋아해요.wav',
+    '저도 케이팝 좋아해요!': 'audio/저도_케이팝_좋아해요.wav',
+    '저도 한국 음식 좋아해요!': 'audio/저도_한국_음식_좋아해요.wav',
+    '저도 여행 좋아해요!': 'audio/저도_여행_좋아해요.wav',
+    '언제 시간 있어요?': 'audio/언제_시간_있어요.wav',
+    '카페 같이 가요!': 'audio/카페_같이_가요.wav',
+    '밥 먹으러 같이 가요!': 'audio/밥_먹으러_같이_가요.wav',
+    '쇼핑 같이 가요!': 'audio/쇼핑_같이_가요.wav',
+    '드라이브 같이 가요!': 'audio/드라이브_같이_가요.wav',
+    '카톡 해요': 'audio/카톡_해요.wav',
+    '전화번호 알려 주세요': 'audio/전화번호_알려_주세요.wav',
+    '카톡 아이디 알려 주세요': 'audio/카톡_아이디_알려_주세요.wav',
+    '인스타 알려 주세요': 'audio/인스타_알려_주세요.wav',
+    '주소 알려 주세요': 'audio/주소_알려_주세요.wav',
+    '너무 잘 어울려요!': 'audio/너무_잘_어울려요.wav',
+    '머리 정말 예뻐요!': 'audio/머리_정말_예뻐요.wav',
+    '옷 정말 예뻐요!': 'audio/옷_정말_예뻐요.wav',
+    '피부 정말 예뻐요!': 'audio/피부_정말_예뻐요.wav',
+    '눈 정말 예뻐요!': 'audio/눈_정말_예뻐요.wav',
+    // lesson25-30 (시즌5 중급편)
+    '잘 지냈어?': 'audio/잘_지냈어.wav',
+    '뭐 해?': 'audio/뭐_해.wav',
+    '같이 해?': 'audio/같이_해.wav',
+    '언제 해?': 'audio/언제_해.wav',
+    '어떻게 해?': 'audio/어떻게_해.wav',
+    '부탁드려도 될까요?': 'audio/부탁드려도_될까요.wav',
+    '찍어 주시겠어요?': 'audio/찍어_주시겠어요.wav',
+    '도와 주시겠어요?': 'audio/도와_주시겠어요.wav',
+    '알려 주시겠어요?': 'audio/알려_주시겠어요.wav',
+    '확인해 주시겠어요?': 'audio/확인해_주시겠어요.wav',
+    '할 수 있어요': 'audio/할_수_있어요.wav',
+    '먹을 수 있어요?': 'audio/먹을_수_있어요.wav',
+    '말할 수 있어요?': 'audio/말할_수_있어요.wav',
+    '볼 수 있어요?': 'audio/볼_수_있어요.wav',
+    '들어갈 수 있어요?': 'audio/들어갈_수_있어요.wav',
+    '어렸을 때 꿈이 뭐였어요?': 'audio/어렸을_때_꿈이_뭐였어요.wav',
+    '예전에 한국 드라마 봤어요': 'audio/예전에_한국_드라마_봤어요.wav',
+    '예전에 K-pop 공연 봤어요': 'audio/예전에_kpop_공연_봤어요.wav',
+    '예전에 서울 봤어요': 'audio/예전에_서울_봤어요.wav',
+    '예전에 한국 영화 봤어요': 'audio/예전에_한국_영화_봤어요.wav',
+    '왜냐하면 좋아하기 때문이에요': 'audio/왜냐하면_좋아하기_때문이에요.wav',
+    '한국 드라마 때문이에요': 'audio/한국_드라마_때문이에요.wav',
+    'K-pop 때문이에요': 'audio/kpop_때문이에요.wav',
+    '한국 음식 때문이에요': 'audio/한국_음식_때문이에요.wav',
+    'K-뷰티 때문이에요': 'audio/k뷰티_때문이에요.wav',
+    '나중에 다시 오고 싶어요': 'audio/나중에_다시_오고_싶어요.wav',
+    '다시 오고 싶어요': 'audio/다시_오고_싶어요.wav',
+    '더 배우고 싶어요': 'audio/더_배우고_싶어요.wav',
+    '친구를 만나고 싶어요': 'audio/친구를_만나고_싶어요.wav',
+    '한국어를 잘 하고 싶어요': 'audio/한국어를_잘_하고_싶어요.wav',
+    // lesson31-36 (시즌6 생활 한국어편)
+    '맛있게 먹겠습니다!': 'audio/맛있게_먹겠습니다.wav',
+    '김치 더 주세요': 'audio/김치_더_주세요.wav',
+    '밥 더 주세요': 'audio/밥_더_주세요.wav',
+    '물 더 주세요': 'audio/물_더_주세요.wav',
+    '반찬 더 주세요': 'audio/반찬_더_주세요.wav',
+    '이 노래 신청할 수 있어요?': 'audio/이_노래_신청할_수_있어요.wav',
+    '이 노래 한 곡만 더요!': 'audio/이_노래_한_곡만_더요.wav',
+    'BTS 노래 한 곡만 더요!': 'audio/bts_노래_한_곡만_더요.wav',
+    '발라드 한 곡만 더요!': 'audio/발라드_한_곡만_더요.wav',
+    '이거 한 곡만 더요!': 'audio/이거_한_곡만_더요.wav',
+    '여기가 아파요': 'audio/여기가_아파요.wav',
+    '배가 아파요': 'audio/배가_아파요.wav',
+    '머리가 아파요': 'audio/머리가_아파요.wav',
+    '목이 아파요': 'audio/목이_아파요.wav',
+    '다리가 아파요': 'audio/다리가_아파요.wav',
+    '여기서 세워 주세요': 'audio/여기서_세워_주세요.wav',
+    '명동까지 가 주세요': 'audio/명동까지_가_주세요.wav',
+    '홍대까지 가 주세요': 'audio/홍대까지_가_주세요.wav',
+    '인천공항까지 가 주세요': 'audio/인천공항까지_가_주세요.wav',
+    '이 주소까지 가 주세요': 'audio/이_주소까지_가_주세요.wav',
+    '오늘 날씨 정말 좋네요!': 'audio/오늘_날씨_정말_좋네요.wav',
+    '오늘 덥네요': 'audio/오늘_덥네요.wav',
+    '오늘 춥네요': 'audio/오늘_춥네요.wav',
+    '오늘 따뜻하네요': 'audio/오늘_따뜻하네요.wav',
+    '오늘 흐리네요': 'audio/오늘_흐리네요.wav',
+    '또 만나요!': 'audio/또_만나요.wav',
+    '꼭 다시 올 거예요': 'audio/꼭_다시_올_거예요.wav',
+    '꼭 연락할 거예요': 'audio/꼭_연락할_거예요.wav',
+    '꼭 보고 싶을 거예요': 'audio/꼭_보고_싶을_거예요.wav',
+    '꼭 기억할 거예요': 'audio/꼭_기억할_거예요.wav',
+  };
+  const src = map[key];
+  if (src) { _audio.src = src; _audio.play().catch(() => {}); }
+}
+
+// ── 캐릭터 ──
+function showChar(img, msg, duration) {
+  const i = document.getElementById('charImg');
+  const b = document.getElementById('charBubble');
+  if (img) { i.src = img; i.style.animation = 'none'; setTimeout(() => i.style.animation = 'charBounce .4s ease', 10); }
+  if (msg) { b.innerHTML = msg; b.classList.add('show'); if (duration) setTimeout(() => b.classList.remove('show'), duration); }
+  else { b.classList.remove('show'); }
+}
+
+// ── 렌더링 ──
+function render() {
+  const TOTAL = lesson.sections.length;
+  // 도트
+  const dots = document.getElementById('dots');
+  dots.innerHTML = lesson.sections.map((_, i) =>
+    `<div class="dot ${i < cur ? 'done' : i === cur ? 'active' : ''}"></div>`
+  ).join('');
+  document.getElementById('stepLabel').textContent = `ステップ ${cur + 1} / ${TOTAL}`;
+  document.getElementById('backBtn').style.display = cur > 0 ? 'block' : 'none';
+
+  const nb = document.getElementById('nextBtn');
+  const nav = document.getElementById('navBar');
+  const sec = lesson.sections[cur];
+
+  if (cur === TOTAL - 1) {
+    nav.style.display = 'flex';
+    document.getElementById('backBtn').style.display = 'none';
+    nb.disabled = false;
+    nb.textContent = '🏠 ホームへ戻る';
+    nb.onclick = () => { location.href = 'index.html'; };
+    const c = lesson.sections[cur].character;
+    if (c) showChar(c.img, c.msg, 4000);
+    return;
+  }
+  nb.onclick = next;
+  nav.style.display = 'flex';
+
+  if (sec.type === 'pattern' && !picked) {
+    nb.disabled = true; nb.textContent = '単語を選んでください 👆';
+  } else if (sec.type === 'quiz' && quizDone.length < sec.questions.length) {
+    nb.disabled = true; nb.textContent = 'クイズに答えてください 🧡';
+  } else {
+    nb.disabled = false;
+    nb.textContent = cur === TOTAL - 2 ? '完了 🎉' : '次へ →';
+  }
+
+  // 캐릭터
+  const c = sec.character;
+  if (c) showChar(c.img, c.msg, 3000);
+}
+
+function show(n) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('visible'));
+  document.getElementById(`sec-${n}`).classList.add('visible');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  render();
+  if (n === lesson.sections.length - 1 && lesson.stage === 6) injectSeasonReview();
+}
+
+function saveProgress(done) {
+  try {
+    localStorage.setItem(`progress_${lesson.id}`, JSON.stringify({ done, step: cur }));
+  } catch {}
+}
+
+function next() {
+  if (cur < lesson.sections.length - 1) {
+    cur++;
+    // 마지막 스텝 직전이면 완료로 저장
+    const isLast = cur === lesson.sections.length - 1;
+    saveProgress(isLast);
+    show(cur);
+  }
+}
+function prev() { if (cur > 0) { cur--; show(cur); } }
+
+// ── 섹션별 HTML 생성 ──
+function buildPhrase(s, idx) {
+  return `
+  <div class="section" id="sec-${idx}">
+    <div class="step-label">${s.stepLabel}</div>
+    <div class="step-title">${s.stepTitle}</div>
+    <div class="kr-block">
+      <div class="label">🇰🇷 韓国語</div>
+      <div class="kr-text">${s.korean}</div>
+      <div class="reading">${s.reading}</div>
+      <div class="meaning">${s.meaning}</div>
+      <button class="listen-btn" onclick="speak('${s.audioKey}')">🔊 &nbsp;発音を聞く</button>
+    </div>
+    <div class="card">
+      <div style="font-size:13px;color:var(--muted);margin-bottom:12px;font-weight:600;">こんな場面で使えます</div>
+      <div class="scene-list">
+        ${s.scenes.map(sc => `
+        <div class="scene-item">
+          <div class="icon">${sc.icon}</div>
+          <div class="text">${sc.text}</div>
+        </div>`).join('')}
+      </div>
+    </div>
+  </div>`;
+}
+
+function buildCompare(s, idx) {
+  return `
+  <div class="section" id="sec-${idx}">
+    <div class="step-label">${s.stepLabel}</div>
+    <div class="step-title">${s.stepTitle}</div>
+    <div class="card">
+      <div style="font-size:13px;color:var(--muted);margin-bottom:14px;">語順を比べてみましょう</div>
+      <div class="compare-box">
+        <div class="compare-col jp-col">
+          <div class="col-label">🇯🇵 日本語</div>
+          <div class="sentence">${s.japanese.sentence}</div>
+          <div class="ruby-text">${s.japanese.reading}</div>
+        </div>
+        <div class="compare-col kr-col">
+          <div class="col-label">🇰🇷 韓国語</div>
+          <div class="sentence">${s.korean.sentence}</div>
+          <div class="ruby-text">${s.korean.reading}</div>
+        </div>
+      </div>
+      <div class="arrow-row">↑ 語順がまったく同じ！単語を入れ替えるだけ ↑</div>
+      <div class="insight"><strong>ポイント：</strong>${s.insight}</div>
+    </div>
+    <div class="card">
+      <div style="font-size:13px;color:var(--muted);margin-bottom:4px;font-weight:600;">実はもう知っている韓国語 😊</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">漢字語は日本語と同じ読み方がほとんど！</div>
+      <div class="vocab-grid">
+        ${s.vocab.map(v => `
+        <div class="vocab-pill">
+          <div class="kr">${v.korean}</div>
+          <div class="jp">${v.japanese}</div>
+        </div>`).join('')}
+      </div>
+      <div style="margin-top:14px;font-size:12px;color:var(--muted);">韓国語は「いとこ言語」。すでに数百語知っています！</div>
+    </div>
+  </div>`;
+}
+
+function buildPattern(s, idx) {
+  return `
+  <div class="section" id="sec-${idx}">
+    <div class="step-label">${s.stepLabel}</div>
+    <div class="step-title">${s.stepTitle}</div>
+    <div class="card">
+      <div style="font-size:13px;color:var(--muted);margin-bottom:14px;">「〜をください」は韓国語でこう言います。<br>下の単語を選んで、文を作ってみましょう 👇</div>
+      <div class="pattern-frame">
+        <div class="instruction">作っている文</div>
+        <div class="kr-big" id="pDisplay">${s.template.korean}</div>
+        <div class="p-reading" id="pReading">${s.template.reading}</div>
+        <div class="p-jp" id="pJp">${s.template.japanese}</div>
+      </div>
+      <div class="word-grid">
+        ${s.words.map(w => `
+        <button class="word-btn" onclick="pickWord(this,'${w.korean}','${w.reading}','${w.japanese}','${w.audioKey}')">
+          <div class="kr">${w.korean}</div>
+          <div class="read">${w.reading}</div>
+          <div class="jp">${w.japanese}</div>
+        </button>`).join('')}
+      </div>
+      <div class="result-box" id="resultBox">
+        <div class="kr" id="rKr"></div>
+        <div class="read" id="rRead"></div>
+        <div class="jp" id="rJp"></div>
+        <div class="cheer">✨ バッチリです！ソウルで通じます。</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function buildQuiz(s, idx) {
+  return `
+  <div class="section" id="sec-${idx}">
+    <div class="step-label">${s.stepLabel}</div>
+    <div class="step-title">${s.stepTitle}</div>
+    ${s.questions.map((q, qi) => `
+    <div class="card" id="qcard-${idx}-${qi}" ${qi > 0 ? 'style="display:none"' : ''}>
+      <div class="quiz-header">
+        <div class="quiz-icon">${q.icon}</div>
+        <div class="q-text">${q.question}</div>
+        <div class="q-sub">${q.sub}</div>
+      </div>
+      <div class="option-list" id="qopts-${idx}-${qi}">
+        ${q.options.map((o, oi) => `
+        <button class="option-btn" onclick="answerQuiz(this,${o.correct},${idx},${qi})">
+          <span class="num">${oi + 1}</span>
+          <span>
+            <div class="kr-opt">${o.korean}</div>
+            <div class="read-opt">${o.reading}</div>
+          </span>
+        </button>`).join('')}
+      </div>
+      <div class="q-result" id="qresult-${idx}-${qi}">
+        <div class="big" id="qicon-${idx}-${qi}"></div>
+        <div id="qtext-${idx}-${qi}"></div>
+      </div>
+    </div>`).join('')}
+  </div>`;
+}
+
+function buildCulture(s, idx) {
+  const bodyHtml = s.culture.body
+    .replace(/<hl>/g, '<span class="hl">').replace(/<\/hl>/g, '</span>')
+    .replace(/<kr>/g, '<span class="kr-inline">').replace(/<\/kr>/g, '</span>');
+  return `
+  <div class="section" id="sec-${idx}">
+    <div class="step-label">${s.stepLabel}</div>
+    <div class="step-title">${s.stepTitle}</div>
+    <div class="card culture-card">
+      <div class="culture-icon">${s.culture.icon}</div>
+      <div class="culture-title">${s.culture.title}</div>
+      <div class="culture-body">${bodyHtml}</div>
+    </div>
+    <div class="drama-box">
+      <div class="d-label">🎬 ドラマでよく聞く言葉</div>
+      <div class="d-kr">${s.drama.lines.join('<br>')}</div>
+      <div class="d-read">${s.drama.reading}</div>
+      <div class="d-jp">${s.drama.japanese}</div>
+      <div class="d-note">${s.drama.note}</div>
+    </div>
+    <div class="card" style="margin-top:14px;">
+      <div class="complete">
+        <div class="big">🎉</div>
+        <h2>今日もできました！</h2>
+        <p>このレッスンで覚えた表現をまとめました。<br>声に出して復習してみましょう。</p>
+        <div class="summary-list">
+          ${s.summary.map(item => `
+          <div class="s-pill">
+            <span class="kr">${item.korean}</span>
+            <span class="read"> · ${item.reading}</span>
+          </div>`).join('')}
+        </div>
+        <div style="font-size:13px;color:var(--muted);">ゆっくりでいいんです。また明日！<br>천천히 해도 괜찮아요 😊</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+const builders = { phrase: buildPhrase, compare: buildCompare, pattern: buildPattern, quiz: buildQuiz, culture: buildCulture };
+
+// ── 인터랙션 ──
+function pickWord(el, kr, reading, jp, audioKey) {
+  const sec = lesson.sections[cur];
+  const t = sec.template;
+  const krText  = t.korean.replace('___', kr);
+  const rdText  = (t.readingTemplate  || '___ ジュセヨ。').replace('___', reading);
+  const jpText  = (t.japaneseTemplate || '___をください。').replace('___', jp);
+
+  document.querySelectorAll('.word-btn').forEach(b => b.classList.remove('selected'));
+  el.classList.add('selected');
+  document.getElementById('pDisplay').textContent = krText;
+  document.getElementById('pReading').textContent = rdText;
+  document.getElementById('pJp').textContent = jpText;
+  document.getElementById('rKr').textContent = krText;
+  document.getElementById('rRead').textContent = rdText;
+  document.getElementById('rJp').textContent = jpText;
+  document.getElementById('resultBox').classList.add('show');
+  speak(audioKey);
+  showChar(lesson.character.cheer, 'バッチリ！<br>通じますよ！', 3000);
+  picked = true;
+  render();
+}
+
+function answerQuiz(btn, correct, secIdx, qIdx) {
+  const q = lesson.sections[secIdx].questions[qIdx];
+  if (quizDone.includes(`${secIdx}-${qIdx}`)) return;
+  quizDone.push(`${secIdx}-${qIdx}`);
+
+  document.querySelectorAll(`#qopts-${secIdx}-${qIdx} .option-btn`).forEach(b => { b.classList.add('disabled'); b.onclick = null; });
+  btn.classList.add(correct ? 'correct' : 'wrong');
+  if (!correct) saveWrongAnswer(secIdx, qIdx);
+
+  const result = document.getElementById(`qresult-${secIdx}-${qIdx}`);
+  result.classList.add('show', correct ? 'ok' : 'ng');
+  document.getElementById(`qicon-${secIdx}-${qIdx}`).textContent = correct ? '🎉' : '😊';
+  document.getElementById(`qtext-${secIdx}-${qIdx}`).textContent = correct ? q.correctMsg : q.wrongMsg;
+  showChar(correct ? lesson.character.correct : lesson.character.wrong, correct ? '正解！やったね！🎉' : '惜しい！<br>大丈夫ですよ！', 4000);
+
+  // 다음 퀴즈 카드 표시
+  const nextCard = document.getElementById(`qcard-${secIdx}-${qIdx + 1}`);
+  if (nextCard) setTimeout(() => { nextCard.style.display = 'block'; nextCard.style.animation = 'fadeIn .4s ease'; }, 700);
+  render();
+}
+
+// ── 오답노트 ──
+function saveWrongAnswer(secIdx, qIdx) {
+  const sec = lesson.sections[secIdx];
+  const q = sec.questions[qIdx];
+  const correctOption = q.options.find(o => o.correct);
+  const lessonNum = parseInt(lessonId.replace('lesson', ''));
+  const season = Math.ceil(lessonNum / 6);
+  const key = `${lessonId}_${secIdx}_${qIdx}`;
+
+  let wrongs = [];
+  try { wrongs = JSON.parse(localStorage.getItem('wrong_answers') || '[]'); } catch {}
+  if (wrongs.some(w => w.key === key)) return; // avoid duplicate
+  wrongs.push({
+    key,
+    lessonId,
+    season,
+    stageTitle: lesson.stageTitle,
+    icon: q.icon,
+    question: q.question,
+    sub: q.sub,
+    wrongMsg: q.wrongMsg,
+    correctKorean: correctOption ? correctOption.korean : '',
+    correctReading: correctOption ? correctOption.reading : '',
+    timestamp: Date.now()
+  });
+  try { localStorage.setItem('wrong_answers', JSON.stringify(wrongs)); } catch {}
+}
+
+function clearWrong(key) {
+  const el = document.getElementById(`wi-${CSS.escape(key)}`);
+  if (el) el.classList.add('wi-cleared');
+  let wrongs = [];
+  try { wrongs = JSON.parse(localStorage.getItem('wrong_answers') || '[]'); } catch {}
+  wrongs = wrongs.filter(w => w.key !== key);
+  try { localStorage.setItem('wrong_answers', JSON.stringify(wrongs)); } catch {}
+}
+
+function injectSeasonReview() {
+  const lessonNum = parseInt(lessonId.replace('lesson', ''));
+  const season = Math.ceil(lessonNum / 6);
+  const lastSecIdx = lesson.sections.length - 1;
+  const lastSec = document.getElementById(`sec-${lastSecIdx}`);
+  if (!lastSec || lastSec.querySelector('.review-card')) return;
+
+  let wrongs = [];
+  try { wrongs = JSON.parse(localStorage.getItem('wrong_answers') || '[]'); } catch {}
+  const seasonWrongs = wrongs.filter(w => w.season === season);
+
+  const itemsHtml = seasonWrongs.length === 0
+    ? `<div class="rc-empty">✨ 今シーズンは全問正解！<br>素晴らしいです！</div>`
+    : seasonWrongs.map(w => `
+      <div class="wi" id="wi-${w.key}">
+        <div class="wi-lesson">${w.icon} ${w.stageTitle}</div>
+        <div class="wi-q">${w.question}</div>
+        <div class="wi-answer">${w.correctKorean}</div>
+        <div class="wi-reading">${w.correctReading}</div>
+        <div class="wi-msg">${w.wrongMsg}</div>
+        <button class="wi-btn" onclick="clearWrong('${w.key}')">✅ 覚えた！</button>
+      </div>`).join('');
+
+  const card = document.createElement('div');
+  card.className = 'review-card';
+  card.innerHTML = `
+    <div class="rc-header">
+      <div class="rc-icon">📝</div>
+      <div>
+        <div class="rc-title">シーズン${season} · 오답노트</div>
+        <div class="rc-sub">間違えた問題をおさらいしましょう</div>
+      </div>
+    </div>
+    ${itemsHtml}`;
+  lastSec.querySelector('.card:last-child')
+    ? lastSec.querySelector('.card:last-child').after(card)
+    : lastSec.appendChild(card);
+}
+
+// ── JSON 로드 & 초기화 ──
+fetch(`lessons/${lessonId}.json`)
+  .then(r => r.json())
+  .then(data => {
+    lesson = data;
+    document.title = `${data.stageTitle} · 韓国語レッスン`;
+    document.getElementById('headerBadge').textContent = `第${data.stage}課 · ${data.stageTitle}`;
+    document.getElementById('headerTitle').textContent = data.appTitle;
+
+    const container = document.getElementById('sections');
+    container.innerHTML = data.sections.map((s, i) => builders[s.type](s, i)).join('');
+
+    quizDone = [];
+    picked = false;
+    cur = 0;
+    show(0);
+  })
+  .catch(e => {
+    document.getElementById('sections').innerHTML = `<div style="padding:40px;text-align:center;color:red;">レッスンの読み込みに失敗しました: ${e.message}</div>`;
+  });
+</script>
+</body>
+</html>

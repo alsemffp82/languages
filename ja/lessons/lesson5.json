@@ -1,0 +1,115 @@
+{
+  "id": "lesson5",
+  "stage": 5,
+  "stageTitle": "市場で",
+  "appTitle": "ソウル旅行シミュレーション",
+  "character": {
+    "default": "images/1.png",
+    "correct": "images/2.png",
+    "wrong":   "images/3.png",
+    "cheer":   "images/4.png",
+    "complete":"images/6.png"
+  },
+  "sections": [
+    {
+      "type": "phrase",
+      "stepLabel": "今日の一言",
+      "stepTitle": "まず、この言葉を覚えましょう",
+      "character": { "img": "images/1.png", "msg": "サトウさん、<br>お買い物へ！" },
+      "korean": "얼마예요?",
+      "reading": "オルマエヨ？",
+      "meaning": "いくらですか？",
+      "audioKey": "얼마예요",
+      "scenes": [
+        { "icon": "🛍️", "text": "市場やショップで値段を聞く基本フレーズ！" },
+        { "icon": "🧅", "text": "広蔵市場、ナムデムン市場など活気あふれる場所で使えます。" },
+        { "icon": "💳", "text": "「얼마」は「いくら」、「예요」は「〜です」の意味。" }
+      ]
+    },
+    {
+      "type": "compare",
+      "stepLabel": "日本語と比べる",
+      "stepTitle": "買い物の言葉もそっくり！",
+      "character": { "img": "images/1.png", "msg": "値段交渉も<br>できますよ！" },
+      "japanese": { "sentence": "少し\n安くなりますか？", "reading": "すこし やすく なりますか" },
+      "korean":   { "sentence": "조금\n깎아 주세요.", "reading": "チョグム カッカ ジュセヨ" },
+      "insight": "「少し」＝「조금（チョグム）」、「安くしてください」＝「깎아 주세요（カッカ ジュセヨ）」。<br>「주세요」はここでも登場！",
+      "vocab": [
+        { "korean": "얼마", "japanese": "オルマ ＝ いくら" },
+        { "korean": "비싸요", "japanese": "ビッサヨ ＝ 高いです" },
+        { "korean": "싸요", "japanese": "サヨ ＝ 安いです" },
+        { "korean": "깎다", "japanese": "カッタ ＝ 値引きする" },
+        { "korean": "계산", "japanese": "ケサン ＝ 会計・計算" },
+        { "korean": "포장", "japanese": "ポジャン ＝ 包装・テイクアウト" }
+      ]
+    },
+    {
+      "type": "pattern",
+      "stepLabel": "パターン練習",
+      "stepTitle": "単語を入れ替えるだけで完成！",
+      "character": { "img": "images/4.png", "msg": "お買い物を<br>楽しもう！" },
+      "template": { "korean": "이거 ___ 있어요?", "reading": "（単語を選んでください）", "japanese": "これ〜はありますか？", "readingTemplate": "イゴ ___ イッソヨ？", "japaneseTemplate": "これ___はありますか？" },
+      "words": [
+        { "korean": "다른 색",   "reading": "タルン セク",   "japanese": "別の色",       "audioKey": "이거 다른 색 있어요" },
+        { "korean": "더 큰 거",  "reading": "ト クン ゴ",   "japanese": "もっと大きいの", "audioKey": "이거 더 큰 거 있어요" },
+        { "korean": "더 작은 거",  "reading": "ト ジャグン ゴ",  "japanese": "もっと小さいの", "audioKey": "이거 더 작은 거 있어요" },
+        { "korean": "다른 디자인","reading": "タルン ディジャイン","japanese": "別のデザイン", "audioKey": "이거 다른 디자인 있어요" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "stepLabel": "確認クイズ",
+      "stepTitle": "覚えているか確認しましょう",
+      "character": { "img": "images/1.png", "msg": "さあ、クイズ！<br>大丈夫ですよ 😊" },
+      "questions": [
+        {
+          "icon": "🛍️",
+          "question": "「いくらですか？」は？",
+          "sub": "今日の一言を思い出して！",
+          "options": [
+            { "korean": "뭐예요?",   "reading": "ムォエヨ？",   "correct": false },
+            { "korean": "얼마예요?", "reading": "オルマエヨ？", "correct": true  },
+            { "korean": "어디예요?", "reading": "オディエヨ？", "correct": false }
+          ],
+          "correctMsg": "完璧！「얼마예요?」はショッピングで最頻出フレーズです！",
+          "wrongMsg":   "惜しい！「얼마예요?（オルマエヨ？）」。「얼마＝いくら」ですよ。"
+        },
+        {
+          "icon": "💰",
+          "question": "「少し安くしてください」は？",
+          "sub": "比較表現を思い出して！",
+          "options": [
+            { "korean": "조금 비싸요",       "reading": "チョグム ビッサヨ",       "correct": false },
+            { "korean": "조금 깎아 주세요",  "reading": "チョグム カッカ ジュセヨ", "correct": true  },
+            { "korean": "조금 주세요",       "reading": "チョグム ジュセヨ",       "correct": false }
+          ],
+          "correctMsg": "その通り！勇気を出して値引き交渉してみましょう 💪",
+          "wrongMsg":   "正解は「조금 깎아 주세요（チョグム カッカ ジュセヨ）」。「깎아 주세요＝安くしてください」ですね。"
+        }
+      ]
+    },
+    {
+      "type": "culture",
+      "stepLabel": "韓国文化のひとさじ",
+      "stepTitle": "知っておくと楽しい！",
+      "character": { "img": "images/6.png", "msg": "お買い物<br>楽しんで！" },
+      "culture": {
+        "icon": "🛍️",
+        "title": "ソウルのショッピング、どこへ行く？",
+        "body": "<hl>광장시장（クァンジャン市場）</hl>はドラマ「ビジネス提案」にも登場した人気市場。ビビンバやチヂミが絶品！<br><br><hl>남대문시장（ナムデムン市場）</hl>は洋服・雑貨の宝庫。値段交渉も楽しい！<br><br>会計のとき便利なフレーズ：<br><hl>「<kr>카드 돼요?</kr>（カドゥ テヨ？）」</hl>＝「カード使えますか？」<br><hl>「<kr>봉투 주세요.</kr>（ポントゥ ジュセヨ）」</hl>＝「袋ください」"
+      },
+      "drama": {
+        "lines": ["완전 싸다!", "이거 살게요!"],
+        "reading": "ワンジョン サダ！／ イゴ サルケヨ！",
+        "japanese": "「めちゃくちゃ安い！」 ／ 「これ買います！」",
+        "note": "ショッピングシーンでよく聞こえてくる楽しいフレーズです ✨"
+      },
+      "summary": [
+        { "korean": "얼마예요?",          "reading": "オルマエヨ？" },
+        { "korean": "조금 깎아 주세요",   "reading": "チョグム カッカ ジュセヨ" },
+        { "korean": "카드 돼요?",         "reading": "カドゥ テヨ？" },
+        { "korean": "이거 살게요",        "reading": "イゴ サルケヨ" }
+      ]
+    }
+  ]
+}
