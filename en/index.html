@@ -3,120 +3,251 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seoul Korean — Learn Korean for Your Seoul Trip</title>
+  <title>Seoul Korean — Learn Korean for Your Trip</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Noto+Sans+KR:wght@400;700&display=swap');
     :root {
       --cream:#F0F6FF; --ocean:#2563EB; --soft-blue:#BFDBFE; --blush:#EFF6FF;
-      --navy:#1E3A8A; --dark-navy:#0F172A; --teal:#0891B2; --soft-teal:#CFFAFE;
+      --navy:#1E3A8A; --dark-navy:#0F172A; --teal:#0891B2;
       --gold:#D97706; --light-gold:#FEF3C7; --text:#1E293B; --muted:#64748B;
     }
     *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);min-height:100vh;}
-    .hero{background:linear-gradient(145deg,#2563EB 0%,#1E3A8A 60%,#0F172A 100%);color:white;padding:48px 24px 40px;text-align:center;position:relative;overflow:hidden;}
-    .hero::before{content:'🇰🇷';position:absolute;font-size:120px;opacity:.08;top:-10px;right:-16px;}
-    .hero::after{content:'✈️';position:absolute;font-size:90px;opacity:.07;bottom:-10px;left:-10px;}
-    .hero-badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:5px 16px;font-size:11px;letter-spacing:2px;font-weight:700;margin-bottom:18px;}
-    .hero h1{font-size:28px;font-weight:700;line-height:1.3;margin-bottom:10px;}
-    .hero h1 .kr{font-family:'Noto Sans KR',sans-serif;font-size:14px;display:block;opacity:.75;margin-top:4px;font-weight:400;}
-    .hero .sub{font-size:14px;opacity:.8;line-height:1.7;margin-bottom:22px;}
-    .hero-stats{display:flex;justify-content:center;gap:24px;}
-    .hero-stats .stat .num{font-size:20px;font-weight:700;}
-    .hero-stats .stat .lbl{font-size:11px;opacity:.65;margin-top:2px;}
-    .progress-bar-wrap{background:white;border-bottom:1px solid #DBEAFE;padding:14px 20px;}
-    .progress-bar-info{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted);margin-bottom:8px;}
-    .progress-bar-info strong{color:var(--navy);font-size:13px;}
-    .progress-track{background:#DBEAFE;border-radius:4px;height:8px;overflow:hidden;}
-    .progress-fill{background:linear-gradient(90deg,var(--ocean),var(--teal));height:100%;border-radius:4px;transition:width .5s ease;}
-    .season-block{margin-bottom:6px;}
-    .season-header{display:flex;align-items:center;gap:12px;padding:14px 20px 10px;border-top:3px solid transparent;}
-    .season-badge{font-size:12px;font-weight:700;padding:4px 12px;border-radius:14px;letter-spacing:.5px;white-space:nowrap;}
-    .season-title{font-size:15px;font-weight:700;color:var(--dark-navy);}
-    .season-desc{font-size:12px;color:var(--muted);margin-top:1px;}
-    .season-progress{margin-left:auto;font-size:13px;font-weight:700;color:var(--ocean);white-space:nowrap;}
-    .season-s1{background:rgba(37,99,235,.06);border-top-color:#2563EB !important;}
-    .color-s1{background:#DBEAFE;color:#1D4ED8;}
-    .lessons-scroll{display:flex;gap:12px;padding:4px 20px 16px;overflow-x:auto;scrollbar-width:none;}
-    .lessons-scroll::-webkit-scrollbar{display:none;}
-    .lesson-card{flex:0 0 148px;background:white;border-radius:16px;padding:16px 14px;box-shadow:0 2px 10px rgba(0,0,0,.06);border:1.5px solid transparent;transition:all .2s;text-decoration:none;color:inherit;display:block;}
-    .lesson-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.10);}
-    .lesson-card.done{border-color:#DBEAFE;background:linear-gradient(135deg,#EFF6FF,white);}
-    .lc-emoji{font-size:26px;margin-bottom:10px;}
-    .lc-num{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:1px;margin-bottom:3px;}
-    .lc-title{font-family:'Noto Sans KR',sans-serif;font-size:13px;font-weight:700;color:var(--dark-navy);line-height:1.4;margin-bottom:5px;}
-    .lc-desc{font-size:11px;color:var(--muted);line-height:1.5;}
-    .lc-badge{display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:11px;font-weight:700;padding:3px 9px;border-radius:8px;}
-    .lc-badge.complete{background:#DBEAFE;color:var(--navy);}
-    .lc-badge.in-progress{background:var(--light-gold);color:#92400E;}
-    .lc-badge.not-started{background:#F1F5F9;color:var(--muted);}
-    .bottom-space{height:40px;}
+    body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);min-height:100vh;font-size:15px;line-height:1.7;}
+
+    /* HEADER */
+    header{background:linear-gradient(135deg,#1D4ED8 0%,#1E3A8A 60%,#0F172A 100%);color:white;padding:36px 24px 28px;text-align:center;position:relative;overflow:hidden;}
+    header::before{content:'🇰🇷';position:absolute;font-size:120px;opacity:.07;right:-16px;top:-10px;}
+    header::after{content:'✈️';position:absolute;font-size:80px;opacity:.07;left:-10px;bottom:-10px;}
+    .app-name{font-size:13px;letter-spacing:2px;opacity:.8;font-weight:500;margin-bottom:14px;}
+    header h1{font-size:22px;font-weight:700;line-height:1.4;margin-bottom:6px;}
+    header .sub{font-size:13px;opacity:.75;}
+
+    /* PROGRESS BAR */
+    .summary-bar{background:white;border-bottom:1px solid #DBEAFE;padding:16px 20px;}
+    .summary-inner{max-width:600px;margin:0 auto;display:flex;align-items:center;gap:16px;}
+    .prog-circle{position:relative;width:54px;height:54px;flex-shrink:0;}
+    .prog-circle svg{transform:rotate(-90deg);}
+    .prog-circle .pct{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--ocean);}
+    .prog-text .title{font-size:14px;font-weight:700;color:var(--dark-navy);}
+    .prog-text .sub{font-size:12px;color:var(--muted);margin-top:2px;}
+
+    /* MAIN CONTENT */
+    .content{max-width:600px;margin:0 auto;padding:20px 16px 40px;}
+
+    /* CONTINUE BUTTON */
+    .start-btn{display:block;width:100%;padding:16px;background:linear-gradient(135deg,var(--ocean),#1E3A8A);color:white;border:none;border-radius:14px;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer;text-align:center;text-decoration:none;margin-bottom:20px;transition:opacity .2s,transform .1s;}
+    .start-btn:active{opacity:.9;transform:scale(.99);}
+
+    /* SEASON HEADER */
+    .season-header{margin:24px 0 12px;padding:14px 16px;border-radius:14px;display:flex;align-items:center;gap:12px;}
+    .season-header .s-emoji{font-size:28px;flex-shrink:0;}
+    .season-header .s-info .s-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;opacity:.7;}
+    .season-header .s-info .s-title{font-size:17px;font-weight:700;margin-top:1px;}
+    .season-header .s-info .s-desc{font-size:12px;opacity:.75;margin-top:2px;}
+    .season-header .s-prog{margin-left:auto;text-align:center;flex-shrink:0;}
+    .season-header .s-prog .s-done{font-size:18px;font-weight:700;}
+    .season-header .s-prog .s-total{font-size:11px;opacity:.6;}
+    .season-s1{background:linear-gradient(135deg,#EFF6FF,#DBEAFE);color:#1E3A8A;}
+
+    /* LESSON CARDS */
+    .lesson-card{background:white;border-radius:14px;padding:14px 16px;margin-bottom:8px;box-shadow:0 2px 8px rgba(0,0,0,.05);display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s;border:2px solid transparent;cursor:pointer;}
+    .lesson-card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.1);}
+    .lesson-card.active{border-color:var(--ocean);}
+    .lesson-card.locked{opacity:.45;cursor:default;pointer-events:none;}
+    .lesson-card.done{border-color:#93C5FD;}
+    .stage-badge{width:46px;height:46px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;background:#EFF6FF;}
+    .stage-badge .stage-num{font-size:9px;font-weight:700;color:var(--muted);margin-top:2px;}
+    .lesson-info{flex:1;min-width:0;}
+    .lesson-info .stage-label{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.5px;}
+    .lesson-info .lesson-title{font-size:15px;font-weight:700;color:var(--dark-navy);margin:2px 0 3px;font-family:'Noto Sans KR',sans-serif;}
+    .lesson-info .lesson-desc{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .lesson-status{flex-shrink:0;text-align:right;}
+    .status-icon{font-size:18px;}
+    .status-text{font-size:11px;color:var(--muted);margin-top:2px;}
+    .mini-bar{height:3px;background:#DBEAFE;border-radius:2px;margin-top:5px;overflow:hidden;}
+    .mini-bar-fill{height:100%;background:var(--ocean);border-radius:2px;transition:width .4s ease;}
+
+    /* LOCK NOTE */
+    .lock-note{text-align:center;font-size:12px;color:var(--muted);padding:4px 0 24px;}
   </style>
 </head>
 <body>
-<div class="hero">
-  <div class="hero-badge">SEOUL KOREAN · 서울 한국어</div>
-  <h1>Learn Korean for Your<br>Seoul Trip 🇰🇷<span class="kr">서울 여행 한국어</span></h1>
-  <p class="sub">Real phrases you'll actually use.<br>From airport to café to K-drama conversations.</p>
-  <div class="hero-stats">
-    <div class="stat"><div class="num" id="doneLessons">0</div><div class="lbl">Lessons Done</div></div>
-    <div class="stat"><div class="num">1</div><div class="lbl">Season</div></div>
-    <div class="stat"><div class="num">6</div><div class="lbl">Total Lessons</div></div>
+
+<header>
+  <div class="app-name">SEOUL KOREAN · 서울 한국어</div>
+  <h1>Learn Korean for Your<br>Seoul Trip 🇰🇷</h1>
+  <div class="sub">Real phrases. Real places. Real confidence.</div>
+</header>
+
+<div class="summary-bar">
+  <div class="summary-inner">
+    <div class="prog-circle">
+      <svg width="54" height="54" viewBox="0 0 54 54">
+        <circle cx="27" cy="27" r="22" fill="none" stroke="#DBEAFE" stroke-width="5"/>
+        <circle cx="27" cy="27" r="22" fill="none" stroke="#2563EB" stroke-width="5"
+          stroke-dasharray="138.2" stroke-dashoffset="138.2" stroke-linecap="round"
+          id="progCircle"/>
+      </svg>
+      <div class="pct" id="progPct">0%</div>
+    </div>
+    <div class="prog-text">
+      <div class="title" id="progTitle">Start your first lesson!</div>
+      <div class="sub" id="progSub">6 lessons · 1 season · Seoul is waiting ✈️</div>
+    </div>
   </div>
 </div>
-<div class="progress-bar-wrap">
-  <div class="progress-bar-info">
-    <span>Your progress — <strong id="progressText">0 / 6 lessons</strong></span>
-    <span id="progressPct">0%</span>
-  </div>
-  <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+
+<div class="content">
+
+  <a class="start-btn" id="continueBtn" href="lesson.html?id=lesson1">
+    ✈️ &nbsp;Start Lesson 1
+  </a>
+
+  <div id="lessonList"></div>
+
+  <div class="lock-note">🔒 Complete each lesson to unlock the next one</div>
+
 </div>
-<div id="seasonsContainer"></div>
-<div class="bottom-space"></div>
+
 <script>
 const SEASONS = [
-  { num:1, emoji:'✈️', title:'Seoul Travel Essentials', desc:'Airport · Café · Hotel · Subway · Market', cls:'season-s1', badgeCls:'color-s1' },
+  { num:1, emoji:'✈️', title:'Seoul Travel Essentials', desc:'Airport · Café · Hotel · Subway · Market · Local Slang', cls:'season-s1' },
 ];
+
 const LESSONS = [
-  { id:'lesson1', season:1, stage:1, emoji:'🛄', title:'저기요', desc:'Excuse me!', totalSteps:5 },
-  { id:'lesson2', season:1, stage:2, emoji:'☕', title:'아메리카노 하나 주세요', desc:'Café ordering', totalSteps:5 },
-  { id:'lesson3', season:1, stage:3, emoji:'🏨', title:'체크인 하려고요', desc:'Hotel check-in', totalSteps:5 },
-  { id:'lesson4', season:1, stage:4, emoji:'🚇', title:'어디서 갈아타요?', desc:'Subway & getting around', totalSteps:5 },
-  { id:'lesson5', season:1, stage:5, emoji:'🛍️', title:'얼마예요?', desc:'Market shopping', totalSteps:5 },
-  { id:'lesson6', season:1, stage:6, emoji:'🤩', title:'진짜 대박이에요!', desc:'React like a local', totalSteps:5 },
+  { id:'lesson1', season:1, stage:1, emoji:'🛄', title:'저기요', desc:'Excuse me! — airport & restaurant basics', totalSteps:5 },
+  { id:'lesson2', season:1, stage:2, emoji:'☕', title:'아메리카노 하나 주세요', desc:'Café ordering — drinks & numbers', totalSteps:5 },
+  { id:'lesson3', season:1, stage:3, emoji:'🏨', title:'체크인 하려고요', desc:'Hotel check-in & requests', totalSteps:5 },
+  { id:'lesson4', season:1, stage:4, emoji:'🚇', title:'어디서 갈아타요?', desc:'Subway & getting around Seoul', totalSteps:5 },
+  { id:'lesson5', season:1, stage:5, emoji:'🛍️', title:'얼마예요?', desc:'Market shopping & bargaining', totalSteps:5 },
+  { id:'lesson6', season:1, stage:6, emoji:'🤩', title:'진짜 대박이에요!', desc:'React like a local — slang & expressions', totalSteps:5 },
 ];
+
 function getProgress(id) {
-  try { const p=localStorage.getItem(`ek_progress_${id}`); return p?JSON.parse(p):null; } catch { return null; }
+  try { const p = localStorage.getItem(`ek_progress_${id}`); return p ? JSON.parse(p) : { done:false, step:0 }; }
+  catch { return { done:false, step:0 }; }
 }
-function buildSeasonBlock(season) {
-  const sp = { done: LESSONS.filter(l=>l.season===season.num&&(p=>p&&p.done)(getProgress(l.id))).length, total: LESSONS.filter(l=>l.season===season.num).length };
-  const cards = LESSONS.filter(l=>l.season===season.num).map(l=>{
-    const p=getProgress(l.id), isDone=p&&p.done, isIP=p&&!p.done;
-    const badge = isDone?`<div class="lc-badge complete">✅ Complete</div>`:isIP?`<div class="lc-badge in-progress">▶ In Progress</div>`:`<div class="lc-badge not-started">→ Start</div>`;
-    return `<a class="lesson-card ${isDone?'done':''}" href="lesson.html?id=${l.id}">
-      <div class="lc-emoji">${l.emoji}</div>
-      <div class="lc-num">LESSON ${l.stage}</div>
-      <div class="lc-title">${l.title}</div>
-      <div class="lc-desc">${l.desc}</div>${badge}</a>`;
-  }).join('');
-  return `<div class="season-block">
+
+function calcOverall() {
+  const done = LESSONS.filter(l => getProgress(l.id).done).length;
+  return { done, total: LESSONS.length, pct: Math.round((done / LESSONS.length) * 100) };
+}
+
+function calcSeasonProgress(seasonNum) {
+  const lessons = LESSONS.filter(l => l.season === seasonNum);
+  const done = lessons.filter(l => getProgress(l.id).done).length;
+  return { done, total: lessons.length };
+}
+
+function updateProgress() {
+  const { done, total, pct } = calcOverall();
+  const circumference = 2 * Math.PI * 22;
+  const offset = circumference * (1 - pct / 100);
+  document.getElementById('progCircle').style.strokeDashoffset = offset;
+  document.getElementById('progPct').textContent = pct + '%';
+
+  if (done === 0) {
+    document.getElementById('progTitle').textContent = 'Start your first lesson!';
+    document.getElementById('progSub').textContent = `${total} lessons · 1 season · Seoul is waiting ✈️`;
+  } else if (done === total) {
+    document.getElementById('progTitle').textContent = 'All lessons complete! 🎉';
+    document.getElementById('progSub').textContent = "You're ready for Seoul. 화이팅!";
+  } else {
+    document.getElementById('progTitle').textContent = `${done} / ${total} lessons done`;
+    document.getElementById('progSub').textContent = 'Keep going! 응원합니다 💪';
+  }
+}
+
+function updateContinueBtn() {
+  const btn = document.getElementById('continueBtn');
+  const next = LESSONS.find(l => !getProgress(l.id).done);
+
+  if (!next) {
+    btn.textContent = '🎊 All done! Review from Lesson 1';
+    btn.href = 'lesson.html?id=lesson1';
+    return;
+  }
+
+  const prog = getProgress(next.id);
+  const idx = LESSONS.findIndex(l => l.id === next.id);
+
+  if (idx === 0 && prog.step === 0) {
+    btn.textContent = '✈️  Start Lesson 1';
+  } else if (prog.step > 0) {
+    btn.textContent = `▶  Continue — ${next.title}`;
+  } else {
+    btn.textContent = `✨  Next up — ${next.title}`;
+  }
+  btn.href = `lesson.html?id=${next.id}`;
+}
+
+function renderLessons() {
+  const container = document.getElementById('lessonList');
+  const firstUnlocked = LESSONS.findIndex(l => !getProgress(l.id).done);
+  let html = '';
+
+  SEASONS.forEach(season => {
+    const sLessons = LESSONS.filter(l => l.season === season.num);
+    const { done, total } = calcSeasonProgress(season.num);
+
+    html += `
     <div class="season-header ${season.cls}">
-      <span class="season-badge ${season.badgeCls}">${season.emoji} Season ${season.num}</span>
-      <div><div class="season-title">${season.title}</div><div class="season-desc">${season.desc}</div></div>
-      <div class="season-progress">${sp.done}/${sp.total}</div>
-    </div>
-    <div class="lessons-scroll">${cards}</div>
-  </div>`;
+      <div class="s-emoji">${season.emoji}</div>
+      <div class="s-info">
+        <div class="s-label">Season ${season.num}</div>
+        <div class="s-title">${season.title}</div>
+        <div class="s-desc">${season.desc}</div>
+      </div>
+      <div class="s-prog">
+        <div class="s-done">${done}/${total}</div>
+        <div class="s-total">done</div>
+      </div>
+    </div>`;
+
+    sLessons.forEach(l => {
+      const i = LESSONS.findIndex(x => x.id === l.id);
+      const prog = getProgress(l.id);
+      const isDone = prog.done;
+      const isActive = i === firstUnlocked;
+      const isLocked = !isDone && i > firstUnlocked;
+      const stepPct = isDone ? 100 : (prog.step / l.totalSteps) * 100;
+
+      let statusIcon, statusText, stateClass;
+      if (isDone) {
+        statusIcon = '✅'; statusText = 'Done'; stateClass = 'done';
+      } else if (isActive) {
+        statusIcon = '▶'; statusText = prog.step > 0 ? `${prog.step}/${l.totalSteps}` : 'Start'; stateClass = 'active';
+      } else {
+        statusIcon = '🔒'; statusText = 'Locked'; stateClass = 'locked';
+      }
+
+      const href = (isDone || isActive) ? `lesson.html?id=${l.id}` : '#';
+      html += `
+      <a class="lesson-card ${stateClass}" href="${href}" ${isLocked ? 'tabindex="-1" aria-disabled="true"' : ''}>
+        <div class="stage-badge">
+          <span>${l.emoji}</span>
+          <span class="stage-num">L${l.stage}</span>
+        </div>
+        <div class="lesson-info">
+          <div class="stage-label">Season ${season.num} · ${season.title}</div>
+          <div class="lesson-title">${l.title}</div>
+          <div class="lesson-desc">${l.desc}</div>
+          ${!isLocked ? `<div class="mini-bar"><div class="mini-bar-fill" style="width:${stepPct}%"></div></div>` : ''}
+        </div>
+        <div class="lesson-status">
+          <div class="status-icon">${statusIcon}</div>
+          <div class="status-text">${statusText}</div>
+        </div>
+      </a>`;
+    });
+  });
+
+  container.innerHTML = html;
 }
-function render() {
-  const done = LESSONS.filter(l=>{const p=getProgress(l.id);return p&&p.done;}).length;
-  const pct = Math.round((done/LESSONS.length)*100);
-  document.getElementById('doneLessons').textContent = done;
-  document.getElementById('progressText').textContent = `${done} / ${LESSONS.length} lessons`;
-  document.getElementById('progressPct').textContent = `${pct}%`;
-  document.getElementById('progressFill').style.width = `${pct}%`;
-  document.getElementById('seasonsContainer').innerHTML = SEASONS.map(buildSeasonBlock).join('');
-}
-render();
+
+updateProgress();
+updateContinueBtn();
+renderLessons();
 </script>
 </body>
 </html>
